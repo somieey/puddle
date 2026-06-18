@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puddle | Learn languages the cozy way</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #f4ede1;
+            --cream-deep: #e9dcc6;
+            --beige: #e0d1b8;
+            --beige-line: #e2d3ba;
+            --brown: #36281b;
+            --brown-mid-solid: #6b5a45;
+            --brown-soft: #93826b;
+            --sage: #5f8a5b;
+            --sage-soft: #d6e2c8;
+            --sage-deep: #3e6b3f;
+            --peach: #d28a5d;
+            --peach-soft: #f0ddc8;
+            --peach-deep: #b06334;
+            --pink: #cf8e9b;
+            --pink-soft: #f1dce0;
+            --pink-deep: #b1647a;
+            --gold: #cda743;
+            --gold-soft: #f0e3b9;
+            --sky: #6a9aa3;
+            --sky-soft: #d3e4e6;
+            --card: #fffdf9;
+            --shadow: 0 22px 46px -22px rgba(87, 63, 45, 0.34);
+            --shadow-sm: 0 10px 26px -16px rgba(87, 63, 45, 0.3);
+            --shadow-hover: 0 28px 54px -22px rgba(87, 63, 45, 0.44);
+            --radius: 26px;
+            --radius-sm: 16px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { background-color: var(--cream); scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Nunito', system-ui, sans-serif;
+            background-color: var(--cream);
+            background-image:
+                radial-gradient(circle at 6% 4%, rgba(95, 138, 91, 0.16), transparent 34%),
+                radial-gradient(circle at 96% 2%, rgba(210, 138, 93, 0.14), transparent 32%),
+                radial-gradient(circle at 50% 100%, rgba(207, 142, 155, 0.12), transparent 42%);
+            background-attachment: fixed;
+            color: var(--brown);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Baloo 2', 'Nunito', sans-serif;
+            color: var(--brown);
+            letter-spacing: -0.01em;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .puddle-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 22px 80px;
+        }
+
+        .eyebrow {
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--brown-soft);
+        }
+
+        /* ---------- Entrance animation ---------- */
+        @keyframes riseIn {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .reveal {
+            opacity: 0;
+            animation: riseIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .reveal.d1 { animation-delay: 0.05s; }
+        .reveal.d2 { animation-delay: 0.12s; }
+        .reveal.d3 { animation-delay: 0.19s; }
+        .reveal.d4 { animation-delay: 0.26s; }
+        .reveal.d5 { animation-delay: 0.33s; }
+        .reveal.d6 { animation-delay: 0.40s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { animation: none; opacity: 1; }
+            .hero-mascot, .mascot-stage::before, .float-decor { animation: none !important; }
+        }
+
+        /* ---------- Navbar ---------- */
+        .puddle-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 0 -22px 30px;
+            padding: 14px 28px;
+            background: rgba(251, 245, 234, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--beige-line);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Baloo 2', sans-serif;
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--brown);
+        }
+        .brand .brand-mark {
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
+            background: linear-gradient(150deg, var(--sage-soft), var(--peach-soft));
+            font-size: 1.25rem;
+            box-shadow: inset 0 0 0 1px rgba(111, 140, 84, 0.25);
+            animation: tilt 5s ease-in-out infinite;
+        }
+        @keyframes tilt {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            position: relative;
+            padding: 9px 17px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.93rem;
+            color: var(--brown-mid-solid);
+            transition: background 0.2s ease, color 0.2s ease, transform 0.18s ease;
+        }
+        .nav-links a:hover {
+            background: var(--cream-deep);
+            color: var(--brown);
+            transform: translateY(-1px);
+        }
+        .nav-links a.cta-link {
+            background: var(--brown);
+            color: var(--cream);
+        }
+        .nav-links a.cta-link:hover { background: #2a1f15; color: var(--cream); }
+
+        /* ---------- Buttons ---------- */
+        .main-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--peach-deep);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 14px 28px;
+            border-radius: 999px;
+            box-shadow: 0 14px 26px -12px rgba(176, 99, 52, 0.9);
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+        .main-btn:hover {
+            background: #9c552b;
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px -12px rgba(176, 99, 52, 0.95);
+        }
+        .ghost-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card);
+            color: var(--brown);
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 14px 26px;
+            border-radius: 999px;
+            border: 1px solid var(--beige-line);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .ghost-btn:hover { background: var(--cream-deep); transform: translateY(-2px); }
+
+        /* ---------- Hero ---------- */
+        .landing-hero {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            gap: 28px;
+            align-items: center;
+            background: linear-gradient(140deg, #fffdf8 0%, #fbf0dd 55%, #f4ecd6 100%);
+            border: 1px solid var(--beige-line);
+            border-radius: 34px;
+            padding: 52px 52px 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 64px;
+            min-height: 420px;
+        }
+
+        .float-decor { position: absolute; pointer-events: none; z-index: 0; opacity: 0.75; }
+        .float-decor.leaf-1 { top: 28px; left: 42%; font-size: 1.8rem; animation: drift 9s ease-in-out infinite; }
+        .float-decor.leaf-2 { top: 70px; right: 9%; font-size: 1.4rem; animation: drift 7s ease-in-out infinite 1s; }
+        .float-decor.cloud-1 { top: 34px; left: 7%; font-size: 2.2rem; opacity: 0.6; animation: floatX 14s ease-in-out infinite; }
+        .float-decor.sparkle-1 { bottom: 120px; left: 34%; font-size: 1.3rem; animation: twinkle 3s ease-in-out infinite; }
+        @keyframes drift { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(8deg); } }
+        @keyframes floatX { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(22px); } }
+        @keyframes twinkle { 0%, 100% { transform: scale(0.7); opacity: 0.3; } 50% { transform: scale(1.1); opacity: 0.95; } }
+
+        .hero-content { position: relative; z-index: 2; padding-bottom: 52px; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--sage-soft);
+            color: var(--sage-deep);
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            padding: 7px 15px;
+            border-radius: 999px;
+            margin-bottom: 18px;
+            box-shadow: var(--shadow-sm);
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.06;
+            margin-bottom: 14px;
+            max-width: 14ch;
+        }
+        .hero-content h1 .accent { color: var(--peach-deep); }
+        .hero-content > p {
+            color: var(--brown-mid-solid);
+            font-size: 1.08rem;
+            max-width: 440px;
+            margin-bottom: 26px;
+        }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+        .hero-proof {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-top: 26px;
+            flex-wrap: wrap;
+        }
+        .proof-item { display: flex; flex-direction: column; line-height: 1.1; }
+        .proof-item strong { font-family: 'Baloo 2', sans-serif; font-size: 1.4rem; color: var(--brown); }
+        .proof-item span { font-size: 0.82rem; font-weight: 700; color: var(--brown-soft); }
+        .proof-divider { width: 1px; height: 34px; background: var(--beige-line); }
+
+        .hero-mascot-box {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            align-self: stretch;
+            padding-bottom: 0;
+        }
+        .speech-bubble {
+            position: relative;
+            background: #fff;
+            color: var(--brown);
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 12px 20px;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--beige-line);
+            text-align: center;
+            animation: bobBubble 4s ease-in-out infinite;
+        }
+        .speech-bubble::after {
+            content: "";
+            position: absolute;
+            bottom: -9px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px 9px 0;
+            border-style: solid;
+            border-color: #fff transparent transparent;
+        }
+        @keyframes bobBubble { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+        .mascot-stage { position: relative; display: grid; place-items: end center; width: 100%; }
+        .mascot-stage::before {
+            content: "";
+            position: absolute;
+            bottom: 14px;
+            width: 58%;
+            height: 22px;
+            background: rgba(87, 63, 45, 0.18);
+            border-radius: 50%;
+            filter: blur(9px);
+            animation: shadowPulse 4s ease-in-out infinite;
+        }
+        @keyframes shadowPulse { 0%, 100% { transform: scale(1); opacity: 0.55; } 50% { transform: scale(0.85); opacity: 0.4; } }
+        .hero-mascot {
+            position: relative;
+            width: 100%;
+            max-width: 270px;
+            border-radius: 26px 26px 0 0;
+            display: block;
+            animation: bob 4s ease-in-out infinite;
+        }
+        @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        /* ---------- Section heading ---------- */
+        .section-head { text-align: center; max-width: 600px; margin: 0 auto 36px; }
+        .section-head h2 { font-size: 2rem; margin: 8px 0 10px; }
+        .section-head p { color: var(--brown-mid-solid); font-size: 1.02rem; }
+
+        section.block { margin-bottom: 72px; }
+
+        /* ---------- Features ---------- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .feature-card {
+            --accent: var(--sage);
+            position: relative;
+            background: var(--card);
+            border: 1px solid var(--beige-line);
+            border-radius: var(--radius);
+            padding: 28px 26px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+        }
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            left: 0; right: 0; top: 0;
+            height: 4px;
+            background: var(--accent);
+            opacity: 0.85;
+            transform: scaleX(0.18);
+            transform-origin: left center;
+            transition: transform 0.3s cubic-bezier(.34,1.4,.64,1);
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: color-mix(in srgb, var(--accent) 45%, var(--beige-line));
+        }
+        .feature-card:hover::before { transform: scaleX(1); }
+        .feature-icon {
+            display: grid;
+            place-items: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            background: color-mix(in srgb, var(--accent) 18%, var(--card));
+            box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 26%, transparent);
+            transition: transform 0.24s ease;
+        }
+        .feature-card:hover .feature-icon { transform: rotate(-7deg) scale(1.08); }
+        .feature-card h3 { font-size: 1.18rem; margin-bottom: 8px; }
+        .feature-card p { color: var(--brown-mid-solid); font-size: 0.96rem; }
+
+        /* ---------- How it works ---------- */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            counter-reset: step;
+        }
+        .step {
+            position: relative;
+            background: var(--card);
+            border: 1px solid var(--beige-line);
+            border-radius: var(--radius);
+            padding: 30px 26px 26px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.24s ease, box-shadow 0.24s ease;
+        }
+        .step:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .step .step-num {
+            counter-increment: step;
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--brown);
+            color: var(--cream);
+            font-family: 'Baloo 2', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+        .step .step-num::before { content: counter(step); }
+        .step h3 { font-size: 1.12rem; margin-bottom: 7px; }
+        .step p { color: var(--brown-mid-solid); font-size: 0.95rem; }
+
+        /* ---------- CTA ---------- */
+        .cta-banner {
+            position: relative;
+            text-align: center;
+            background: linear-gradient(140deg, var(--sage-soft), var(--peach-soft));
+            border: 1px solid var(--beige-line);
+            border-radius: 34px;
+            padding: 56px 32px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .cta-banner h2 { font-size: 2.2rem; margin-bottom: 12px; }
+        .cta-banner p { color: var(--brown-mid-solid); font-size: 1.05rem; max-width: 480px; margin: 0 auto 24px; }
+        .cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+        .cta-mascot { font-size: 2.4rem; margin-bottom: 8px; display: block; }
+
+        /* ---------- Footer ---------- */
+        .puddle-footer {
+            text-align: center;
+            color: var(--brown-soft);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-top: 10px;
+        }
+        .puddle-footer .brand-mini { font-family: 'Baloo 2', sans-serif; font-weight: 800; color: var(--brown); }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 900px) {
+            .landing-hero { grid-template-columns: 1fr; padding: 44px 32px 0; text-align: center; }
+            .hero-content { padding-bottom: 24px; }
+            .hero-content h1 { max-width: none; margin-inline: auto; }
+            .hero-content > p { margin-inline: auto; }
+            .hero-actions, .hero-proof { justify-content: center; }
+            .hero-mascot-box { padding-bottom: 0; }
+            .feature-grid, .steps { grid-template-columns: repeat(2, 1fr); }
+            .float-decor.cloud-1, .float-decor.leaf-1 { display: none; }
+        }
+        @media (max-width: 560px) {
+            .feature-grid, .steps { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.3rem; }
+            .section-head h2 { font-size: 1.7rem; }
+            .nav-links { gap: 2px; }
+            .nav-links a { padding: 8px 13px; font-size: 0.86rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="puddle-page">
+
+    <nav class="puddle-navbar">
+        <a href="/" class="brand">
+            <span class="brand-mark">🦫</span>
+            Puddle
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/login">Login</a>
+            <a href="/signup" class="cta-link">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="landing-hero">
+        <span class="float-decor cloud-1">☁️</span>
+        <span class="float-decor leaf-1">🍃</span>
+        <span class="float-decor leaf-2">🍂</span>
+        <span class="float-decor sparkle-1">✨</span>
+
+        <div class="hero-content reveal d1">
+            <span class="hero-badge">🌿 Cozy language learning</span>
+            <h1>Learn languages the <span class="accent">cozy</span> way.</h1>
+            <p>Daily lessons, cute streaks, personal notes, and interest-based learning with your capybara buddy.</p>
+
+            <div class="hero-actions">
+                <a href="/signup" class="main-btn">Get Started →</a>
+                <a href="/login" class="ghost-btn">Login</a>
+            </div>
+
+            <div class="hero-proof">
+                <div class="proof-item">
+                    <strong>5 min</strong>
+                    <span>A day is enough</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <strong>100%</strong>
+                    <span>Cozy &amp; pressure-free</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-item">
+                    <strong>1</strong>
+                    <span>Capybara buddy</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-mascot-box reveal d2">
+            <div class="speech-bubble">Ready to learn together? 🌱</div>
+            <div class="mascot-stage">
+                <img src="{{ url_for('static', filename='images/capybara-welcome.png') }}" class="hero-mascot" alt="Puddle capybara mascot">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="block">
+        <div class="section-head reveal d1">
+            <span class="eyebrow">Why Puddle</span>
+            <h2>Everything you need to stay curious</h2>
+            <p>Small, friendly tools that make a new language feel like a daily treat instead of a chore.</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card reveal d1" style="--accent: var(--sage);">
+                <div class="feature-icon">📚</div>
+                <h3>Daily lessons</h3>
+                <p>Bite-sized lessons designed to fit into five cozy minutes a day.</p>
+            </div>
+            <div class="feature-card reveal d2" style="--accent: var(--peach);">
+                <div class="feature-icon">🔥</div>
+                <h3>Cute streaks</h3>
+                <p>Build a streak, earn XP, and watch your capybara cheer you on.</p>
+            </div>
+            <div class="feature-card reveal d3" style="--accent: var(--pink);">
+                <div class="feature-icon">📝</div>
+                <h3>Personal notes</h3>
+                <p>Save words, phrases, and little reminders in your own notebook.</p>
+            </div>
+            <div class="feature-card reveal d4" style="--accent: var(--gold);">
+                <div class="feature-icon">🎯</div>
+                <h3>Interest-based</h3>
+                <p>Learn through topics you actually love, from food to travel.</p>
+            </div>
+            <div class="feature-card reveal d5" style="--accent: var(--sky);">
+                <div class="feature-icon">🃏</div>
+                <h3>Flashcards</h3>
+                <p>Lock in vocabulary with quick, friendly recall practice.</p>
+            </div>
+            <div class="feature-card reveal d6" style="--accent: var(--pink-deep);">
+                <div class="feature-icon">🏆</div>
+                <h3>Achievements</h3>
+                <p>Collect sticker-style badges as you hit cozy little milestones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="block">
+        <div class="section-head reveal d1">
+            <span class="eyebrow">How it works</span>
+            <h2>Get started in three little steps</h2>
+            <p>No pressure, no overwhelm — just you, your capybara, and a few minutes a day.</p>
+        </div>
+
+        <div class="steps">
+            <div class="step reveal d1">
+                <div class="step-num"></div>
+                <h3>Create your account</h3>
+                <p>Sign up in seconds and pick the topics that spark your curiosity.</p>
+            </div>
+            <div class="step reveal d2">
+                <div class="step-num"></div>
+                <h3>Learn a little daily</h3>
+                <p>Complete cozy lessons, take notes, and grow your streak each day.</p>
+            </div>
+            <div class="step reveal d3">
+                <div class="step-num"></div>
+                <h3>Watch yourself grow</h3>
+                <p>Track XP, level up, and celebrate milestones with your buddy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="block">
+        <div class="cta-banner reveal d1">
+            <span class="cta-mascot">🦫</span>
+            <h2>Your capybara buddy is waiting</h2>
+            <p>Join Puddle today and turn language learning into the coziest part of your day.</p>
+            <div class="cta-actions">
+                <a href="/signup" class="main-btn">Get Started Free →</a>
+                <a href="/login" class="ghost-btn">I already have an account</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="puddle-footer">
+        <p><span class="brand-mini">🦫 Puddle</span> — learn languages the cozy way.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

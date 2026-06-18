@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Quiz Result | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin:0;
+            font-family:"Nunito", sans-serif;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:
+                radial-gradient(circle at top left,#e3eed8 0%,transparent 30%),
+                radial-gradient(circle at top right,#f6e2d2 0%,transparent 35%),
+                #f4ede1;
+            color:#36281b;
+        }
+
+        .result-card {
+            width:620px;
+            max-width:92%;
+            background:#fffdf9;
+            border-radius:34px;
+            padding:42px;
+            text-align:center;
+            box-shadow:0 24px 50px -24px rgba(80,60,40,.35);
+            border:1px solid #e2d3ba;
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:46px;
+            margin-bottom:14px;
+        }
+
+        p {
+            color:#7a6a55;
+            font-weight:800;
+            font-size:18px;
+            line-height:1.6;
+        }
+
+        .answer-box {
+            background:#fff8ee;
+            border:1px solid #e2d3ba;
+            border-radius:22px;
+            padding:20px;
+            margin:24px 0;
+        }
+
+        .xp {
+            display:inline-block;
+            background:#d6e2c8;
+            color:#5f8a5b;
+            padding:10px 18px;
+            border-radius:999px;
+            font-weight:900;
+            margin-top:10px;
+        }
+
+        a {
+            display:inline-block;
+            margin-top:24px;
+            text-decoration:none;
+            background:#d28a5d;
+            color:white;
+            padding:13px 24px;
+            border-radius:999px;
+            font-weight:900;
+        }
+    </style>
+</head>
+<body>
+
+<div class="result-card">
+
+    {% if already_completed %}
+        <h1>Already Completed 🌿</h1>
+        <p>You have already completed today’s quiz. Come back tomorrow for a new one.</p>
+
+    {% elif is_correct %}
+        <h1>Correct 🎉</h1>
+        <p>Nice work! You answered today’s quiz correctly.</p>
+
+        <div class="answer-box">
+            <p><strong>Your answer:</strong> {{ selected_answer }}</p>
+            <p><strong>Correct answer:</strong> {{ correct_answer }}</p>
+        </div>
+
+        <div class="xp">+{{ xp_awarded }} XP earned</div>
+
+    {% else %}
+        <h1>Not Quite 🦫</h1>
+        <p>Good try. Review the correct answer and try again tomorrow.</p>
+
+        <div class="answer-box">
+            <p><strong>Your answer:</strong> {{ selected_answer }}</p>
+            <p><strong>Correct answer:</strong> {{ correct_answer }}</p>
+        </div>
+    {% endif %}
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

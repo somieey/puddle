@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Note | Puddle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            font-family:"Nunito", sans-serif;
+            min-height:100vh;
+            background:
+                radial-gradient(circle at top left, #e3eed8 0%, transparent 30%),
+                radial-gradient(circle at top right, #f6e2d2 0%, transparent 35%),
+                var(--cream);
+            color:var(--brown);
+        }
+
+        .page {
+            max-width:900px;
+            margin:0 auto;
+            padding:32px 22px 70px;
+        }
+
+        .top-nav {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:28px;
+        }
+
+        .logo {
+            font-family:"Baloo 2";
+            font-size:34px;
+            font-weight:800;
+        }
+
+        .back-link {
+            text-decoration:none;
+            color:var(--brown);
+            font-weight:900;
+            background:rgba(255,255,255,.78);
+            padding:11px 18px;
+            border-radius:999px;
+            box-shadow:0 10px 26px -16px rgba(80,60,40,.35);
+        }
+
+        .form-card {
+            background:rgba(255,255,255,.76);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:42px;
+            box-shadow:var(--shadow);
+        }
+
+        .badge {
+            display:inline-block;
+            background:var(--sage-soft);
+            color:var(--sage);
+            padding:8px 16px;
+            border-radius:999px;
+            font-weight:900;
+            margin-bottom:16px;
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:46px;
+            margin-bottom:10px;
+        }
+
+        .subtitle {
+            color:var(--brown-soft);
+            font-size:18px;
+            font-weight:700;
+            margin-bottom:28px;
+        }
+
+        form {
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        textarea {
+            width:100%;
+            border:none;
+            border-radius:18px;
+            background:white;
+            font-family:inherit;
+            font-size:16px;
+            padding:16px;
+            resize:vertical;
+            min-height:260px;
+            box-shadow:0 0 0 1px rgba(80,60,40,.12);
+        }
+
+        textarea:focus {
+            outline:none;
+            box-shadow:0 0 0 2px rgba(95,138,91,.25);
+        }
+
+        .save-btn {
+            align-self:flex-start;
+            border:none;
+            background:var(--peach);
+            color:white;
+            padding:14px 26px;
+            border-radius:999px;
+            font-weight:900;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        .save-btn:hover {
+            transform:translateY(-2px);
+            opacity:.95;
+        }
+
+        @media(max-width:700px) {
+            .form-card { padding:28px; }
+            h1 { font-size:38px; }
+        }
+
+        input,
+textarea {
+    transition: .2s ease;
+}
+
+input:hover,
+textarea:hover {
+    background: #fffaf2;
+    border-color: #b06334 !important;
+    box-shadow: 0 0 0 3px rgba(176,99,52,.16);
+}
+
+input:focus,
+textarea:focus {
+    background: #fffdf9;
+    border-color: #5f8a5b !important;
+    box-shadow: 0 0 0 5px rgba(95,138,91,.22);
+    outline: none;
+}
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top-nav">
+        <div class="logo">🦫 Puddle</div>
+        <a href="/notes" class="back-link">← Notes</a>
+    </div>
+
+    <section class="form-card">
+        <span class="badge">✏️ Edit Note</span>
+        <h1>Refine your note.</h1>
+        <p class="subtitle">Update your saved thought, reminder, or explanation.</p>
+
+        <form method="POST">
+            <textarea name="note" required>{{ note.note }}</textarea>
+
+            <button type="submit" class="save-btn">Save Changes →</button>
+        </form>
+    </section>
+
+</div>
+
+</body>
+</html>

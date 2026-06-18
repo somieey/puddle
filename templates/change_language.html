@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Language | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:"Nunito",sans-serif;
+            background:var(--cream);
+            color:var(--brown);
+            min-height:100vh;
+            padding:50px 20px;
+        }
+
+        .container{
+            max-width:900px;
+            margin:auto;
+        }
+
+        .header{
+            text-align:center;
+            margin-bottom:40px;
+        }
+
+        .header h1{
+            font-family:"Baloo 2";
+            font-size:56px;
+            margin-bottom:10px;
+        }
+
+        .header p{
+            color:var(--brown-soft);
+            font-size:18px;
+        }
+
+        .language-grid{
+            display:grid;
+            gap:20px;
+        }
+
+        .language-card{
+            background:rgba(255,255,255,.8);
+            border:1px solid var(--line);
+            border-radius:28px;
+            padding:28px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:var(--shadow);
+            transition:.25s;
+        }
+
+        .language-card:hover{
+            transform:translateY(-3px);
+        }
+
+        .language-left{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .language-icon{
+            font-size:42px;
+        }
+
+        .language-info h2{
+            font-size:28px;
+            margin-bottom:4px;
+        }
+
+        .language-info p{
+            color:var(--brown-soft);
+        }
+
+        .current-badge{
+            display:inline-block;
+            margin-top:8px;
+            background:#dff0d5;
+            color:#3d6c3d;
+            padding:6px 12px;
+            border-radius:999px;
+            font-size:13px;
+            font-weight:800;
+        }
+
+        .language-btn{
+            border:none;
+            border-radius:16px;
+            padding:14px 22px;
+            cursor:pointer;
+            font-weight:800;
+            font-size:15px;
+        }
+
+        .active-btn{
+            background:var(--sage);
+            color:white;
+        }
+
+        .disabled-btn{
+            background:#e7dfd3;
+            color:#988a75;
+            cursor:not-allowed;
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:35px;
+        }
+
+        .back-btn{
+            text-decoration:none;
+            background:var(--peach);
+            color:white;
+            padding:14px 24px;
+            border-radius:999px;
+            font-weight:800;
+            display:inline-block;
+        }
+
+        @media(max-width:700px){
+
+            .language-card{
+                flex-direction:column;
+                align-items:flex-start;
+                gap:20px;
+            }
+
+            .header h1{
+                font-size:42px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🌍 Choose Your Language</h1>
+        <p>Puddle will use this language for lessons, vocabulary and practice.</p>
+    </div>
+
+    <form method="POST">
+
+        <div class="language-grid">
+
+            <!-- Marathi -->
+
+            <div class="language-card">
+
+                <div class="language-left">
+
+                    <div class="language-icon">🦫</div>
+
+                    <div class="language-info">
+
+                        <h2>Marathi</h2>
+
+                        <p>Learn everyday Marathi through lessons, flashcards and practice.</p>
+
+                        {% if user.language|default("marathi") == "marathi" %}
+                            <div class="current-badge">
+                                Currently Learning
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    name="language"
+                    value="marathi"
+                    class="language-btn active-btn"
+                >
+                    Select Marathi
+                </button>
+
+            </div>
+
+            <!-- Hindi -->
+
+            <div class="language-card">
+
+                <div class="language-left">
+
+                    <div class="language-icon">🚧</div>
+
+                    <div class="language-info">
+
+                        <h2>Hindi</h2>
+
+                        <p>Coming soon. Learn conversational Hindi with Puddle.</p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="language-btn disabled-btn"
+                >
+                    Coming Soon
+                </button>
+
+            </div>
+
+            <!-- Spanish -->
+
+            <div class="language-card">
+
+                <div class="language-left">
+
+                    <div class="language-icon">🚧</div>
+
+                    <div class="language-info">
+
+                        <h2>Spanish</h2>
+
+                        <p>Coming soon. Start speaking practical Spanish.</p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="language-btn disabled-btn"
+                >
+                    Coming Soon
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <div class="footer">
+        <a href="/profile" class="back-btn">
+            ← Back to Profile
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

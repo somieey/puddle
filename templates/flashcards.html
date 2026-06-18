@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flashcards | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --peach-soft:#f0ddc8;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body {
+            font-family:"Nunito", sans-serif;
+            min-height:100vh;
+            background:
+                radial-gradient(circle at top left, #e3eed8 0%, transparent 30%),
+                radial-gradient(circle at top right, #f6e2d2 0%, transparent 35%),
+                var(--cream);
+            color:var(--brown);
+        }
+
+        .page {
+            max-width:1000px;
+            margin:0 auto;
+            padding:32px 22px 70px;
+        }
+
+        .top-nav {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:28px;
+        }
+
+        .logo {
+            font-family:"Baloo 2";
+            font-size:34px;
+            font-weight:800;
+        }
+
+        .back-link {
+            text-decoration:none;
+            color:var(--brown);
+            font-weight:900;
+            background:rgba(255,255,255,.78);
+            padding:11px 18px;
+            border-radius:999px;
+            box-shadow:0 10px 26px -16px rgba(80,60,40,.35);
+        }
+
+        .hero {
+            display:grid;
+            grid-template-columns:1.3fr .7fr;
+            gap:28px;
+            align-items:center;
+            background:linear-gradient(135deg,#fffdf9,#f0ddc8);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:42px;
+            box-shadow:var(--shadow);
+            margin-bottom:30px;
+        }
+
+        .badge {
+            display:inline-block;
+            background:var(--sage-soft);
+            color:var(--sage);
+            padding:8px 16px;
+            border-radius:999px;
+            font-weight:900;
+            margin-bottom:16px;
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:48px;
+            line-height:1.05;
+            margin-bottom:12px;
+        }
+
+        .hero p {
+            color:var(--brown-soft);
+            font-size:18px;
+            line-height:1.6;
+        }
+
+        .mascot-box {
+            text-align:center;
+        }
+
+        .mascot-box img {
+            width:210px;
+            max-width:100%;
+            animation:float 3s ease-in-out infinite;
+            filter:drop-shadow(0 18px 20px rgba(80,55,35,.20));
+        }
+
+        @keyframes float {
+            0%,100% { transform:translateY(0); }
+            50% { transform:translateY(-10px); }
+        }
+
+        .flashcard-area {
+            background:rgba(255,255,255,.74);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:36px;
+            box-shadow:var(--shadow);
+            text-align:center;
+        }
+
+        .counter {
+            display:inline-block;
+            background:var(--sage-soft);
+            color:var(--sage);
+            font-weight:900;
+            padding:8px 16px;
+            border-radius:999px;
+            margin-bottom:24px;
+        }
+
+        .flashcard-scene {
+            perspective: 1000px;
+            max-width:560px;
+            min-height:330px;
+            margin:0 auto;
+        }
+
+        .flashcard {
+            width:100%;
+            min-height:330px;
+            position:relative;
+            transform-style:preserve-3d;
+            transition:transform .65s ease;
+        }
+
+        .flashcard.flipped {
+            transform:rotateY(180deg);
+        }
+
+        .card-face {
+            position:absolute;
+            inset:0;
+            background:linear-gradient(135deg,#fffdf9,#fff4e8);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:42px 32px;
+            box-shadow:0 20px 45px -28px rgba(80,60,40,.45);
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            backface-visibility:hidden;
+        }
+
+        .card-back {
+            transform:rotateY(180deg);
+            background:linear-gradient(135deg,#fffdf9,#eef5e8);
+        }
+
+        .card-label {
+            position:absolute;
+            top:20px;
+            left:24px;
+            font-size:13px;
+            font-weight:900;
+            color:var(--brown-soft);
+            text-transform:uppercase;
+            letter-spacing:.08em;
+        }
+
+        #word {
+            font-family:"Baloo 2";
+            font-size:62px;
+            line-height:1.05;
+            margin-bottom:12px;
+        }
+
+        .front-hint {
+            color:var(--brown-soft);
+            font-weight:800;
+            margin-top:8px;
+        }
+
+        .translation-label {
+            font-weight:900;
+            color:var(--sage);
+            font-size:15px;
+            text-transform:uppercase;
+            letter-spacing:.08em;
+            margin-bottom:10px;
+        }
+
+        #meaning {
+            font-family:"Baloo 2";
+            font-size:44px;
+            line-height:1.1;
+            color:var(--brown);
+            margin-bottom:8px;
+        }
+
+        .translation-text {
+            color:var(--brown-soft);
+            font-weight:800;
+            font-size:18px;
+        }
+
+        .listen-btn {
+            border:none;
+            background:#efe7d9;
+            color:#6b4f3a;
+            padding:10px 18px;
+            border-radius:999px;
+            font-weight:900;
+            cursor:pointer;
+            margin-top:22px;
+        }
+
+        .listen-btn:hover {
+            background:var(--sage-soft);
+            color:var(--sage);
+        }
+
+        .button-row {
+            display:flex;
+            justify-content:center;
+            gap:14px;
+            flex-wrap:wrap;
+            margin-top:26px;
+        }
+
+        .main-btn {
+            border:none;
+            background:var(--peach);
+            color:white;
+            padding:14px 26px;
+            border-radius:999px;
+            font-weight:900;
+            cursor:pointer;
+            font-size:16px;
+            box-shadow:0 14px 28px -18px rgba(176,99,52,.85);
+        }
+
+        .secondary-btn {
+            border:none;
+            background:var(--sage);
+            color:white;
+            padding:14px 26px;
+            border-radius:999px;
+            font-weight:900;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .main-btn:hover,
+        .secondary-btn:hover {
+            transform:translateY(-2px);
+            opacity:.95;
+        }
+
+        .hint {
+            margin-top:18px;
+            color:var(--brown-soft);
+            font-weight:700;
+        }
+
+        .empty-state {
+            background:rgba(255,255,255,.75);
+            border:1px dashed var(--line);
+            border-radius:30px;
+            padding:42px;
+            text-align:center;
+            box-shadow:0 14px 34px -24px rgba(80,60,40,.35);
+        }
+
+        .empty-state h2 {
+            font-family:"Baloo 2";
+            font-size:34px;
+            margin-bottom:8px;
+        }
+
+        .empty-state p {
+            color:var(--brown-soft);
+            font-weight:800;
+            margin-bottom:20px;
+        }
+
+        .primary-link {
+            text-decoration:none;
+            background:var(--peach);
+            color:white;
+            padding:12px 20px;
+            border-radius:999px;
+            font-weight:900;
+            display:inline-block;
+        }
+
+        @media(max-width:760px) {
+            .hero {
+                grid-template-columns:1fr;
+                text-align:center;
+            }
+
+            h1 {
+                font-size:38px;
+            }
+
+            .top-nav {
+                flex-direction:column;
+                gap:14px;
+            }
+
+            #word {
+                font-size:44px;
+            }
+
+            #meaning {
+                font-size:34px;
+            }
+
+            .flashcard-area {
+                padding:24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top-nav">
+        <div class="logo">🦫 Puddle</div>
+        <a href="/dashboard" class="back-link">← Dashboard</a>
+    </div>
+
+    <section class="hero">
+        <div>
+            <span class="badge">🃏 Flashcards</span>
+            <h1>Review with cards.</h1>
+            <p>Flip through the words you have learned and test your memory one card at a time.</p>
+        </div>
+
+        <div class="mascot-box">
+            <img src="{{ url_for('static', filename='images/capybara-welcome.png') }}" alt="Capybara mascot">
+        </div>
+    </section>
+
+    {% if flashcards %}
+
+        <section class="flashcard-area">
+
+            <div id="card-counter" class="counter">
+                1 / {{ flashcards|length }}
+            </div>
+
+            <div class="flashcard-scene">
+                <div id="flashcard" class="flashcard">
+
+                    <div class="card-face card-front">
+                        <div class="card-label">Word</div>
+
+                        <h2 id="word">
+                            {{ flashcards[0].word }}
+                        </h2>
+
+                        <p class="front-hint">Try to remember the meaning first.</p>
+
+                        <button
+                            type="button"
+                            class="listen-btn"
+                            onclick="speakText(document.getElementById('word').innerText)"
+                        >
+                            🔊 Listen
+                        </button>
+                    </div>
+
+                    <div class="card-face card-back">
+                        <div class="card-label">Translation</div>
+
+                        <p class="translation-label">Translation</p>
+
+                        <h2 id="meaning">
+                            {{ flashcards[0].meaning }}
+                        </h2>
+
+                        <p class="translation-text">
+                            This is the meaning of {{ flashcards[0].word }}.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button class="secondary-btn" onclick="flipCard()">
+                    Flip Card
+                </button>
+
+                <button class="main-btn" onclick="nextCard()">
+                    Next Card →
+                </button>
+            </div>
+
+            <p class="hint">Tip: Guess before you flip. That helps memory.</p>
+
+        </section>
+
+    {% else %}
+
+        <div class="empty-state">
+            <h2>No flashcards yet 🃏</h2>
+            <p>Complete lessons first and your learned words will appear here.</p>
+            <a href="/dashboard" class="primary-link">Start Learning →</a>
+        </div>
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='js/lesson.js') }}"></script>
+
+<script>
+const flashcards = JSON.parse('{{ flashcards|tojson|safe }}');
+
+let currentCard = 0;
+let isFlipped = false;
+
+function flipCard() {
+    const card = document.getElementById("flashcard");
+
+    isFlipped = !isFlipped;
+
+    if (isFlipped) {
+        card.classList.add("flipped");
+    } else {
+        card.classList.remove("flipped");
+    }
+}
+
+function nextCard() {
+    const card = document.getElementById("flashcard");
+
+    currentCard++;
+
+    if (currentCard >= flashcards.length) {
+        currentCard = 0;
+    }
+
+    card.classList.remove("flipped");
+    isFlipped = false;
+
+    setTimeout(function() {
+        document.getElementById("word").innerText =
+            flashcards[currentCard].word;
+
+        document.getElementById("meaning").innerText =
+            flashcards[currentCard].meaning;
+
+        document.querySelector(".translation-text").innerText =
+            "This is the meaning of " + flashcards[currentCard].word + ".";
+
+        document.getElementById("card-counter").innerText =
+            (currentCard + 1) + " / " + flashcards.length;
+    }, 200);
+}
+</script>
+
+</body>
+</html>

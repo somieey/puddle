@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff7e8;
+    color: #3b2f2f;
+}
+
+.navbar {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #3b2f2f;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background: #f28c5b;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.btn.secondary {
+    background: #8fcf9f;
+}
+input,
+textarea {
+    color: #36281b;
+    caret-color: #36281b;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9b8d7c;
+}

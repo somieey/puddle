@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ lesson.title }} | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #f4ede1;
+            --cream-deep: #e9dcc6;
+            --card: #fffdf9;
+            --brown: #36281b;
+            --brown-soft: #7a6a55;
+            --sage: #5f8a5b;
+            --sage-soft: #d6e2c8;
+            --peach: #d28a5d;
+            --peach-soft: #f0ddc8;
+            --pink-soft: #f1dce0;
+            --gold-soft: #f0e3b9;
+            --line: #e2d3ba;
+            --shadow: 0 24px 50px -24px rgba(80,60,40,.35);
+            --shadow-sm: 0 10px 26px -16px rgba(80,60,40,.28);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Nunito", sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, rgba(214,226,200,.9) 0%, transparent 30%),
+                radial-gradient(circle at top right, rgba(240,221,200,.95) 0%, transparent 34%),
+                var(--cream);
+            color: var(--brown);
+        }
+
+        .lesson-page {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 30px 22px 64px;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 26px;
+        }
+
+        .logo {
+            font-family: "Baloo 2";
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--brown);
+            font-weight: 900;
+            background: rgba(255,255,255,.76);
+            padding: 11px 18px;
+            border-radius: 999px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .lesson-shell {
+            background: rgba(255,255,255,.74);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--line);
+            border-radius: 36px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .lesson-header {
+            position: relative;
+            padding: 34px 42px;
+            background:
+                linear-gradient(135deg, rgba(255,253,249,.98), rgba(240,221,200,.9));
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .lesson-header h1 {
+            font-family: "Baloo 2";
+            font-size: 42px;
+            line-height: 1.05;
+        }
+
+        .step-pill {
+            display: inline-block;
+            margin-bottom: 12px;
+            background: var(--sage-soft);
+            color: var(--sage);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-weight: 900;
+            font-size: 14px;
+        }
+
+        .mascot-small {
+            width: 145px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 16px 18px rgba(80,60,40,.18));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .lesson-content {
+            padding: 42px;
+        }
+
+        .lesson-step {
+            display: none;
+            min-height: 390px;
+        }
+
+        .step-card {
+            background: var(--card);
+            border: 1px solid rgba(226,211,186,.75);
+            border-radius: 30px;
+            padding: 34px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .step-card h2 {
+            font-family: "Baloo 2";
+            font-size: 34px;
+            margin-bottom: 14px;
+        }
+
+        .step-subtext {
+            color: var(--brown-soft);
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .sentence-box {
+            background: linear-gradient(135deg, #fffaf4, #f7ecd9);
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            padding: 28px;
+            margin: 22px 0;
+        }
+
+        .sentence {
+            font-size: 42px;
+            font-family: "Baloo 2";
+            line-height: 1.1;
+        }
+
+        .audio-row {
+            margin-top: 18px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .audio-chip {
+            border: none;
+            background: #efe7d9;
+            color: #6b4f3a;
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 1px rgba(80,60,40,.08);
+        }
+
+        .audio-chip:hover {
+            background: var(--sage-soft);
+            color: var(--sage);
+        }
+
+        .translation {
+            margin-top: 18px;
+            font-size: 22px;
+            color: var(--brown-soft);
+            font-weight: 800;
+            background: #f8f1e6;
+            padding: 16px 20px;
+            border-radius: 18px;
+        }
+
+        .action-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .btn {
+            border: none;
+            background: var(--peach);
+            color: white;
+            padding: 13px 24px;
+            border-radius: 999px;
+            font-weight: 900;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            box-shadow: 0 12px 24px -14px rgba(176,99,52,.8);
+        }
+
+        .btn:hover {
+            opacity: .94;
+            transform: translateY(-1px);
+        }
+
+        .btn.secondary {
+            background: var(--sage);
+        }
+
+        .btn.soft {
+            background: var(--sage-soft);
+            color: var(--sage);
+            box-shadow: none;
+        }
+
+        .match-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+            margin-top: 22px;
+        }
+
+        .match-column {
+            background: #fffaf4;
+            padding: 22px;
+            border-radius: 24px;
+            border: 1px solid var(--line);
+        }
+
+        .match-column h3 {
+            margin-bottom: 16px;
+            font-family: "Baloo 2";
+            font-size: 24px;
+        }
+
+        .word-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .match-btn {
+            width: 100%;
+            border: 2px solid transparent;
+            background: white;
+            padding: 14px 16px;
+            border-radius: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(80,60,40,.08);
+            color: var(--brown);
+        }
+
+        .word-audio {
+            border: none;
+            background: #efe7d9;
+            color: var(--brown);
+            border-radius: 14px;
+            width: 46px;
+            height: 46px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        .word-audio:hover {
+            background: var(--sage-soft);
+            color: var(--sage);
+        }
+
+        .meaning-btn {
+            margin-bottom: 12px;
+        }
+
+        .practice-options {
+            margin-top: 20px;
+        }
+
+        .practice-options label {
+            display: block;
+            background: #fffaf4;
+            border: 1px solid var(--line);
+            padding: 15px 18px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        .practice-options input {
+            margin-right: 8px;
+        }
+
+        #blank-result,
+        #match-result {
+            margin-top: 16px;
+            font-weight: 900;
+            color: var(--sage);
+        }
+
+        .note-box {
+            background: #fffaf4;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 24px;
+            line-height: 1.7;
+            color: var(--brown-soft);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .summary-list {
+            list-style: none;
+            margin-top: 18px;
+        }
+
+        .summary-list li {
+            background: #fffaf4;
+            border: 1px solid var(--line);
+            padding: 13px 18px;
+            border-radius: 16px;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 620px;
+            padding: 16px;
+            border: none;
+            border-radius: 18px;
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+            margin-top: 16px;
+            background: white;
+        }
+
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(95,138,91,.25);
+        }
+
+        .complete-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-top: 18px;
+        }
+
+        .saved-notes {
+            margin-top: 30px;
+            background: rgba(255,255,255,.64);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: 26px;
+        }
+
+        .saved-notes h3 {
+            margin-bottom: 14px;
+            font-family: "Baloo 2";
+            font-size: 26px;
+        }
+
+        .saved-notes ul {
+            list-style: none;
+        }
+
+        .saved-notes li {
+            background: #fffaf4;
+            border: 1px solid var(--line);
+            padding: 14px 18px;
+            border-radius: 16px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        @media(max-width: 760px) {
+            .lesson-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .lesson-content {
+                padding: 24px;
+            }
+
+            .match-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sentence {
+                font-size: 32px;
+            }
+
+            .step-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="lesson-page">
+
+    <div class="top-nav">
+        <div class="logo">🦫 Puddle</div>
+        <a href="/dashboard" class="back-link">← Dashboard</a>
+    </div>
+
+    <div class="lesson-shell">
+
+        <div class="lesson-header">
+            <div>
+                <span class="step-pill">
+                    Step <span id="step-count">1</span> of 5
+                </span>
+
+                <h1>{{ lesson.title }}</h1>
+            </div>
+
+            <img
+                src="{{ url_for('static', filename='images/capybara-welcome.png') }}"
+                class="mascot-small"
+                alt="Capybara mascot"
+            >
+        </div>
+
+        <div class="lesson-content">
+
+            <section id="step-1" class="lesson-step">
+                <div class="step-card">
+                    <h2>Listen and Understand 🌱</h2>
+                    <p class="step-subtext">First, read the sentence. Then listen to how it sounds.</p>
+
+                    <div class="sentence-box">
+                        <p class="sentence">{{ lesson.sentence }}</p>
+
+                        <div class="audio-row">
+                            <button type="button" class="audio-chip" onclick="speakText('{{ lesson.sentence }}')">
+                                🔊 Play sentence
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn soft" onclick="revealTranslation()">
+                        Reveal Meaning
+                    </button>
+
+                    <p id="translation" class="translation" style="display:none;">
+                        {{ lesson.translation }}
+                    </p>
+
+                    <div class="action-row">
+                        <button type="button" class="btn" onclick="nextStep()">
+                            Next →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="step-2" class="lesson-step">
+                <div class="step-card">
+                    <h2>Match the Words 🎮</h2>
+                    <p class="step-subtext">Match each Marathi word with its meaning. Use the small sound buttons if needed.</p>
+
+                    <div class="match-layout">
+
+                        <div class="match-column">
+                            <h3>Words</h3>
+
+                            {% for item in lesson.words|shuffle %}
+                                <div class="word-row">
+                                    <button
+                                        type="button"
+                                        class="match-btn"
+                                        data-meaning="{{ item.meaning }}"
+                                        onclick="selectWord(this, '{{ item.word }}')"
+                                    >
+                                        {{ item.word }}
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="word-audio"
+                                        onclick="speakText('{{ item.word }}')"
+                                        title="Listen"
+                                    >
+                                        🔊
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="match-column">
+                            <h3>Meanings</h3>
+
+                            {% set shuffled_words = lesson.words | shuffle %}
+                            {% for item in shuffled_words %}
+                                <button
+                                    type="button"
+                                    class="match-btn meaning-btn"
+                                    onclick="selectMeaning(this, '{{ item.meaning }}')"
+                                >
+                                    {{ item.meaning }}
+                                </button>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    
+                    <p id="match-progress">Matched 0 / {{ lesson.words|length }}</p>
+                    <p id="match-result"></p>
+
+                    <button id="match-next-btn" class="btn" onclick="nextStep()" style="display:none;">
+                        Next →
+                    </button>
+                </div>
+            </section>
+
+            <section id="step-3" class="lesson-step">
+                <div class="step-card">
+                    <h2>Fill in the Blank ✍️</h2>
+                    <p class="step-subtext">Choose the correct word to complete the sentence.</p>
+
+                    <div class="sentence-box">
+                        <p class="sentence">{{ lesson.practice.question }}</p>
+                    </div>
+
+                    <div class="practice-options">
+                        {% for option in lesson.practice.options %}
+                            <label>
+                                <input type="radio" name="blank_answer" value="{{ option }}">
+                                {{ option }}
+                            </label>
+                        {% endfor %}
+                    </div>
+
+                    <button type="button" class="btn secondary" onclick="checkBlankAnswer('{{ lesson.practice.answer }}')">
+                        Check Answer
+                    </button>
+
+                    <p id="blank-result"></p>
+
+                    <button id="blank-next-btn" class="btn" onclick="nextStep()" style="display:none;">
+                        Next →
+                    </button>
+                </div>
+            </section>
+
+            <section id="step-4" class="lesson-step">
+                <div class="step-card">
+                    <h2>Quick Learning Note 📝</h2>
+
+                    <div class="note-box">
+                        {{ lesson.note }}
+                    </div>
+
+                    <div class="action-row">
+                        <button type="button" class="btn" onclick="nextStep()">
+                            Continue →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="step-5" class="lesson-step">
+                <div class="step-card">
+                    <h2>Lesson Complete 🎉</h2>
+
+                    <p class="step-subtext">You learned these words today:</p>
+
+                    <ul class="summary-list">
+                        {% for item in lesson.words %}
+                            <li>{{ item.word }} → {{ item.meaning }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <p class="translation">⭐ +10 XP after completing this lesson</p>
+
+                    <form method="POST" action="/save-note">
+                        <input type="hidden" name="lesson_id" value="{{ lesson.id }}">
+
+                        <textarea
+                            name="note"
+                            rows="4"
+                            placeholder="Write a personal note about this lesson..."
+                        ></textarea>
+
+                        <div class="complete-actions">
+                            <button type="submit" class="btn secondary">
+                                Save Note
+                            </button>
+
+                            <a href="/complete-lesson/{{ lesson.id }}" class="btn">
+                                Complete Lesson
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <div class="saved-notes">
+                <h3>Saved Notes</h3>
+
+                {% if user_notes %}
+                    <ul>
+                        {% for note in user_notes %}
+                            <li>{{ note.note }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No notes yet.</p>
+                {% endif %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/lesson.js') }}"></script>
+</body>
+</html>

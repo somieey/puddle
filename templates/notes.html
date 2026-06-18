@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Notes | Puddle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --peach-soft:#f0ddc8;
+            --pink-soft:#f1dce0;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            font-family:"Nunito", sans-serif;
+            min-height:100vh;
+            background:
+                radial-gradient(circle at top left, #e3eed8 0%, transparent 30%),
+                radial-gradient(circle at top right, #f6e2d2 0%, transparent 35%),
+                var(--cream);
+            color:var(--brown);
+        }
+
+        .page {
+            max-width:1100px;
+            margin:0 auto;
+            padding:32px 22px 70px;
+        }
+
+        .top-nav {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:28px;
+        }
+
+        .logo {
+            font-family:"Baloo 2";
+            font-size:34px;
+            font-weight:800;
+        }
+
+        .nav-actions {
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+
+        .nav-link, .primary-btn {
+            text-decoration:none;
+            font-weight:900;
+            border-radius:999px;
+            padding:11px 18px;
+            box-shadow:0 10px 26px -16px rgba(80,60,40,.35);
+        }
+
+        .nav-link {
+            color:var(--brown);
+            background:rgba(255,255,255,.78);
+        }
+
+        .primary-btn {
+            background:var(--peach);
+            color:white;
+        }
+
+        .hero {
+            display:grid;
+            grid-template-columns:1.3fr .7fr;
+            gap:28px;
+            align-items:center;
+            background:linear-gradient(135deg,#fffdf9,#f0ddc8);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:42px;
+            box-shadow:var(--shadow);
+            margin-bottom:30px;
+        }
+
+        .badge {
+            display:inline-block;
+            background:var(--sage-soft);
+            color:var(--sage);
+            padding:8px 16px;
+            border-radius:999px;
+            font-weight:900;
+            margin-bottom:16px;
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:48px;
+            line-height:1.05;
+            margin-bottom:12px;
+        }
+
+        .hero p {
+            color:var(--brown-soft);
+            font-size:18px;
+            line-height:1.6;
+        }
+
+        .mascot-box {
+            text-align:center;
+        }
+
+        .mascot-box img {
+            width:210px;
+            max-width:100%;
+            animation:float 3s ease-in-out infinite;
+            filter:drop-shadow(0 18px 20px rgba(80,55,35,.20));
+        }
+
+        @keyframes float {
+            0%,100% { transform:translateY(0); }
+            50% { transform:translateY(-10px); }
+        }
+
+        .notes-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:22px;
+        }
+
+        .note-card {
+            background:var(--card);
+            border:1px solid var(--line);
+            border-radius:28px;
+            padding:24px;
+            box-shadow:0 14px 34px -24px rgba(80,60,40,.35);
+            transition:.22s ease;
+        }
+
+        .note-card:hover {
+            transform:translateY(-5px);
+            box-shadow:0 24px 45px -24px rgba(80,60,40,.45);
+        }
+
+        .note-title {
+            font-family:"Baloo 2";
+            font-size:26px;
+            margin-bottom:10px;
+        }
+
+        .note-text {
+            color:var(--brown-soft);
+            line-height:1.7;
+            font-weight:700;
+            margin-bottom:20px;
+        }
+
+        .note-actions {
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+
+        .edit-btn, .delete-btn {
+            border:none;
+            border-radius:999px;
+            padding:10px 16px;
+            font-weight:900;
+            cursor:pointer;
+            text-decoration:none;
+            font-family:inherit;
+        }
+
+        .edit-btn {
+            background:var(--sage-soft);
+            color:var(--sage);
+        }
+
+        .delete-btn {
+            background:var(--pink-soft);
+            color:#a34d63;
+        }
+
+        .empty-state {
+            background:rgba(255,255,255,.75);
+            border:1px dashed var(--line);
+            border-radius:30px;
+            padding:42px;
+            text-align:center;
+            box-shadow:0 14px 34px -24px rgba(80,60,40,.35);
+        }
+
+        .empty-state h2 {
+            font-family:"Baloo 2";
+            font-size:34px;
+            margin-bottom:8px;
+        }
+
+        .empty-state p {
+            color:var(--brown-soft);
+            font-weight:700;
+            margin-bottom:20px;
+        }
+
+        .modal {
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(54,40,27,.48);
+            justify-content:center;
+            align-items:center;
+            z-index:100;
+            padding:20px;
+        }
+
+        .modal-box {
+            background:var(--card);
+            padding:30px;
+            border-radius:28px;
+            text-align:center;
+            max-width:380px;
+            box-shadow:var(--shadow);
+            border:1px solid var(--line);
+        }
+
+        .modal-box h3 {
+            font-family:"Baloo 2";
+            font-size:30px;
+            margin-bottom:8px;
+        }
+
+        .modal-box p {
+            color:var(--brown-soft);
+            font-weight:700;
+            margin-bottom:22px;
+        }
+
+        .modal-actions {
+            display:flex;
+            justify-content:center;
+            gap:12px;
+        }
+
+        .cancel-btn {
+            border:none;
+            background:var(--sage-soft);
+            color:var(--sage);
+            padding:11px 18px;
+            border-radius:999px;
+            font-weight:900;
+            cursor:pointer;
+        }
+
+        .confirm-delete-btn {
+            border:none;
+            background:#d46b75;
+            color:white;
+            padding:11px 18px;
+            border-radius:999px;
+            font-weight:900;
+            cursor:pointer;
+        }
+
+        @media(max-width:760px) {
+            .hero {
+                grid-template-columns:1fr;
+                text-align:center;
+            }
+
+            h1 { font-size:38px; }
+
+            .top-nav {
+                flex-direction:column;
+                gap:14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top-nav">
+        <div class="logo">🦫 Puddle</div>
+
+        <div class="nav-actions">
+            <a href="/dashboard" class="nav-link">← Dashboard</a>
+            <a href="/add-note" class="primary-btn">+ Add Note</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div>
+            <span class="badge">📝 Notes Workspace</span>
+            <h1>Your learning notes.</h1>
+            <p>Save words, meanings, reminders, and personal explanations in one cozy place.</p>
+        </div>
+
+        <div class="mascot-box">
+            <img src="{{ url_for('static', filename='images/capybara-welcome.png') }}" alt="Capybara mascot">
+        </div>
+    </section>
+
+    {% if user_notes %}
+        <section class="notes-grid">
+            {% for note in user_notes %}
+                <div class="note-card">
+                    <div class="note-title">
+                        {% if note.title %}
+                            {{ note.title }}
+                        {% elif note.lesson_id == "general" %}
+                            General Note
+                        {% else %}
+                            Lesson {{ note.lesson_id }}
+                        {% endif %}
+                    </div>
+
+                    <div class="note-text">
+                        {{ note.note }}
+                    </div>
+
+                    <div class="note-actions">
+                        <a href="/edit-note/{{ note._id }}" class="edit-btn">Edit</a>
+
+                        <button
+                            type="button"
+                            class="delete-btn"
+                            onclick="openDeleteModal('{{ note._id }}')"
+                        >
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% else %}
+        <div class="empty-state">
+            <h2>No notes yet 📝</h2>
+            <p>Start by adding a general note or saving one from a lesson.</p>
+            <a href="/add-note" class="primary-btn">Add Your First Note</a>
+        </div>
+    {% endif %}
+
+</div>
+
+<div id="deleteModal" class="modal">
+    <div class="modal-box">
+        <h3>Delete Note?</h3>
+        <p>This note will be removed permanently.</p>
+
+        <div class="modal-actions">
+            <button onclick="closeDeleteModal()" class="cancel-btn">Cancel</button>
+            <button id="deleteButton" onclick="confirmDelete()" class="confirm-delete-btn">Delete</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let noteToDelete = null;
+
+function openDeleteModal(noteId) {
+    noteToDelete = noteId;
+    document.getElementById("deleteModal").style.display = "flex";
+}
+
+function closeDeleteModal() {
+    document.getElementById("deleteModal").style.display = "none";
+}
+
+function confirmDelete() {
+    window.location.href = "/delete-note/" + noteToDelete;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1572 @@
+[
+    {
+        "id": 1,
+        "title": "Basic Greeting",
+        "sentence": "Namaskar, mi vidyarthi aahe.",
+        "translation": "Hello, I am a student.",
+        "words": [
+            {
+                "word": "namaskar",
+                "meaning": "hello"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            },
+            {
+                "word": "vidyarthi",
+                "meaning": "student"
+            },
+            {
+                "word": "aahe",
+                "meaning": "am / is / are"
+            }
+        ],
+        "practice": {
+            "question": "Namaskar, ___ vidyarthi aahe.",
+            "options": [
+                "mi",
+                "tu",
+                "to",
+                "ti"
+            ],
+            "answer": "mi"
+        },
+        "note": "'Mi' means I. 'Aahe' works like am/is/are depending on the sentence."
+    },
+    {
+        "id": 2,
+        "title": "Your Name",
+        "sentence": "Tujhe naav kay aahe?",
+        "translation": "What is your name?",
+        "words": [
+            {
+                "word": "tujhe",
+                "meaning": "your"
+            },
+            {
+                "word": "naav",
+                "meaning": "name"
+            },
+            {
+                "word": "kay",
+                "meaning": "what"
+            },
+            {
+                "word": "aahe",
+                "meaning": "is"
+            }
+        ],
+        "practice": {
+            "question": "Tujhe ___ kay aahe?",
+            "options": [
+                "naav",
+                "ghar",
+                "pustak",
+                "kaam"
+            ],
+            "answer": "naav"
+        },
+        "note": "Use this to ask someone's name informally."
+    },
+    {
+        "id": 3,
+        "title": "My Name",
+        "sentence": "Majhe naav Puddle aahe.",
+        "translation": "My name is Puddle.",
+        "words": [
+            {
+                "word": "majhe",
+                "meaning": "my"
+            },
+            {
+                "word": "naav",
+                "meaning": "name"
+            },
+            {
+                "word": "puddle",
+                "meaning": "Puddle"
+            },
+            {
+                "word": "aahe",
+                "meaning": "is"
+            }
+        ],
+        "practice": {
+            "question": "Majhe ___ Puddle aahe.",
+            "options": [
+                "naav",
+                "paani",
+                "shahar",
+                "mitra"
+            ],
+            "answer": "naav"
+        },
+        "note": "'Majhe naav...' means 'My name...'."
+    },
+    {
+        "id": 4,
+        "title": "How Are You",
+        "sentence": "Tu kasa ahes?",
+        "translation": "How are you?",
+        "words": [
+            {
+                "word": "tu",
+                "meaning": "you"
+            },
+            {
+                "word": "kasa",
+                "meaning": "how"
+            },
+            {
+                "word": "ahes",
+                "meaning": "are"
+            }
+        ],
+        "practice": {
+            "question": "Tu ___ ahes?",
+            "options": [
+                "kasa",
+                "kuthe",
+                "kon",
+                "kiti"
+            ],
+            "answer": "kasa"
+        },
+        "note": "'Kasa' is how. For feminine speech, people often say 'kashi'."
+    },
+    {
+        "id": 5,
+        "title": "I Am Fine",
+        "sentence": "Mi changla aahe.",
+        "translation": "I am fine.",
+        "words": [
+            {
+                "word": "mi",
+                "meaning": "I"
+            },
+            {
+                "word": "changla",
+                "meaning": "fine / good"
+            },
+            {
+                "word": "aahe",
+                "meaning": "am"
+            }
+        ],
+        "practice": {
+            "question": "Mi ___ aahe.",
+            "options": [
+                "changla",
+                "kuthe",
+                "kon",
+                "paani"
+            ],
+            "answer": "changla"
+        },
+        "note": "'Changla' means good/fine. Forms may change with gender/context."
+    },
+    {
+        "id": 6,
+        "title": "Polite Request",
+        "sentence": "Krupaya mala madat kara.",
+        "translation": "Please help me.",
+        "words": [
+            {
+                "word": "krupaya",
+                "meaning": "please"
+            },
+            {
+                "word": "mala",
+                "meaning": "me / to me"
+            },
+            {
+                "word": "madat",
+                "meaning": "help"
+            },
+            {
+                "word": "kara",
+                "meaning": "do"
+            }
+        ],
+        "practice": {
+            "question": "Krupaya mala ___ kara.",
+            "options": [
+                "madat",
+                "naav",
+                "bhat",
+                "vel"
+            ],
+            "answer": "madat"
+        },
+        "note": "'Madat kara' means 'help/do help'."
+    },
+    {
+        "id": 7,
+        "title": "Sorry",
+        "sentence": "Maaf kara, mi ushira alo.",
+        "translation": "Sorry, I came late.",
+        "words": [
+            {
+                "word": "maaf kara",
+                "meaning": "sorry / forgive me"
+            },
+            {
+                "word": "ushira",
+                "meaning": "late"
+            },
+            {
+                "word": "alo",
+                "meaning": "came"
+            }
+        ],
+        "practice": {
+            "question": "Maaf kara, mi ___ alo.",
+            "options": [
+                "ushira",
+                "lavkar",
+                "ghar",
+                "pustak"
+            ],
+            "answer": "ushira"
+        },
+        "note": "'Maaf kara' is a polite way to apologize."
+    },
+    {
+        "id": 8,
+        "title": "Yes and No",
+        "sentence": "Ho, mala samajla.",
+        "translation": "Yes, I understood.",
+        "words": [
+            {
+                "word": "ho",
+                "meaning": "yes"
+            },
+            {
+                "word": "mala",
+                "meaning": "to me / I"
+            },
+            {
+                "word": "samajla",
+                "meaning": "understood"
+            }
+        ],
+        "practice": {
+            "question": "___, mala samajla.",
+            "options": [
+                "Ho",
+                "Nahi",
+                "Kuthe",
+                "Kiti"
+            ],
+            "answer": "Ho"
+        },
+        "note": "'Ho' means yes. 'Nahi' means no."
+    },
+    {
+        "id": 9,
+        "title": "I Do Not Know",
+        "sentence": "Mala mahit nahi.",
+        "translation": "I do not know.",
+        "words": [
+            {
+                "word": "mala",
+                "meaning": "to me / I"
+            },
+            {
+                "word": "mahit",
+                "meaning": "known"
+            },
+            {
+                "word": "nahi",
+                "meaning": "not / no"
+            }
+        ],
+        "practice": {
+            "question": "Mala mahit ___.",
+            "options": [
+                "nahi",
+                "aahe",
+                "kasa",
+                "pahije"
+            ],
+            "answer": "nahi"
+        },
+        "note": "'Mala mahit nahi' is a very useful sentence meaning 'I don't know'."
+    },
+    {
+        "id": 10,
+        "title": "I Understand",
+        "sentence": "Mala samajta.",
+        "translation": "I understand.",
+        "words": [
+            {
+                "word": "mala",
+                "meaning": "to me / I"
+            },
+            {
+                "word": "samajta",
+                "meaning": "understand"
+            }
+        ],
+        "practice": {
+            "question": "Mala ___.",
+            "options": [
+                "samajta",
+                "paani",
+                "ghar",
+                "vel"
+            ],
+            "answer": "samajta"
+        },
+        "note": "'Samajta' means understand."
+    },
+    {
+        "id": 11,
+        "title": "Home",
+        "sentence": "Maze ghar ithe aahe.",
+        "translation": "My home is here.",
+        "words": [
+            {
+                "word": "maze",
+                "meaning": "my"
+            },
+            {
+                "word": "ghar",
+                "meaning": "home / house"
+            },
+            {
+                "word": "ithe",
+                "meaning": "here"
+            },
+            {
+                "word": "aahe",
+                "meaning": "is"
+            }
+        ],
+        "practice": {
+            "question": "Maze ghar ___ aahe.",
+            "options": [
+                "ithe",
+                "kuthe",
+                "kon",
+                "kiti"
+            ],
+            "answer": "ithe"
+        },
+        "note": "'Ithe' means here."
+    },
+    {
+        "id": 12,
+        "title": "Family",
+        "sentence": "Majhi aai ghari aahe.",
+        "translation": "My mother is at home.",
+        "words": [
+            {
+                "word": "majhi",
+                "meaning": "my"
+            },
+            {
+                "word": "aai",
+                "meaning": "mother"
+            },
+            {
+                "word": "ghari",
+                "meaning": "at home"
+            }
+        ],
+        "practice": {
+            "question": "Majhi ___ ghari aahe.",
+            "options": [
+                "aai",
+                "shala",
+                "pustak",
+                "bazar"
+            ],
+            "answer": "aai"
+        },
+        "note": "'Aai' means mother. 'Ghari' means at home."
+    },
+    {
+        "id": 13,
+        "title": "Father Works",
+        "sentence": "Majhe baba kaam kartat.",
+        "translation": "My father works.",
+        "words": [
+            {
+                "word": "baba",
+                "meaning": "father"
+            },
+            {
+                "word": "kaam",
+                "meaning": "work"
+            },
+            {
+                "word": "kartat",
+                "meaning": "does / works"
+            }
+        ],
+        "practice": {
+            "question": "Majhe baba ___ kartat.",
+            "options": [
+                "kaam",
+                "jevan",
+                "paani",
+                "naav"
+            ],
+            "answer": "kaam"
+        },
+        "note": "'Kaam kartat' means works/does work."
+    },
+    {
+        "id": 14,
+        "title": "Friend",
+        "sentence": "Maza mitra changla aahe.",
+        "translation": "My friend is good.",
+        "words": [
+            {
+                "word": "mitra",
+                "meaning": "friend"
+            },
+            {
+                "word": "changla",
+                "meaning": "good"
+            },
+            {
+                "word": "maza",
+                "meaning": "my"
+            }
+        ],
+        "practice": {
+            "question": "Maza ___ changla aahe.",
+            "options": [
+                "mitra",
+                "paani",
+                "vel",
+                "bhat"
+            ],
+            "answer": "mitra"
+        },
+        "note": "'Mitra' means friend."
+    },
+    {
+        "id": 15,
+        "title": "School",
+        "sentence": "Mi shalet jato.",
+        "translation": "I go to school.",
+        "words": [
+            {
+                "word": "shalet",
+                "meaning": "to school"
+            },
+            {
+                "word": "jato",
+                "meaning": "go"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            }
+        ],
+        "practice": {
+            "question": "Mi shalet ___.",
+            "options": [
+                "jato",
+                "khato",
+                "pito",
+                "zopto"
+            ],
+            "answer": "jato"
+        },
+        "note": "'Jato' means go/goes."
+    },
+    {
+        "id": 16,
+        "title": "College",
+        "sentence": "Mi college madhe shikto.",
+        "translation": "I study in college.",
+        "words": [
+            {
+                "word": "college",
+                "meaning": "college"
+            },
+            {
+                "word": "madhe",
+                "meaning": "in"
+            },
+            {
+                "word": "shikto",
+                "meaning": "study / learn"
+            }
+        ],
+        "practice": {
+            "question": "Mi college madhe ___.",
+            "options": [
+                "shikto",
+                "pito",
+                "baghto",
+                "zopto"
+            ],
+            "answer": "shikto"
+        },
+        "note": "'Madhe' means in. 'Shikto' means study/learn."
+    },
+    {
+        "id": 17,
+        "title": "Book",
+        "sentence": "He pustak navin aahe.",
+        "translation": "This book is new.",
+        "words": [
+            {
+                "word": "he",
+                "meaning": "this"
+            },
+            {
+                "word": "pustak",
+                "meaning": "book"
+            },
+            {
+                "word": "navin",
+                "meaning": "new"
+            }
+        ],
+        "practice": {
+            "question": "He pustak ___ aahe.",
+            "options": [
+                "navin",
+                "june",
+                "kuthe",
+                "kon"
+            ],
+            "answer": "navin"
+        },
+        "note": "'Navin' means new."
+    },
+    {
+        "id": 18,
+        "title": "Reading",
+        "sentence": "Mi pustak vaachto.",
+        "translation": "I read a book.",
+        "words": [
+            {
+                "word": "pustak",
+                "meaning": "book"
+            },
+            {
+                "word": "vaachto",
+                "meaning": "read"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            }
+        ],
+        "practice": {
+            "question": "Mi pustak ___.",
+            "options": [
+                "vaachto",
+                "lihito",
+                "pito",
+                "jaato"
+            ],
+            "answer": "vaachto"
+        },
+        "note": "'Vaachto' means read. 'Lihito' means write."
+    },
+    {
+        "id": 19,
+        "title": "Writing",
+        "sentence": "Mi vakya lihito.",
+        "translation": "I write a sentence.",
+        "words": [
+            {
+                "word": "vakya",
+                "meaning": "sentence"
+            },
+            {
+                "word": "lihito",
+                "meaning": "write"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            }
+        ],
+        "practice": {
+            "question": "Mi vakya ___.",
+            "options": [
+                "lihito",
+                "vaachto",
+                "khato",
+                "aikto"
+            ],
+            "answer": "lihito"
+        },
+        "note": "'Vakya' means sentence."
+    },
+    {
+        "id": 20,
+        "title": "Food",
+        "sentence": "Mala jevan pahije.",
+        "translation": "I want food.",
+        "words": [
+            {
+                "word": "mala",
+                "meaning": "I / to me"
+            },
+            {
+                "word": "jevan",
+                "meaning": "food / meal"
+            },
+            {
+                "word": "pahije",
+                "meaning": "want / need"
+            }
+        ],
+        "practice": {
+            "question": "Mala jevan ___.",
+            "options": [
+                "pahije",
+                "aahe",
+                "kuthe",
+                "kon"
+            ],
+            "answer": "pahije"
+        },
+        "note": "'Pahije' means want/need."
+    },
+    {
+        "id": 21,
+        "title": "Water",
+        "sentence": "Mala paani pahije.",
+        "translation": "I want water.",
+        "words": [
+            {
+                "word": "paani",
+                "meaning": "water"
+            },
+            {
+                "word": "pahije",
+                "meaning": "want / need"
+            },
+            {
+                "word": "mala",
+                "meaning": "I / to me"
+            }
+        ],
+        "practice": {
+            "question": "Mala ___ pahije.",
+            "options": [
+                "paani",
+                "naav",
+                "ghar",
+                "kaam"
+            ],
+            "answer": "paani"
+        },
+        "note": "'Paani' means water."
+    },
+    {
+        "id": 22,
+        "title": "Tea",
+        "sentence": "Mala chaha avadto.",
+        "translation": "I like tea.",
+        "words": [
+            {
+                "word": "chaha",
+                "meaning": "tea"
+            },
+            {
+                "word": "avadto",
+                "meaning": "like"
+            },
+            {
+                "word": "mala",
+                "meaning": "I / to me"
+            }
+        ],
+        "practice": {
+            "question": "Mala ___ avadto.",
+            "options": [
+                "chaha",
+                "paani",
+                "ghar",
+                "shala"
+            ],
+            "answer": "chaha"
+        },
+        "note": "'Mala ... avadto' means 'I like ...' in many common sentences."
+    },
+    {
+        "id": 23,
+        "title": "Eating",
+        "sentence": "Mi bhakri khato.",
+        "translation": "I eat bhakri.",
+        "words": [
+            {
+                "word": "bhakri",
+                "meaning": "flatbread"
+            },
+            {
+                "word": "khato",
+                "meaning": "eat"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            }
+        ],
+        "practice": {
+            "question": "Mi bhakri ___.",
+            "options": [
+                "khato",
+                "pito",
+                "jato",
+                "zopto"
+            ],
+            "answer": "khato"
+        },
+        "note": "'Bhakri' is a common flatbread. 'Khato' means eat."
+    },
+    {
+        "id": 24,
+        "title": "Drinking",
+        "sentence": "Mi dudh pito.",
+        "translation": "I drink milk.",
+        "words": [
+            {
+                "word": "dudh",
+                "meaning": "milk"
+            },
+            {
+                "word": "pito",
+                "meaning": "drink"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            }
+        ],
+        "practice": {
+            "question": "Mi dudh ___.",
+            "options": [
+                "pito",
+                "khato",
+                "baghto",
+                "lihito"
+            ],
+            "answer": "pito"
+        },
+        "note": "'Pito' means drink."
+    },
+    {
+        "id": 25,
+        "title": "Fruit",
+        "sentence": "Mala amba avadto.",
+        "translation": "I like mango.",
+        "words": [
+            {
+                "word": "amba",
+                "meaning": "mango"
+            },
+            {
+                "word": "avadto",
+                "meaning": "like"
+            },
+            {
+                "word": "mala",
+                "meaning": "I / to me"
+            }
+        ],
+        "practice": {
+            "question": "Mala ___ avadto.",
+            "options": [
+                "amba",
+                "pustak",
+                "paise",
+                "vel"
+            ],
+            "answer": "amba"
+        },
+        "note": "'Amba' means mango."
+    },
+    {
+        "id": 26,
+        "title": "Today",
+        "sentence": "Aaj mi ghari aahe.",
+        "translation": "Today I am at home.",
+        "words": [
+            {
+                "word": "aaj",
+                "meaning": "today"
+            },
+            {
+                "word": "ghari",
+                "meaning": "at home"
+            },
+            {
+                "word": "aahe",
+                "meaning": "am / is"
+            }
+        ],
+        "practice": {
+            "question": "___ mi ghari aahe.",
+            "options": [
+                "Aaj",
+                "Udya",
+                "Kon",
+                "Kuthe"
+            ],
+            "answer": "Aaj"
+        },
+        "note": "'Aaj' means today."
+    },
+    {
+        "id": 27,
+        "title": "Tomorrow",
+        "sentence": "Udya mi bazarat jaanar.",
+        "translation": "Tomorrow I will go to the market.",
+        "words": [
+            {
+                "word": "udya",
+                "meaning": "tomorrow"
+            },
+            {
+                "word": "bazarat",
+                "meaning": "to the market"
+            },
+            {
+                "word": "jaanar",
+                "meaning": "will go"
+            }
+        ],
+        "practice": {
+            "question": "___ mi bazarat jaanar.",
+            "options": [
+                "Udya",
+                "Aaj",
+                "Ata",
+                "Ithe"
+            ],
+            "answer": "Udya"
+        },
+        "note": "'Udya' means tomorrow. 'Jaanar' means will go."
+    },
+    {
+        "id": 28,
+        "title": "Now",
+        "sentence": "Ata mi abhyas karto.",
+        "translation": "Now I study.",
+        "words": [
+            {
+                "word": "ata",
+                "meaning": "now"
+            },
+            {
+                "word": "abhyas",
+                "meaning": "study"
+            },
+            {
+                "word": "karto",
+                "meaning": "do"
+            }
+        ],
+        "practice": {
+            "question": "Ata mi abhyas ___.",
+            "options": [
+                "karto",
+                "khato",
+                "pito",
+                "zopto"
+            ],
+            "answer": "karto"
+        },
+        "note": "'Abhyas karto' means do study/study."
+    },
+    {
+        "id": 29,
+        "title": "Morning",
+        "sentence": "Sakali mi lavkar uthto.",
+        "translation": "In the morning I wake up early.",
+        "words": [
+            {
+                "word": "sakali",
+                "meaning": "in the morning"
+            },
+            {
+                "word": "lavkar",
+                "meaning": "early"
+            },
+            {
+                "word": "uthto",
+                "meaning": "wake up"
+            }
+        ],
+        "practice": {
+            "question": "Sakali mi lavkar ___.",
+            "options": [
+                "uthto",
+                "zopto",
+                "khato",
+                "baghto"
+            ],
+            "answer": "uthto"
+        },
+        "note": "'Sakali' means in the morning. 'Lavkar' means early."
+    },
+    {
+        "id": 30,
+        "title": "Night",
+        "sentence": "Ratree mi zopto.",
+        "translation": "At night I sleep.",
+        "words": [
+            {
+                "word": "ratree",
+                "meaning": "at night"
+            },
+            {
+                "word": "zopto",
+                "meaning": "sleep"
+            },
+            {
+                "word": "mi",
+                "meaning": "I"
+            }
+        ],
+        "practice": {
+            "question": "Ratree mi ___.",
+            "options": [
+                "zopto",
+                "uthto",
+                "pito",
+                "jato"
+            ],
+            "answer": "zopto"
+        },
+        "note": "'Ratree' means at night."
+    },
+    {
+        "id": 31,
+        "title": "Where",
+        "sentence": "Tu kuthe rahatos?",
+        "translation": "Where do you live?",
+        "words": [
+            {
+                "word": "kuthe",
+                "meaning": "where"
+            },
+            {
+                "word": "rahatos",
+                "meaning": "live"
+            },
+            {
+                "word": "tu",
+                "meaning": "you"
+            }
+        ],
+        "practice": {
+            "question": "Tu ___ rahatos?",
+            "options": [
+                "kuthe",
+                "kasa",
+                "kay",
+                "kon"
+            ],
+            "answer": "kuthe"
+        },
+        "note": "'Kuthe' means where."
+    },
+    {
+        "id": 32,
+        "title": "Who",
+        "sentence": "Ti kon aahe?",
+        "translation": "Who is she?",
+        "words": [
+            {
+                "word": "ti",
+                "meaning": "she"
+            },
+            {
+                "word": "kon",
+                "meaning": "who"
+            },
+            {
+                "word": "aahe",
+                "meaning": "is"
+            }
+        ],
+        "practice": {
+            "question": "Ti ___ aahe?",
+            "options": [
+                "kon",
+                "kuthe",
+                "kiti",
+                "kasa"
+            ],
+            "answer": "kon"
+        },
+        "note": "'Ti' means she. 'Kon' means who."
+    },
+    {
+        "id": 33,
+        "title": "What",
+        "sentence": "He kay aahe?",
+        "translation": "What is this?",
+        "words": [
+            {
+                "word": "he",
+                "meaning": "this"
+            },
+            {
+                "word": "kay",
+                "meaning": "what"
+            },
+            {
+                "word": "aahe",
+                "meaning": "is"
+            }
+        ],
+        "practice": {
+            "question": "He ___ aahe?",
+            "options": [
+                "kay",
+                "kuthe",
+                "kon",
+                "kiti"
+            ],
+            "answer": "kay"
+        },
+        "note": "'Kay' means what."
+    },
+    {
+        "id": 34,
+        "title": "How Many",
+        "sentence": "Tujhyakade kiti pustake aahet?",
+        "translation": "How many books do you have?",
+        "words": [
+            {
+                "word": "tujhyakade",
+                "meaning": "with you / you have"
+            },
+            {
+                "word": "kiti",
+                "meaning": "how many / how much"
+            },
+            {
+                "word": "pustake",
+                "meaning": "books"
+            }
+        ],
+        "practice": {
+            "question": "Tujhyakade ___ pustake aahet?",
+            "options": [
+                "kiti",
+                "kay",
+                "kon",
+                "kuthe"
+            ],
+            "answer": "kiti"
+        },
+        "note": "'Kiti' means how many/how much."
+    },
+    {
+        "id": 35,
+        "title": "Market",
+        "sentence": "Mi bazarat phal gheto.",
+        "translation": "I buy fruit in the market.",
+        "words": [
+            {
+                "word": "bazarat",
+                "meaning": "in the market"
+            },
+            {
+                "word": "phal",
+                "meaning": "fruit"
+            },
+            {
+                "word": "gheto",
+                "meaning": "take / buy"
+            }
+        ],
+        "practice": {
+            "question": "Mi bazarat phal ___.",
+            "options": [
+                "gheto",
+                "pito",
+                "zopto",
+                "aikto"
+            ],
+            "answer": "gheto"
+        },
+        "note": "'Gheto' means take/buy depending on context."
+    },
+    {
+        "id": 36,
+        "title": "Money",
+        "sentence": "Majhyakade paise aahet.",
+        "translation": "I have money.",
+        "words": [
+            {
+                "word": "majhyakade",
+                "meaning": "with me / I have"
+            },
+            {
+                "word": "paise",
+                "meaning": "money"
+            },
+            {
+                "word": "aahet",
+                "meaning": "are / have"
+            }
+        ],
+        "practice": {
+            "question": "Majhyakade ___ aahet.",
+            "options": [
+                "paise",
+                "paani",
+                "naav",
+                "ghar"
+            ],
+            "answer": "paise"
+        },
+        "note": "'Paise' means money."
+    },
+    {
+        "id": 37,
+        "title": "Price",
+        "sentence": "Yachi kimat kiti aahe?",
+        "translation": "How much is its price?",
+        "words": [
+            {
+                "word": "yachi",
+                "meaning": "its / this one's"
+            },
+            {
+                "word": "kimat",
+                "meaning": "price"
+            },
+            {
+                "word": "kiti",
+                "meaning": "how much"
+            }
+        ],
+        "practice": {
+            "question": "Yachi ___ kiti aahe?",
+            "options": [
+                "kimat",
+                "naav",
+                "madat",
+                "shala"
+            ],
+            "answer": "kimat"
+        },
+        "note": "'Kimat' means price."
+    },
+    {
+        "id": 38,
+        "title": "Travel by Bus",
+        "sentence": "Mi busne shalet jato.",
+        "translation": "I go to school by bus.",
+        "words": [
+            {
+                "word": "busne",
+                "meaning": "by bus"
+            },
+            {
+                "word": "shalet",
+                "meaning": "to school"
+            },
+            {
+                "word": "jato",
+                "meaning": "go"
+            }
+        ],
+        "practice": {
+            "question": "Mi ___ shalet jato.",
+            "options": [
+                "busne",
+                "ghari",
+                "bhat",
+                "vel"
+            ],
+            "answer": "busne"
+        },
+        "note": "'Busne' means by bus."
+    },
+    {
+        "id": 39,
+        "title": "Directions Left",
+        "sentence": "Dava kade vala.",
+        "translation": "Turn left.",
+        "words": [
+            {
+                "word": "dava",
+                "meaning": "left"
+            },
+            {
+                "word": "kade",
+                "meaning": "towards"
+            },
+            {
+                "word": "vala",
+                "meaning": "turn"
+            }
+        ],
+        "practice": {
+            "question": "___ kade vala.",
+            "options": [
+                "Dava",
+                "Ujva",
+                "Ata",
+                "Aaj"
+            ],
+            "answer": "Dava"
+        },
+        "note": "'Dava' means left."
+    },
+    {
+        "id": 40,
+        "title": "Directions Right",
+        "sentence": "Ujva kade ja.",
+        "translation": "Go to the right side.",
+        "words": [
+            {
+                "word": "ujva",
+                "meaning": "right"
+            },
+            {
+                "word": "kade",
+                "meaning": "towards"
+            },
+            {
+                "word": "ja",
+                "meaning": "go"
+            }
+        ],
+        "practice": {
+            "question": "___ kade ja.",
+            "options": [
+                "Ujva",
+                "Dava",
+                "Kal",
+                "Ithe"
+            ],
+            "answer": "Ujva"
+        },
+        "note": "'Ujva' means right."
+    },
+    {
+        "id": 41,
+        "title": "Weather Hot",
+        "sentence": "Aaj khup garam aahe.",
+        "translation": "Today it is very hot.",
+        "words": [
+            {
+                "word": "aaj",
+                "meaning": "today"
+            },
+            {
+                "word": "khup",
+                "meaning": "very"
+            },
+            {
+                "word": "garam",
+                "meaning": "hot"
+            }
+        ],
+        "practice": {
+            "question": "Aaj khup ___ aahe.",
+            "options": [
+                "garam",
+                "thanda",
+                "navin",
+                "ushira"
+            ],
+            "answer": "garam"
+        },
+        "note": "'Khup' means very. 'Garam' means hot."
+    },
+    {
+        "id": 42,
+        "title": "Weather Cold",
+        "sentence": "Aaj khup thanda aahe.",
+        "translation": "Today it is very cold.",
+        "words": [
+            {
+                "word": "aaj",
+                "meaning": "today"
+            },
+            {
+                "word": "khup",
+                "meaning": "very"
+            },
+            {
+                "word": "thanda",
+                "meaning": "cold"
+            }
+        ],
+        "practice": {
+            "question": "Aaj khup ___ aahe.",
+            "options": [
+                "thanda",
+                "garam",
+                "navin",
+                "lavkar"
+            ],
+            "answer": "thanda"
+        },
+        "note": "'Thanda' means cold."
+    },
+    {
+        "id": 43,
+        "title": "Rain",
+        "sentence": "Paus padat aahe.",
+        "translation": "It is raining.",
+        "words": [
+            {
+                "word": "paus",
+                "meaning": "rain"
+            },
+            {
+                "word": "padat",
+                "meaning": "falling"
+            },
+            {
+                "word": "aahe",
+                "meaning": "is"
+            }
+        ],
+        "practice": {
+            "question": "___ padat aahe.",
+            "options": [
+                "Paus",
+                "Bhat",
+                "Naav",
+                "Paise"
+            ],
+            "answer": "Paus"
+        },
+        "note": "'Paus padat aahe' means it is raining."
+    },
+    {
+        "id": 44,
+        "title": "Happy",
+        "sentence": "Mi anandi aahe.",
+        "translation": "I am happy.",
+        "words": [
+            {
+                "word": "mi",
+                "meaning": "I"
+            },
+            {
+                "word": "anandi",
+                "meaning": "happy"
+            },
+            {
+                "word": "aahe",
+                "meaning": "am"
+            }
+        ],
+        "practice": {
+            "question": "Mi ___ aahe.",
+            "options": [
+                "anandi",
+                "thaklo",
+                "bhook",
+                "tahan"
+            ],
+            "answer": "anandi"
+        },
+        "note": "'Anandi' means happy."
+    },
+    {
+        "id": 45,
+        "title": "Tired",
+        "sentence": "Mi thaklo aahe.",
+        "translation": "I am tired.",
+        "words": [
+            {
+                "word": "mi",
+                "meaning": "I"
+            },
+            {
+                "word": "thaklo",
+                "meaning": "tired"
+            },
+            {
+                "word": "aahe",
+                "meaning": "am"
+            }
+        ],
+        "practice": {
+            "question": "Mi ___ aahe.",
+            "options": [
+                "thaklo",
+                "anandi",
+                "garam",
+                "navin"
+            ],
+            "answer": "thaklo"
+        },
+        "note": "'Thaklo' means tired. A female speaker may say 'thakli'."
+    },
+    {
+        "id": 46,
+        "title": "Hungry",
+        "sentence": "Mala bhook lagli aahe.",
+        "translation": "I am hungry.",
+        "words": [
+            {
+                "word": "mala",
+                "meaning": "to me / I"
+            },
+            {
+                "word": "bhook",
+                "meaning": "hunger"
+            },
+            {
+                "word": "lagli",
+                "meaning": "felt / happened"
+            }
+        ],
+        "practice": {
+            "question": "Mala ___ lagli aahe.",
+            "options": [
+                "bhook",
+                "tahan",
+                "paise",
+                "naav"
+            ],
+            "answer": "bhook"
+        },
+        "note": "'Mala bhook lagli aahe' means I am hungry."
+    },
+    {
+        "id": 47,
+        "title": "Thirsty",
+        "sentence": "Mala tahan lagli aahe.",
+        "translation": "I am thirsty.",
+        "words": [
+            {
+                "word": "mala",
+                "meaning": "to me / I"
+            },
+            {
+                "word": "tahan",
+                "meaning": "thirst"
+            },
+            {
+                "word": "lagli",
+                "meaning": "felt / happened"
+            }
+        ],
+        "practice": {
+            "question": "Mala ___ lagli aahe.",
+            "options": [
+                "tahan",
+                "bhook",
+                "pustak",
+                "shala"
+            ],
+            "answer": "tahan"
+        },
+        "note": "'Tahan' means thirst."
+    },
+    {
+        "id": 48,
+        "title": "Can I Come",
+        "sentence": "Mi yeu shakto ka?",
+        "translation": "Can I come?",
+        "words": [
+            {
+                "word": "mi",
+                "meaning": "I"
+            },
+            {
+                "word": "yeu",
+                "meaning": "come"
+            },
+            {
+                "word": "shakto",
+                "meaning": "can"
+            },
+            {
+                "word": "ka",
+                "meaning": "question marker"
+            }
+        ],
+        "practice": {
+            "question": "Mi yeu ___ ka?",
+            "options": [
+                "shakto",
+                "pahije",
+                "aahe",
+                "nahi"
+            ],
+            "answer": "shakto"
+        },
+        "note": "'Shakto' means can/able to. 'Ka' makes it a question."
+    },
+    {
+        "id": 49,
+        "title": "I Can Speak",
+        "sentence": "Mi thode bolu shakto.",
+        "translation": "I can speak a little.",
+        "words": [
+            {
+                "word": "thode",
+                "meaning": "a little"
+            },
+            {
+                "word": "bolu",
+                "meaning": "speak"
+            },
+            {
+                "word": "shakto",
+                "meaning": "can"
+            }
+        ],
+        "practice": {
+            "question": "Mi thode bolu ___.",
+            "options": [
+                "shakto",
+                "pahije",
+                "aahe",
+                "jaato"
+            ],
+            "answer": "shakto"
+        },
+        "note": "'Bolu shakto' means can speak."
+    },
+    {
+        "id": 50,
+        "title": "See You Again",
+        "sentence": "Punha bhetu.",
+        "translation": "See you again.",
+        "words": [
+            {
+                "word": "punha",
+                "meaning": "again"
+            },
+            {
+                "word": "bhetu",
+                "meaning": "meet / see"
+            },
+            {
+                "word": "punha bhetu",
+                "meaning": "see you again"
+            }
+        ],
+        "practice": {
+            "question": "___ bhetu.",
+            "options": [
+                "Punha",
+                "Paani",
+                "Naav",
+                "Ghar"
+            ],
+            "answer": "Punha"
+        },
+        "note": "'Punha bhetu' means see you again."
+    }
+]

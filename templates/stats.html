@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Stats | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --peach-soft:#f0ddc8;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:"Nunito",sans-serif;
+            min-height:100vh;
+            background:
+                radial-gradient(circle at top left,#e3eed8 0%,transparent 30%),
+                radial-gradient(circle at top right,#f6e2d2 0%,transparent 35%),
+                var(--cream);
+            color:var(--brown);
+        }
+
+        .page{
+            max-width:1100px;
+            margin:auto;
+            padding:32px 22px 70px;
+        }
+
+        .top-nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:28px;
+        }
+
+        .logo{
+            font-family:"Baloo 2";
+            font-size:34px;
+            font-weight:800;
+        }
+
+        .back-link{
+            text-decoration:none;
+            color:var(--brown);
+            font-weight:900;
+            background:white;
+            padding:11px 18px;
+            border-radius:999px;
+            box-shadow:0 10px 26px -16px rgba(80,60,40,.35);
+        }
+
+        .hero{
+            display:grid;
+            grid-template-columns:1.3fr .7fr;
+            gap:28px;
+            align-items:center;
+            background:linear-gradient(135deg,#fffdf9,#f0ddc8);
+            border-radius:34px;
+            padding:42px;
+            box-shadow:var(--shadow);
+            margin-bottom:30px;
+        }
+
+        .badge{
+            display:inline-block;
+            background:var(--sage-soft);
+            color:var(--sage);
+            padding:8px 16px;
+            border-radius:999px;
+            font-weight:900;
+            margin-bottom:16px;
+        }
+
+        h1{
+            font-family:"Baloo 2";
+            font-size:48px;
+            margin-bottom:12px;
+        }
+
+        .hero p{
+            color:var(--brown-soft);
+            font-size:18px;
+        }
+
+        .mascot{
+            text-align:center;
+        }
+
+        .mascot img{
+            width:220px;
+            animation:float 3s ease-in-out infinite;
+        }
+
+        @keyframes float{
+            0%,100%{transform:translateY(0);}
+            50%{transform:translateY(-10px);}
+        }
+
+        .stats-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .stat-card{
+            background:var(--card);
+            border-radius:28px;
+            padding:26px;
+            box-shadow:0 14px 34px -24px rgba(80,60,40,.35);
+            border:1px solid var(--line);
+        }
+
+        .stat-card span{
+            font-size:34px;
+        }
+
+        .stat-card p{
+            margin-top:10px;
+            color:var(--brown-soft);
+            font-weight:800;
+        }
+
+        .stat-card h2{
+            font-family:"Baloo 2";
+            font-size:40px;
+        }
+
+        .progress-section{
+            background:white;
+            border-radius:30px;
+            padding:30px;
+            margin-top:28px;
+            box-shadow:var(--shadow);
+        }
+
+        .progress-section h3{
+            font-family:"Baloo 2";
+            font-size:32px;
+            margin-bottom:18px;
+        }
+
+        .progress-bar{
+            height:22px;
+            background:#ece4d6;
+            border-radius:999px;
+            overflow:hidden;
+        }
+
+        .progress-fill{
+            height:100%;
+            width:{{ progress_percentage }}%;
+            background:linear-gradient(90deg,#5f8a5b,#8db086);
+            border-radius:999px;
+        }
+
+        .progress-text{
+            margin-top:14px;
+            color:var(--brown-soft);
+            font-weight:800;
+        }
+
+        @media(max-width:760px){
+
+            .hero{
+                grid-template-columns:1fr;
+                text-align:center;
+            }
+
+            h1{
+                font-size:38px;
+            }
+
+            .top-nav{
+                flex-direction:column;
+                gap:14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top-nav">
+        <div class="logo">🦫 Puddle</div>
+        <a href="/dashboard" class="back-link">← Dashboard</a>
+    </div>
+
+    <section class="hero">
+
+        <div>
+            <span class="badge">📊 Learning Stats</span>
+
+            <h1>Your Progress</h1>
+
+            <p>
+                See how far you've come on your language learning journey.
+            </p>
+        </div>
+
+        <div class="mascot">
+            <img src="{{ url_for('static', filename='images/capybara-welcome.png') }}">
+        </div>
+
+    </section>
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <span>⭐</span>
+            <p>Total XP</p>
+            <h2>{{ user.xp }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>🔥</span>
+            <p>Current Streak</p>
+            <h2>{{ user.streak }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>🏆</span>
+            <p>Longest Streak</p>
+            <h2>{{ user.longest_streak }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>📚</span>
+            <p>Lessons Completed</p>
+            <h2>{{ completed_count }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>🧠</span>
+            <p>Words Learned</p>
+            <h2>{{ words_learned }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>🏅</span>
+            <p>Level</p>
+            <h2>{{ (user.xp // 50) + 1 }}</h2>
+        </div>
+
+    </section>
+
+    <section class="progress-section">
+
+        <h3>Course Progress</h3>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <p class="progress-text">
+            {{ completed_count }}/{{ total_lessons }}
+            lessons completed
+        </p>
+
+    </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Nunito',sans-serif;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:
+            radial-gradient(circle at top left,#e3eed8 0%,transparent 30%),
+            radial-gradient(circle at top right,#f6e2d2 0%,transparent 35%),
+            var(--cream);
+        }
+
+        .container{
+            width:1100px;
+            max-width:92%;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+
+            background:rgba(255,255,255,.75);
+            backdrop-filter:blur(15px);
+
+            border-radius:32px;
+            overflow:hidden;
+            box-shadow:var(--shadow);
+        }
+
+        .left{
+            padding:60px;
+        }
+
+        .logo{
+            font-family:'Baloo 2';
+            font-size:40px;
+            font-weight:800;
+            color:var(--brown);
+        }
+
+        h1{
+            margin-top:30px;
+            font-size:48px;
+            color:var(--brown);
+        }
+
+        .subtitle{
+            color:var(--brown-soft);
+            margin:15px 0 35px;
+            font-size:18px;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        input{
+            padding:16px;
+            border:none;
+            border-radius:16px;
+            background:#fff;
+            font-size:16px;
+            box-shadow:0 0 0 1px rgba(0,0,0,.08);
+        }
+
+        button{
+            border:none;
+            padding:16px;
+            border-radius:16px;
+            background:var(--peach);
+            color:white;
+            font-weight:800;
+            cursor:pointer;
+        }
+
+        button:hover{
+            opacity:.92;
+        }
+
+        .bottom-link{
+            margin-top:20px;
+        }
+
+        .bottom-link a{
+            color:var(--sage);
+            font-weight:700;
+        }
+
+        .right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #fff8ec 0%, #eef5e8 100%);
+}
+
+.scene-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mascot {
+    width: 340px;
+    z-index: 5;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 18px 20px rgba(80, 55, 35, 0.22));
+}
+
+.hill {
+    position: absolute;
+    bottom: -70px;
+    border-radius: 50% 50% 0 0;
+    z-index: 1;
+}
+
+.hill-back {
+    width: 520px;
+    height: 190px;
+    background: #dbe8c8;
+    left: -80px;
+}
+
+.hill-front {
+    width: 620px;
+    height: 210px;
+    background: #c7d9b3;
+    right: -120px;
+}
+
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    z-index: 1;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud-one {
+    width: 90px;
+    height: 34px;
+    top: 90px;
+    left: 90px;
+}
+
+.cloud-one::before {
+    width: 42px;
+    height: 42px;
+    left: 14px;
+    top: -20px;
+}
+
+.cloud-one::after {
+    width: 52px;
+    height: 52px;
+    right: 10px;
+    top: -26px;
+}
+
+.cloud-two {
+    width: 80px;
+    height: 30px;
+    top: 150px;
+    right: 80px;
+    opacity: 0.7;
+}
+
+.cloud-two::before {
+    width: 38px;
+    height: 38px;
+    left: 12px;
+    top: -18px;
+}
+
+.cloud-two::after {
+    width: 46px;
+    height: 46px;
+    right: 8px;
+    top: -22px;
+}
+
+.flower {
+    position: absolute;
+    z-index: 3;
+    color: #d28a5d;
+    font-size: 26px;
+    opacity: 0.85;
+}
+
+.flower-one {
+    bottom: 110px;
+    left: 100px;
+}
+
+.flower-two {
+    bottom: 135px;
+    right: 120px;
+    color: #cf8e9b;
+}
+
+.flower-three {
+    bottom: 85px;
+    right: 210px;
+    color: #f0c86a;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+    input,
+textarea {
+    transition: .2s ease;
+}
+
+input:hover,
+textarea:hover {
+    background: #fffaf2;
+    border-color: #b06334 !important;
+    box-shadow: 0 0 0 3px rgba(176,99,52,.16);
+}
+
+input:focus,
+textarea:focus {
+    background: #fffdf9;
+    border-color: #5f8a5b !important;
+    box-shadow: 0 0 0 5px rgba(95,138,91,.22);
+    outline: none;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <div class="logo">🦫 Puddle</div>
+
+        <h1>Welcome Back</h1>
+
+        <p class="subtitle">
+            Continue your cozy language journey.
+        </p>
+
+        <form method="POST">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p class="bottom-link">
+            New here?
+            <a href="/signup">Create an account</a>
+        </p>
+
+    </div>
+
+    <div class="right">
+    <div class="scene-bg">
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+
+        <div class="flower flower-one">✿</div>
+        <div class="flower flower-two">✿</div>
+        <div class="flower flower-three">✿</div>
+
+        <img
+            src="{{ url_for('static', filename='images/capybara-welcome.png') }}"
+            class="mascot"
+            alt="Capybara mascot"
+        >
+
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

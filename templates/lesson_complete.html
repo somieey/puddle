@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson Complete | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --peach-soft:#f0ddc8;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body {
+            font-family:"Nunito", sans-serif;
+            min-height:100vh;
+            background:
+                radial-gradient(circle at top left,#e3eed8 0%,transparent 30%),
+                radial-gradient(circle at top right,#f6e2d2 0%,transparent 35%),
+                var(--cream);
+            color:var(--brown);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:24px;
+        }
+
+        .complete-card {
+            width:720px;
+            max-width:100%;
+            background:rgba(255,255,255,.78);
+            border:1px solid var(--line);
+            border-radius:38px;
+            padding:46px;
+            text-align:center;
+            box-shadow:var(--shadow);
+            position:relative;
+            overflow:hidden;
+        }
+
+        .complete-card::before {
+            content:"✨";
+            position:absolute;
+            top:28px;
+            left:34px;
+            font-size:34px;
+            animation:twinkle 2s infinite ease-in-out;
+        }
+
+        .complete-card::after {
+            content:"🌿";
+            position:absolute;
+            bottom:28px;
+            right:34px;
+            font-size:34px;
+            animation:float 3s infinite ease-in-out;
+        }
+
+        .mascot {
+            width:190px;
+            max-width:70%;
+            margin-bottom:16px;
+            animation:float 3s ease-in-out infinite;
+            filter:drop-shadow(0 18px 20px rgba(80,55,35,.20));
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:52px;
+            line-height:1.05;
+            margin-bottom:12px;
+        }
+
+        .subtitle {
+            color:var(--brown-soft);
+            font-size:19px;
+            font-weight:800;
+            margin-bottom:28px;
+        }
+
+        .reward-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:16px;
+            margin:28px 0;
+        }
+
+        .reward-card {
+            background:var(--card);
+            border:1px solid var(--line);
+            border-radius:26px;
+            padding:22px;
+            box-shadow:0 14px 34px -24px rgba(80,60,40,.35);
+        }
+
+        .reward-card span {
+            font-size:34px;
+        }
+
+        .reward-card h2 {
+            font-family:"Baloo 2";
+            font-size:34px;
+            margin-top:8px;
+        }
+
+        .reward-card p {
+            color:var(--brown-soft);
+            font-weight:800;
+            margin-top:4px;
+        }
+
+        .bonus {
+            background:linear-gradient(135deg,#fffdf9,#e8f2dc);
+        }
+
+        .actions {
+            display:flex;
+            justify-content:center;
+            gap:14px;
+            flex-wrap:wrap;
+            margin-top:28px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            text-decoration:none;
+            border-radius:999px;
+            padding:14px 24px;
+            font-weight:900;
+            display:inline-block;
+        }
+
+        .primary-btn {
+            background:var(--peach);
+            color:white;
+        }
+
+        .secondary-btn {
+            background:var(--sage-soft);
+            color:var(--sage);
+        }
+
+        .primary-btn:hover,
+        .secondary-btn:hover {
+            transform:translateY(-2px);
+            opacity:.95;
+        }
+
+        .confetti {
+            position:absolute;
+            font-size:22px;
+            animation:fall 3s infinite linear;
+            opacity:.75;
+        }
+
+        .c1 { top:-20px; left:20%; animation-delay:.2s; }
+        .c2 { top:-20px; left:45%; animation-delay:.8s; }
+        .c3 { top:-20px; left:70%; animation-delay:1.2s; }
+
+        @keyframes float {
+            0%,100% { transform:translateY(0); }
+            50% { transform:translateY(-10px); }
+        }
+
+        @keyframes twinkle {
+            0%,100% { opacity:.45; transform:scale(1); }
+            50% { opacity:1; transform:scale(1.2); }
+        }
+
+        @keyframes fall {
+            0% { transform:translateY(0) rotate(0deg); }
+            100% { transform:translateY(720px) rotate(280deg); }
+        }
+
+        @media(max-width:650px) {
+            .complete-card {
+                padding:34px 24px;
+            }
+
+            h1 {
+                font-size:40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="complete-card">
+
+    <div class="confetti c1">🎉</div>
+    <div class="confetti c2">✨</div>
+    <div class="confetti c3">⭐</div>
+
+    <img
+        src="{{ url_for('static', filename='images/capybara-welcome.png') }}"
+        class="mascot"
+        alt="Capybara mascot"
+    >
+
+    <h1>Lesson Complete!</h1>
+
+    <p class="subtitle">
+        Your capybara is proud of you. Small steps are still progress.
+    </p>
+
+    <div class="reward-grid">
+
+        <div class="reward-card">
+            <span>⭐</span>
+            <h2>+10 XP</h2>
+            <p>Lesson reward earned</p>
+        </div>
+
+        {% if bonus_xp > 0 %}
+            <div class="reward-card bonus">
+                <span>🎯</span>
+                <h2>+{{ bonus_xp }} XP</h2>
+                <p>Daily challenge bonus</p>
+            </div>
+        {% endif %}
+
+        <div class="reward-card">
+            <span>🔥</span>
+            <h2>Nice!</h2>
+            <p>Keep your learning streak alive</p>
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <a href="/dashboard" class="primary-btn">Go to Dashboard →</a>
+        <a href="/review" class="secondary-btn">Review Lessons</a>
+    </div>
+
+</div>
+
+</body>
+</html>

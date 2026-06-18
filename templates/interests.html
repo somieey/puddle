@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Interests | Puddle</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream:#f4ede1;
+            --card:#fffdf9;
+            --brown:#36281b;
+            --brown-soft:#7a6a55;
+            --sage:#5f8a5b;
+            --sage-soft:#d6e2c8;
+            --peach:#d28a5d;
+            --peach-soft:#f0ddc8;
+            --pink-soft:#f1dce0;
+            --line:#e2d3ba;
+            --shadow:0 24px 50px -24px rgba(80,60,40,.35);
+        }
+
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body {
+            font-family:"Nunito", sans-serif;
+            min-height:100vh;
+            background:
+                radial-gradient(circle at top left, #e3eed8 0%, transparent 30%),
+                radial-gradient(circle at top right, #f6e2d2 0%, transparent 35%),
+                var(--cream);
+            color:var(--brown);
+        }
+
+        .page {
+            max-width:1050px;
+            margin:0 auto;
+            padding:34px 22px 70px;
+        }
+
+        .top-nav {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:28px;
+        }
+
+        .logo {
+            font-family:"Baloo 2";
+            font-size:34px;
+            font-weight:800;
+        }
+
+        .hero {
+            display:grid;
+            grid-template-columns:1.25fr .75fr;
+            align-items:center;
+            gap:30px;
+            background:linear-gradient(135deg,#fffdf9,#f0ddc8);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:42px;
+            box-shadow:var(--shadow);
+            margin-bottom:30px;
+        }
+
+        .badge {
+            display:inline-block;
+            background:var(--sage-soft);
+            color:var(--sage);
+            padding:8px 16px;
+            border-radius:999px;
+            font-weight:900;
+            margin-bottom:16px;
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:48px;
+            line-height:1.05;
+            margin-bottom:12px;
+        }
+
+        .hero p {
+            color:var(--brown-soft);
+            font-size:18px;
+            line-height:1.6;
+        }
+
+        .mascot-box {
+            text-align:center;
+        }
+
+        .mascot-box img {
+            width:220px;
+            max-width:100%;
+            animation:float 3s ease-in-out infinite;
+            filter:drop-shadow(0 18px 20px rgba(80,55,35,.20));
+        }
+
+        @keyframes float {
+            0%,100% { transform:translateY(0); }
+            50% { transform:translateY(-10px); }
+        }
+
+        form {
+            background:rgba(255,255,255,.72);
+            border:1px solid var(--line);
+            border-radius:34px;
+            padding:32px;
+            box-shadow:0 14px 34px -22px rgba(80,60,40,.35);
+        }
+
+        .interest-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+            gap:18px;
+            margin-bottom:28px;
+        }
+
+        .interest-card {
+            cursor:pointer;
+            display:block;
+        }
+
+        .interest-card input {
+            display:none;
+        }
+
+        .interest-box {
+            min-height:135px;
+            background:var(--card);
+            border:2px solid transparent;
+            border-radius:26px;
+            padding:24px;
+            box-shadow:0 10px 26px -18px rgba(80,60,40,.35);
+            transition:.22s ease;
+        }
+
+        .interest-box:hover {
+            transform:translateY(-5px);
+            box-shadow:0 22px 44px -26px rgba(80,60,40,.45);
+        }
+
+        .interest-card input:checked + .interest-box {
+            border-color:var(--sage);
+            background:linear-gradient(135deg,#fffdf9,#e8f2dc);
+        }
+
+        .icon {
+            width:52px;
+            height:52px;
+            display:grid;
+            place-items:center;
+            border-radius:18px;
+            background:var(--pink-soft);
+            font-size:28px;
+            margin-bottom:14px;
+        }
+
+        .interest-box h3 {
+            font-family:"Baloo 2";
+            font-size:26px;
+            text-transform:capitalize;
+        }
+
+        .interest-box p {
+            color:var(--brown-soft);
+            font-size:14px;
+            font-weight:700;
+        }
+
+        .save-btn {
+            border:none;
+            background:var(--peach);
+            color:white;
+            padding:15px 28px;
+            border-radius:999px;
+            font-weight:900;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        .save-btn:hover {
+            transform:translateY(-2px);
+            opacity:.95;
+        }
+
+        @media(max-width:760px) {
+            .hero {
+                grid-template-columns:1fr;
+                text-align:center;
+            }
+
+            h1 {
+                font-size:38px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top-nav">
+        <div class="logo">🦫 Puddle</div>
+    </div>
+
+    <section class="hero">
+        <div>
+            <span class="badge">💛 Personalize Puddle</span>
+            <h1>Choose your interests.</h1>
+            <p>This helps Puddle create practice sentences around topics you actually enjoy.</p>
+        </div>
+
+        <div class="mascot-box">
+            <img src="{{ url_for('static', filename='images/capybara-welcome.png') }}" alt="Capybara mascot">
+        </div>
+    </section>
+
+    <form method="POST" action="/interests">
+
+        <div class="interest-grid">
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="gaming">
+                <div class="interest-box">
+                    <div class="icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>Learn through games.</p>
+                </div>
+            </label>
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="anime">
+                <div class="interest-box">
+                    <div class="icon">🌸</div>
+                    <h3>Anime</h3>
+                    <p>Practice with anime topics.</p>
+                </div>
+            </label>
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="coding">
+                <div class="interest-box">
+                    <div class="icon">💻</div>
+                    <h3>Coding</h3>
+                    <p>Learn with tech examples.</p>
+                </div>
+            </label>
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="music">
+                <div class="interest-box">
+                    <div class="icon">🎵</div>
+                    <h3>Music</h3>
+                    <p>Use songs and sounds.</p>
+                </div>
+            </label>
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="movies">
+                <div class="interest-box">
+                    <div class="icon">🎬</div>
+                    <h3>Movies</h3>
+                    <p>Practice with film phrases.</p>
+                </div>
+            </label>
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="cricket">
+                <div class="interest-box">
+                    <div class="icon">🏏</div>
+                    <h3>Cricket</h3>
+                    <p>Learn with sports examples.</p>
+                </div>
+            </label>
+
+            <label class="interest-card">
+                <input type="checkbox" name="interests" value="books">
+                <div class="interest-box">
+                    <div class="icon">📚</div>
+                    <h3>Books</h3>
+                    <p>Build bookish vocabulary.</p>
+                </div>
+            </label>
+
+        </div>
+
+        <button type="submit" class="save-btn">Save Interests →</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
