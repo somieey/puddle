@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session    
-from database.mongodb import users_collection, notes_collection
+from database.mongodb import users_collection, notes_collection, feedback_collection
 import bcrypt
 import json
 from datetime import date, timedelta
@@ -997,6 +997,38 @@ def complete_revision():
     update_user_achievements(session["user_email"])
 
     return redirect(url_for("dashboard"))
+
+@app.route("/feedback", methods=["GET", "POST"])
+def feedback():
+    if "user_email" not in session:
+        return redirect(url_for("login"))
+
+    user = users_collection.find_one({"email": session["user_email"]})
+
+    if request.method == "POST":
+        feedback_type = request.form.get("feedback_type")
+        message = request.form.get("message")
+        phrase = request.form.get("phrase")
+        language = request.form.get("language")
+
+        if not message:
+            return "Please write your feedback."
+
+        feedback_data = {
+            "email": session["user_email"],
+            "username": user.get("username"),
+            "feedback_type": feedback_type,
+            "message": message,
+            "phrase": phrase,
+            "language": language,
+            "created_at": date.today().isoformat()
+        }
+
+        feedback_collection.insert_one(feedback_data)
+
+        return render_template("feedback_success.html")
+
+    return render_template("feedback.html", user=user)
 
 if __name__ == "__main__":
     app.run(debug=True)

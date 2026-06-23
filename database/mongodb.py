@@ -14,3 +14,4 @@ client = MongoClient(mongo_uri)
 db = client["puddle_db"]
 users_collection = db["users"]
 notes_collection = db["notes"]
+feedback_collection = db["feedback"]
