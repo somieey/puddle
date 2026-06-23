@@ -10,6 +10,10 @@ import os
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev_secret_key")
 
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+app.config["SESSION_COOKIE_SECURE"] = True
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+
 def get_user_language(user):
     return user.get("language", "marathi")
 
@@ -184,6 +188,12 @@ def signup():
         username = request.form.get("username")
         email = request.form.get("email")
         password = request.form.get("password")
+
+        if len(password) < 8:
+            return "Password must be at least 8 characters long."
+
+        if not any(char.isdigit() for char in password):
+            return "Password must contain at least one number."
 
         existing_user = users_collection.find_one({"email": email})
 
