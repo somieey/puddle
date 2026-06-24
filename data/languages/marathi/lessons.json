@@ -1,1572 +1,1240 @@
 [
-    {
-        "id": 1,
-        "title": "Basic Greeting",
-        "sentence": "Namaskar, mi vidyarthi aahe.",
-        "translation": "Hello, I am a student.",
-        "words": [
-            {
-                "word": "namaskar",
-                "meaning": "hello"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            },
-            {
-                "word": "vidyarthi",
-                "meaning": "student"
-            },
-            {
-                "word": "aahe",
-                "meaning": "am / is / are"
-            }
-        ],
-        "practice": {
-            "question": "Namaskar, ___ vidyarthi aahe.",
-            "options": [
-                "mi",
-                "tu",
-                "to",
-                "ti"
-            ],
-            "answer": "mi"
-        },
-        "note": "'Mi' means I. 'Aahe' works like am/is/are depending on the sentence."
+  {
+    "id": 1,
+    "title": "Casual Hello — How's it going?",
+    "sentence": "काय रे, कसं काय?",
+    "transliteration": "Kaay re, kasa kaay?",
+    "translation": "Hey, how's it going? (said to a male friend)",
+    "words": [
+      { "word": "काय", "transliteration": "kaay", "meaning": "what" },
+      { "word": "कसं", "transliteration": "kasa", "meaning": "how" },
+      { "word": "रे", "transliteration": "re", "meaning": "hey (used when speaking to a male)" },
+      { "word": "गं", "transliteration": "ga", "meaning": "hey (used when speaking to a female)" }
+    ],
+    "practice": {
+      "question": "When greeting a female friend casually, which word do you use to address her?",
+      "options": ["रे (re)", "गं (ga)", "काय (kaay)", "कसं (kasa)"],
+      "answer": "गं (ga)"
     },
-    {
-        "id": 2,
-        "title": "Your Name",
-        "sentence": "Tujhe naav kay aahe?",
-        "translation": "What is your name?",
-        "words": [
-            {
-                "word": "tujhe",
-                "meaning": "your"
-            },
-            {
-                "word": "naav",
-                "meaning": "name"
-            },
-            {
-                "word": "kay",
-                "meaning": "what"
-            },
-            {
-                "word": "aahe",
-                "meaning": "is"
-            }
-        ],
-        "practice": {
-            "question": "Tujhe ___ kay aahe?",
-            "options": [
-                "naav",
-                "ghar",
-                "pustak",
-                "kaam"
-            ],
-            "answer": "naav"
-        },
-        "note": "Use this to ask someone's name informally."
+    "matching": [
+      { "marathi": "kaay", "english": "what" },
+      { "marathi": "kasa", "english": "how" },
+      { "marathi": "re", "english": "addressing a male" },
+      { "marathi": "ga", "english": "addressing a female" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "How are you? (with male/female forms)",
+    "sentence": "तू कसा आहेस?",
+    "transliteration": "Tu kasa aahes?",
+    "translation": "How are you? (said to a male)",
+    "words": [
+      { "word": "तू", "transliteration": "tu", "meaning": "you (informal)" },
+      { "word": "कसा", "transliteration": "kasa", "meaning": "how (when asking a male)" },
+      { "word": "कशी", "transliteration": "kashi", "meaning": "how (when asking a female)" },
+      { "word": "आहेस", "transliteration": "aahes", "meaning": "are (you, informal)" }
+    ],
+    "practice": {
+      "question": "How would you ask a female friend 'How are you?'",
+      "options": ["तू कसा आहेस?", "तू कशी आहेस?", "तू काय आहेस?", "तू कोण आहेस?"],
+      "answer": "तू कशी आहेस?"
     },
-    {
-        "id": 3,
-        "title": "My Name",
-        "sentence": "Majhe naav Puddle aahe.",
-        "translation": "My name is Puddle.",
-        "words": [
-            {
-                "word": "majhe",
-                "meaning": "my"
-            },
-            {
-                "word": "naav",
-                "meaning": "name"
-            },
-            {
-                "word": "puddle",
-                "meaning": "Puddle"
-            },
-            {
-                "word": "aahe",
-                "meaning": "is"
-            }
-        ],
-        "practice": {
-            "question": "Majhe ___ Puddle aahe.",
-            "options": [
-                "naav",
-                "paani",
-                "shahar",
-                "mitra"
-            ],
-            "answer": "naav"
-        },
-        "note": "'Majhe naav...' means 'My name...'."
+    "matching": [
+      { "marathi": "tu", "english": "you" },
+      { "marathi": "kasa", "english": "how (to a male)" },
+      { "marathi": "kashi", "english": "how (to a female)" },
+      { "marathi": "aahes", "english": "are (you)" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "I'm doing great!",
+    "sentence": "मी मजेत आहे!",
+    "transliteration": "Mi majet aahe!",
+    "translation": "I'm doing great! / I'm in good spirits! (you'll often hear just 'मजेत!' on its own)",
+    "words": [
+      { "word": "मी", "transliteration": "mi", "meaning": "I" },
+      { "word": "मजेत", "transliteration": "majet", "meaning": "great, in good spirits" },
+      { "word": "बरं", "transliteration": "bara", "meaning": "fine, okay, good" },
+      { "word": "आहे", "transliteration": "aahe", "meaning": "am / is" }
+    ],
+    "practice": {
+      "question": "What does मजेत (majet) mean?",
+      "options": ["tired", "great / in good spirits", "hungry", "sad"],
+      "answer": "great / in good spirits"
     },
-    {
-        "id": 4,
-        "title": "How Are You",
-        "sentence": "Tu kasa ahes?",
-        "translation": "How are you?",
-        "words": [
-            {
-                "word": "tu",
-                "meaning": "you"
-            },
-            {
-                "word": "kasa",
-                "meaning": "how"
-            },
-            {
-                "word": "ahes",
-                "meaning": "are"
-            }
-        ],
-        "practice": {
-            "question": "Tu ___ ahes?",
-            "options": [
-                "kasa",
-                "kuthe",
-                "kon",
-                "kiti"
-            ],
-            "answer": "kasa"
-        },
-        "note": "'Kasa' is how. For feminine speech, people often say 'kashi'."
+    "matching": [
+      { "marathi": "mi", "english": "I" },
+      { "marathi": "majet", "english": "in good spirits / great" },
+      { "marathi": "bara", "english": "fine, okay" },
+      { "marathi": "aahe", "english": "am, is" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Thank you",
+    "sentence": "खूप धन्यवाद!",
+    "transliteration": "Khup dhanyavaad!",
+    "translation": "Thank you so much! (the everyday phrase you'll hear first; many also just say 'थँक यू')",
+    "words": [
+      { "word": "धन्यवाद", "transliteration": "dhanyavaad", "meaning": "thank you" },
+      { "word": "खूप", "transliteration": "khup", "meaning": "very, a lot" },
+      { "word": "खूप धन्यवाद", "transliteration": "khup dhanyavaad", "meaning": "thank you very much" },
+      { "word": "थँक यू", "transliteration": "thank you", "meaning": "thank you (the borrowed English version, used casually all the time)" }
+    ],
+    "practice": {
+      "question": "Which is the most common, everyday way to say 'thank you' in spoken Marathi?",
+      "options": ["धन्यवाद (dhanyavaad)", "मजेत (majet)", "इकडे (ikade)", "नको (nako)"],
+      "answer": "धन्यवाद (dhanyavaad)"
     },
-    {
-        "id": 5,
-        "title": "I Am Fine",
-        "sentence": "Mi changla aahe.",
-        "translation": "I am fine.",
-        "words": [
-            {
-                "word": "mi",
-                "meaning": "I"
-            },
-            {
-                "word": "changla",
-                "meaning": "fine / good"
-            },
-            {
-                "word": "aahe",
-                "meaning": "am"
-            }
-        ],
-        "practice": {
-            "question": "Mi ___ aahe.",
-            "options": [
-                "changla",
-                "kuthe",
-                "kon",
-                "paani"
-            ],
-            "answer": "changla"
-        },
-        "note": "'Changla' means good/fine. Forms may change with gender/context."
+    "matching": [
+      { "marathi": "dhanyavaad", "english": "thank you" },
+      { "marathi": "khup", "english": "very, a lot" },
+      { "marathi": "khup dhanyavaad", "english": "thank you very much" },
+      { "marathi": "thank you", "english": "thank you (casual / borrowed)" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Saying 'please' the Marathi way",
+    "sentence": "जरा थांबता का?",
+    "transliteration": "Jara thaambataa kaa?",
+    "translation": "Could you wait a moment, please?",
+    "words": [
+      { "word": "जरा", "transliteration": "jara", "meaning": "just, a little (softens a request into 'please')" },
+      { "word": "थांबा", "transliteration": "thaamba", "meaning": "wait, stop" },
+      { "word": "का", "transliteration": "kaa", "meaning": "question particle (turns a request polite)" },
+      { "word": "इकडे", "transliteration": "ikade", "meaning": "here, this way" }
+    ],
+    "practice": {
+      "question": "Which little word softens a request into a polite 'please' in Marathi?",
+      "options": ["जरा (jara)", "मी (mi)", "हो (ho)", "नाव (naav)"],
+      "answer": "जरा (jara)"
     },
-    {
-        "id": 6,
-        "title": "Polite Request",
-        "sentence": "Krupaya mala madat kara.",
-        "translation": "Please help me.",
-        "words": [
-            {
-                "word": "krupaya",
-                "meaning": "please"
-            },
-            {
-                "word": "mala",
-                "meaning": "me / to me"
-            },
-            {
-                "word": "madat",
-                "meaning": "help"
-            },
-            {
-                "word": "kara",
-                "meaning": "do"
-            }
-        ],
-        "practice": {
-            "question": "Krupaya mala ___ kara.",
-            "options": [
-                "madat",
-                "naav",
-                "bhat",
-                "vel"
-            ],
-            "answer": "madat"
-        },
-        "note": "'Madat kara' means 'help/do help'."
+    "matching": [
+      { "marathi": "jara", "english": "just / please (softener)" },
+      { "marathi": "thaamba", "english": "wait, stop" },
+      { "marathi": "kaa", "english": "question particle" },
+      { "marathi": "ikade", "english": "here, this way" }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Yes, No, and 'I don't want it'",
+    "sentence": "हो, चालेल!",
+    "transliteration": "Ho, chaalel!",
+    "translation": "Yes, that works! / Sure, that's fine!",
+    "words": [
+      { "word": "हो", "transliteration": "ho", "meaning": "yes" },
+      { "word": "नाही", "transliteration": "naahi", "meaning": "no, not" },
+      { "word": "नको", "transliteration": "nako", "meaning": "no — I don't want it" },
+      { "word": "चालेल", "transliteration": "chaalel", "meaning": "that works, that's fine" },
+      { "word": "नक्की", "transliteration": "nakki", "meaning": "definitely, for sure" }
+    ],
+    "practice": {
+      "question": "Which word means 'no — I don't want it'?",
+      "options": ["हो (ho)", "नको (nako)", "चालेल (chaalel)", "नक्की (nakki)"],
+      "answer": "नको (nako)"
     },
-    {
-        "id": 7,
-        "title": "Sorry",
-        "sentence": "Maaf kara, mi ushira alo.",
-        "translation": "Sorry, I came late.",
-        "words": [
-            {
-                "word": "maaf kara",
-                "meaning": "sorry / forgive me"
-            },
-            {
-                "word": "ushira",
-                "meaning": "late"
-            },
-            {
-                "word": "alo",
-                "meaning": "came"
-            }
-        ],
-        "practice": {
-            "question": "Maaf kara, mi ___ alo.",
-            "options": [
-                "ushira",
-                "lavkar",
-                "ghar",
-                "pustak"
-            ],
-            "answer": "ushira"
-        },
-        "note": "'Maaf kara' is a polite way to apologize."
+    "matching": [
+      { "marathi": "ho", "english": "yes" },
+      { "marathi": "naahi", "english": "no, not" },
+      { "marathi": "nako", "english": "don't want it" },
+      { "marathi": "chaalel", "english": "that works / fine" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Introducing yourself",
+    "sentence": "माझं नाव आरव आहे.",
+    "transliteration": "Maajha naav Aarav aahe.",
+    "translation": "My name is Aarav. (in quick speech people often drop 'आहे' → 'माझं नाव आरव.')",
+    "words": [
+      { "word": "माझं", "transliteration": "maajha", "meaning": "my" },
+      { "word": "नाव", "transliteration": "naav", "meaning": "name" },
+      { "word": "आहे", "transliteration": "aahe", "meaning": "is" },
+      { "word": "मी", "transliteration": "mi", "meaning": "I" }
+    ],
+    "practice": {
+      "question": "How do you say 'my' in Marathi (as in 'my name')?",
+      "options": ["तुझं (tujha)", "माझं (maajha)", "नाव (naav)", "आहे (aahe)"],
+      "answer": "माझं (maajha)"
     },
-    {
-        "id": 8,
-        "title": "Yes and No",
-        "sentence": "Ho, mala samajla.",
-        "translation": "Yes, I understood.",
-        "words": [
-            {
-                "word": "ho",
-                "meaning": "yes"
-            },
-            {
-                "word": "mala",
-                "meaning": "to me / I"
-            },
-            {
-                "word": "samajla",
-                "meaning": "understood"
-            }
-        ],
-        "practice": {
-            "question": "___, mala samajla.",
-            "options": [
-                "Ho",
-                "Nahi",
-                "Kuthe",
-                "Kiti"
-            ],
-            "answer": "Ho"
-        },
-        "note": "'Ho' means yes. 'Nahi' means no."
+    "matching": [
+      { "marathi": "maajha", "english": "my" },
+      { "marathi": "naav", "english": "name" },
+      { "marathi": "aahe", "english": "is" },
+      { "marathi": "mi", "english": "I" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Asking someone's name",
+    "sentence": "तुझं नाव काय?",
+    "transliteration": "Tujha naav kaay?",
+    "translation": "What's your name? (informal — in spoken Marathi 'आहे' is usually dropped)",
+    "words": [
+      { "word": "तुझं", "transliteration": "tujha", "meaning": "your (informal)" },
+      { "word": "तुमचं", "transliteration": "tumcha", "meaning": "your (formal / polite)" },
+      { "word": "नाव", "transliteration": "naav", "meaning": "name" },
+      { "word": "काय", "transliteration": "kaay", "meaning": "what" }
+    ],
+    "practice": {
+      "question": "Which is the polite / formal way to say 'your'?",
+      "options": ["तुझं (tujha)", "माझं (maajha)", "तुमचं (tumcha)", "काय (kaay)"],
+      "answer": "तुमचं (tumcha)"
     },
-    {
-        "id": 9,
-        "title": "I Do Not Know",
-        "sentence": "Mala mahit nahi.",
-        "translation": "I do not know.",
-        "words": [
-            {
-                "word": "mala",
-                "meaning": "to me / I"
-            },
-            {
-                "word": "mahit",
-                "meaning": "known"
-            },
-            {
-                "word": "nahi",
-                "meaning": "not / no"
-            }
-        ],
-        "practice": {
-            "question": "Mala mahit ___.",
-            "options": [
-                "nahi",
-                "aahe",
-                "kasa",
-                "pahije"
-            ],
-            "answer": "nahi"
-        },
-        "note": "'Mala mahit nahi' is a very useful sentence meaning 'I don't know'."
+    "matching": [
+      { "marathi": "tujha", "english": "your (informal)" },
+      { "marathi": "tumcha", "english": "your (formal)" },
+      { "marathi": "naav", "english": "name" },
+      { "marathi": "kaay", "english": "what" }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Where are you from?",
+    "sentence": "तू कुठून आलास?",
+    "transliteration": "Tu kuthun aalaas?",
+    "translation": "Where are you from? (said to a male — literally 'where did you come from?')",
+    "words": [
+      { "word": "कुठे", "transliteration": "kuthe", "meaning": "where" },
+      { "word": "कुठून", "transliteration": "kuthun", "meaning": "from where" },
+      { "word": "आलास", "transliteration": "aalaas", "meaning": "came (you, male)" },
+      { "word": "आलीस", "transliteration": "aaliis", "meaning": "came (you, female)" }
+    ],
+    "practice": {
+      "question": "How would you ask a female 'Where are you from?'",
+      "options": ["तू कुठून आलास?", "तू कुठून आलीस?", "तू कुठे आहेस?", "तू कोण आहेस?"],
+      "answer": "तू कुठून आलीस?"
     },
-    {
-        "id": 10,
-        "title": "I Understand",
-        "sentence": "Mala samajta.",
-        "translation": "I understand.",
-        "words": [
-            {
-                "word": "mala",
-                "meaning": "to me / I"
-            },
-            {
-                "word": "samajta",
-                "meaning": "understand"
-            }
-        ],
-        "practice": {
-            "question": "Mala ___.",
-            "options": [
-                "samajta",
-                "paani",
-                "ghar",
-                "vel"
-            ],
-            "answer": "samajta"
-        },
-        "note": "'Samajta' means understand."
+    "matching": [
+      { "marathi": "kuthe", "english": "where" },
+      { "marathi": "kuthun", "english": "from where" },
+      { "marathi": "aalaas", "english": "came (male)" },
+      { "marathi": "aaliis", "english": "came (female)" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Saying goodbye — the Marathi way",
+    "sentence": "बरं, येतो.",
+    "transliteration": "Bara, yeto.",
+    "translation": "Okay, I'll be off. / See you. (said by a male; a woman says 'बरं, येते.') Marathi doesn't really have a word for 'goodbye' — people say 'I'll come [again]' instead.",
+    "words": [
+      { "word": "बरं", "transliteration": "bara", "meaning": "okay, alright" },
+      { "word": "येतो", "transliteration": "yeto", "meaning": "I'll be off / see you (said by a male; literally 'I come')" },
+      { "word": "येते", "transliteration": "yete", "meaning": "I'll be off / see you (said by a female)" },
+      { "word": "भेटू", "transliteration": "bhetu", "meaning": "see you / let's meet (a friendly 'catch you later')" },
+      { "word": "ठीक आहे", "transliteration": "theek aahe", "meaning": "okay, alright (interchangeable with बरं)" }
+    ],
+    "practice": {
+      "question": "A woman is leaving. Which is the natural thing for her to say?",
+      "options": ["बरं, येतो.", "बरं, येते.", "तू आलास?", "जरा थांबा."],
+      "answer": "बरं, येते."
     },
-    {
-        "id": 11,
-        "title": "Home",
-        "sentence": "Maze ghar ithe aahe.",
-        "translation": "My home is here.",
-        "words": [
-            {
-                "word": "maze",
-                "meaning": "my"
-            },
-            {
-                "word": "ghar",
-                "meaning": "home / house"
-            },
-            {
-                "word": "ithe",
-                "meaning": "here"
-            },
-            {
-                "word": "aahe",
-                "meaning": "is"
-            }
-        ],
-        "practice": {
-            "question": "Maze ghar ___ aahe.",
-            "options": [
-                "ithe",
-                "kuthe",
-                "kon",
-                "kiti"
-            ],
-            "answer": "ithe"
-        },
-        "note": "'Ithe' means here."
+    "matching": [
+      { "marathi": "bara", "english": "okay, alright" },
+      { "marathi": "yeto", "english": "see you (said by a male)" },
+      { "marathi": "yete", "english": "see you (said by a female)" },
+      { "marathi": "bhetu", "english": "see you / let's meet" }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Fillers & conversation words",
+    "sentence": "अरे, हो ना!",
+    "transliteration": "Are, ho na!",
+    "translation": "Oh, totally! / Right?! (these little words are sprinkled through almost every Marathi chat)",
+    "words": [
+      { "word": "अरे", "transliteration": "are", "meaning": "hey / oh (to a male, or as a general exclamation)" },
+      { "word": "अगं", "transliteration": "aga", "meaning": "hey / oh (when speaking to a female)" },
+      { "word": "हो ना", "transliteration": "ho na", "meaning": "right? / isn't it? / totally" },
+      { "word": "अगदी", "transliteration": "agadi", "meaning": "exactly, absolutely" },
+      { "word": "बरं", "transliteration": "bara", "meaning": "okay / well... (also used as a soft filler)" }
+    ],
+    "practice": {
+      "question": "Which filler would you use to get a female friend's attention?",
+      "options": ["अरे (are)", "अगं (aga)", "अगदी (agadi)", "हो ना (ho na)"],
+      "answer": "अगं (aga)"
     },
-    {
-        "id": 12,
-        "title": "Family",
-        "sentence": "Majhi aai ghari aahe.",
-        "translation": "My mother is at home.",
-        "words": [
-            {
-                "word": "majhi",
-                "meaning": "my"
-            },
-            {
-                "word": "aai",
-                "meaning": "mother"
-            },
-            {
-                "word": "ghari",
-                "meaning": "at home"
-            }
-        ],
-        "practice": {
-            "question": "Majhi ___ ghari aahe.",
-            "options": [
-                "aai",
-                "shala",
-                "pustak",
-                "bazar"
-            ],
-            "answer": "aai"
-        },
-        "note": "'Aai' means mother. 'Ghari' means at home."
+    "matching": [
+      { "marathi": "are", "english": "hey (to a male / general)" },
+      { "marathi": "aga", "english": "hey (to a female)" },
+      { "marathi": "ho na", "english": "right? / totally" },
+      { "marathi": "agadi", "english": "exactly, absolutely" }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "What are you doing?",
+    "sentence": "काय करतोयस?",
+    "transliteration": "Kaay kartoyas?",
+    "translation": "What are you doing? (right now, to a male — a woman is asked 'काय करतेयस?')",
+    "words": [
+      { "word": "काय", "transliteration": "kaay", "meaning": "what" },
+      { "word": "करतोयस", "transliteration": "kartoyas", "meaning": "are doing (you, male, right now)" },
+      { "word": "करतेयस", "transliteration": "karteyas", "meaning": "are doing (you, female, right now)" },
+      { "word": "काही नाही", "transliteration": "kaahi naahi", "meaning": "nothing (the classic reply)" }
+    ],
+    "practice": {
+      "question": "How do you ask a female friend 'what are you doing?'",
+      "options": ["काय करतोयस?", "काय करतेयस?", "काय केलंस?", "कुठे आहेस?"],
+      "answer": "काय करतेयस?"
     },
-    {
-        "id": 13,
-        "title": "Father Works",
-        "sentence": "Majhe baba kaam kartat.",
-        "translation": "My father works.",
-        "words": [
-            {
-                "word": "baba",
-                "meaning": "father"
-            },
-            {
-                "word": "kaam",
-                "meaning": "work"
-            },
-            {
-                "word": "kartat",
-                "meaning": "does / works"
-            }
-        ],
-        "practice": {
-            "question": "Majhe baba ___ kartat.",
-            "options": [
-                "kaam",
-                "jevan",
-                "paani",
-                "naav"
-            ],
-            "answer": "kaam"
-        },
-        "note": "'Kaam kartat' means works/does work."
+    "matching": [
+      { "marathi": "kaay", "english": "what" },
+      { "marathi": "kartoyas", "english": "are doing (male)" },
+      { "marathi": "karteyas", "english": "are doing (female)" },
+      { "marathi": "kaahi naahi", "english": "nothing" }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Where are you?",
+    "sentence": "तू कुठे आहेस?",
+    "transliteration": "Tu kuthe aahes?",
+    "translation": "Where are you? (the message you send when someone's running late)",
+    "words": [
+      { "word": "कुठे", "transliteration": "kuthe", "meaning": "where" },
+      { "word": "इथे", "transliteration": "ithe", "meaning": "here" },
+      { "word": "तिथे", "transliteration": "tithe", "meaning": "there" },
+      { "word": "येतोय", "transliteration": "yetoy", "meaning": "I'm coming / on my way (said by a male)" },
+      { "word": "येतेय", "transliteration": "yetey", "meaning": "I'm coming / on my way (said by a female)" }
+    ],
+    "practice": {
+      "question": "Which word means 'here'?",
+      "options": ["इथे (ithe)", "तिथे (tithe)", "कुठे (kuthe)", "येतोय (yetoy)"],
+      "answer": "इथे (ithe)"
     },
-    {
-        "id": 14,
-        "title": "Friend",
-        "sentence": "Maza mitra changla aahe.",
-        "translation": "My friend is good.",
-        "words": [
-            {
-                "word": "mitra",
-                "meaning": "friend"
-            },
-            {
-                "word": "changla",
-                "meaning": "good"
-            },
-            {
-                "word": "maza",
-                "meaning": "my"
-            }
-        ],
-        "practice": {
-            "question": "Maza ___ changla aahe.",
-            "options": [
-                "mitra",
-                "paani",
-                "vel",
-                "bhat"
-            ],
-            "answer": "mitra"
-        },
-        "note": "'Mitra' means friend."
+    "matching": [
+      { "marathi": "kuthe", "english": "where" },
+      { "marathi": "ithe", "english": "here" },
+      { "marathi": "tithe", "english": "there" },
+      { "marathi": "yetoy", "english": "I'm coming (male)" }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "I'm at home",
+    "sentence": "मी घरी आहे.",
+    "transliteration": "Mi ghari aahe.",
+    "translation": "I'm at home. (note: 'घरी' = 'at home', a special form of 'घर')",
+    "words": [
+      { "word": "घर", "transliteration": "ghar", "meaning": "house, home" },
+      { "word": "घरी", "transliteration": "ghari", "meaning": "at home" },
+      { "word": "आत", "transliteration": "aat", "meaning": "inside" },
+      { "word": "बाहेर", "transliteration": "baaher", "meaning": "outside" },
+      { "word": "खोली", "transliteration": "kholi", "meaning": "room" }
+    ],
+    "practice": {
+      "question": "What does घरी (ghari) mean?",
+      "options": ["at home", "outside", "door", "room"],
+      "answer": "at home"
     },
-    {
-        "id": 15,
-        "title": "School",
-        "sentence": "Mi shalet jato.",
-        "translation": "I go to school.",
-        "words": [
-            {
-                "word": "shalet",
-                "meaning": "to school"
-            },
-            {
-                "word": "jato",
-                "meaning": "go"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            }
-        ],
-        "practice": {
-            "question": "Mi shalet ___.",
-            "options": [
-                "jato",
-                "khato",
-                "pito",
-                "zopto"
-            ],
-            "answer": "jato"
-        },
-        "note": "'Jato' means go/goes."
+    "matching": [
+      { "marathi": "ghar", "english": "house" },
+      { "marathi": "ghari", "english": "at home" },
+      { "marathi": "aat", "english": "inside" },
+      { "marathi": "baaher", "english": "outside" }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Food & eating",
+    "sentence": "मला भूक लागली.",
+    "transliteration": "Mala bhuk laagli.",
+    "translation": "I'm hungry. (literally 'hunger has struck me' — Marathi expresses hunger as something that happens to you)",
+    "words": [
+      { "word": "जेवण", "transliteration": "jevan", "meaning": "a meal, cooked food" },
+      { "word": "भूक", "transliteration": "bhuk", "meaning": "hunger" },
+      { "word": "पाणी", "transliteration": "paani", "meaning": "water" },
+      { "word": "मला", "transliteration": "mala", "meaning": "to me / I (used in 'I feel...' sentences)" },
+      { "word": "लागली", "transliteration": "laagli", "meaning": "has struck / set in (here: 'feel hungry')" }
+    ],
+    "practice": {
+      "question": "How do you say 'I'm hungry' in Marathi?",
+      "options": ["मला भूक लागली.", "मला पाणी पाहिजे.", "मी घरी आहे.", "काय करतोयस?"],
+      "answer": "मला भूक लागली."
     },
-    {
-        "id": 16,
-        "title": "College",
-        "sentence": "Mi college madhe shikto.",
-        "translation": "I study in college.",
-        "words": [
-            {
-                "word": "college",
-                "meaning": "college"
-            },
-            {
-                "word": "madhe",
-                "meaning": "in"
-            },
-            {
-                "word": "shikto",
-                "meaning": "study / learn"
-            }
-        ],
-        "practice": {
-            "question": "Mi college madhe ___.",
-            "options": [
-                "shikto",
-                "pito",
-                "baghto",
-                "zopto"
-            ],
-            "answer": "shikto"
-        },
-        "note": "'Madhe' means in. 'Shikto' means study/learn."
+    "matching": [
+      { "marathi": "jevan", "english": "a meal / food" },
+      { "marathi": "bhuk", "english": "hunger" },
+      { "marathi": "paani", "english": "water" },
+      { "marathi": "mala", "english": "to me / I" }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Did you eat?",
+    "sentence": "जेवलास का?",
+    "transliteration": "Jevlaas kaa?",
+    "translation": "Did you eat? (to a male — a woman is asked 'जेवलीस का?'). In Marathi homes this is a warm, caring way to check in on someone, almost like 'how are you doing?'",
+    "words": [
+      { "word": "जेवलास", "transliteration": "jevlaas", "meaning": "did you eat (you, male)" },
+      { "word": "जेवलीस", "transliteration": "jevliis", "meaning": "did you eat (you, female)" },
+      { "word": "का", "transliteration": "kaa", "meaning": "question particle (makes it a question)" },
+      { "word": "अजून नाही", "transliteration": "ajun naahi", "meaning": "not yet" }
+    ],
+    "practice": {
+      "question": "How do you ask a female 'did you eat?'",
+      "options": ["जेवलास का?", "जेवलीस का?", "जेवण का?", "भूक का?"],
+      "answer": "जेवलीस का?"
     },
-    {
-        "id": 17,
-        "title": "Book",
-        "sentence": "He pustak navin aahe.",
-        "translation": "This book is new.",
-        "words": [
-            {
-                "word": "he",
-                "meaning": "this"
-            },
-            {
-                "word": "pustak",
-                "meaning": "book"
-            },
-            {
-                "word": "navin",
-                "meaning": "new"
-            }
-        ],
-        "practice": {
-            "question": "He pustak ___ aahe.",
-            "options": [
-                "navin",
-                "june",
-                "kuthe",
-                "kon"
-            ],
-            "answer": "navin"
-        },
-        "note": "'Navin' means new."
+    "matching": [
+      { "marathi": "jevlaas", "english": "did you eat (male)" },
+      { "marathi": "jevliis", "english": "did you eat (female)" },
+      { "marathi": "ajun naahi", "english": "not yet" },
+      { "marathi": "kaa", "english": "question particle" }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Time & today",
+    "sentence": "आत्ता नको, उद्या भेटूया.",
+    "transliteration": "Aatta nako, udya bhetuya.",
+    "translation": "Not right now, let's meet tomorrow. (handy: Hindi uses 'कल' for both — Marathi splits it into उद्या = tomorrow and काल = yesterday)",
+    "words": [
+      { "word": "आज", "transliteration": "aaj", "meaning": "today" },
+      { "word": "उद्या", "transliteration": "udya", "meaning": "tomorrow" },
+      { "word": "काल", "transliteration": "kaal", "meaning": "yesterday" },
+      { "word": "आत्ता", "transliteration": "aatta", "meaning": "right now" },
+      { "word": "नंतर", "transliteration": "nantar", "meaning": "later" }
+    ],
+    "practice": {
+      "question": "Which word means 'right now'?",
+      "options": ["आत्ता (aatta)", "उद्या (udya)", "काल (kaal)", "नंतर (nantar)"],
+      "answer": "आत्ता (aatta)"
     },
-    {
-        "id": 18,
-        "title": "Reading",
-        "sentence": "Mi pustak vaachto.",
-        "translation": "I read a book.",
-        "words": [
-            {
-                "word": "pustak",
-                "meaning": "book"
-            },
-            {
-                "word": "vaachto",
-                "meaning": "read"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            }
-        ],
-        "practice": {
-            "question": "Mi pustak ___.",
-            "options": [
-                "vaachto",
-                "lihito",
-                "pito",
-                "jaato"
-            ],
-            "answer": "vaachto"
-        },
-        "note": "'Vaachto' means read. 'Lihito' means write."
+    "matching": [
+      { "marathi": "aaj", "english": "today" },
+      { "marathi": "udya", "english": "tomorrow" },
+      { "marathi": "kaal", "english": "yesterday" },
+      { "marathi": "aatta", "english": "right now" }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Friends & hanging out",
+    "sentence": "मित्रांसोबत बाहेर चाललोय.",
+    "transliteration": "Mitraansobat baaher chaalloy.",
+    "translation": "I'm heading out with friends. (said by a male; a woman says 'चाललेय')",
+    "words": [
+      { "word": "मित्र", "transliteration": "mitra", "meaning": "friend (male)" },
+      { "word": "मैत्रीण", "transliteration": "maitriin", "meaning": "friend (female)" },
+      { "word": "सोबत", "transliteration": "sobat", "meaning": "with, along" },
+      { "word": "बाहेर", "transliteration": "baaher", "meaning": "out, outside" },
+      { "word": "चाललोय", "transliteration": "chaalloy", "meaning": "am heading / going (male, right now)" }
+    ],
+    "practice": {
+      "question": "What is the Marathi word for a female friend?",
+      "options": ["मित्र (mitra)", "मैत्रीण (maitriin)", "सोबत (sobat)", "बाहेर (baaher)"],
+      "answer": "मैत्रीण (maitriin)"
     },
-    {
-        "id": 19,
-        "title": "Writing",
-        "sentence": "Mi vakya lihito.",
-        "translation": "I write a sentence.",
-        "words": [
-            {
-                "word": "vakya",
-                "meaning": "sentence"
-            },
-            {
-                "word": "lihito",
-                "meaning": "write"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            }
-        ],
-        "practice": {
-            "question": "Mi vakya ___.",
-            "options": [
-                "lihito",
-                "vaachto",
-                "khato",
-                "aikto"
-            ],
-            "answer": "lihito"
-        },
-        "note": "'Vakya' means sentence."
+    "matching": [
+      { "marathi": "mitra", "english": "friend (male)" },
+      { "marathi": "maitriin", "english": "friend (female)" },
+      { "marathi": "sobat", "english": "with / along" },
+      { "marathi": "baaher", "english": "out / outside" }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "What do you like?",
+    "sentence": "मला चहा आवडतो.",
+    "transliteration": "Mala chaha aavadto.",
+    "translation": "I like tea. (in Marathi the verb agrees with the thing you like: चहा is masculine → आवडतो; for a neuter thing you'd say आवडतं)",
+    "words": [
+      { "word": "मला", "transliteration": "mala", "meaning": "to me / I" },
+      { "word": "तुला", "transliteration": "tula", "meaning": "to you" },
+      { "word": "आवडतं", "transliteration": "aavadta", "meaning": "like (it is liked)" },
+      { "word": "आवडत नाही", "transliteration": "aavadat naahi", "meaning": "don't like" },
+      { "word": "चहा", "transliteration": "chaha", "meaning": "tea" }
+    ],
+    "practice": {
+      "question": "How do you say 'I don't like it'?",
+      "options": ["मला आवडतं.", "मला आवडत नाही.", "मला भूक लागली.", "तुला आवडतं?"],
+      "answer": "मला आवडत नाही."
     },
-    {
-        "id": 20,
-        "title": "Food",
-        "sentence": "Mala jevan pahije.",
-        "translation": "I want food.",
-        "words": [
-            {
-                "word": "mala",
-                "meaning": "I / to me"
-            },
-            {
-                "word": "jevan",
-                "meaning": "food / meal"
-            },
-            {
-                "word": "pahije",
-                "meaning": "want / need"
-            }
-        ],
-        "practice": {
-            "question": "Mala jevan ___.",
-            "options": [
-                "pahije",
-                "aahe",
-                "kuthe",
-                "kon"
-            ],
-            "answer": "pahije"
-        },
-        "note": "'Pahije' means want/need."
+    "matching": [
+      { "marathi": "mala", "english": "to me / I" },
+      { "marathi": "tula", "english": "to you" },
+      { "marathi": "aavadta", "english": "like" },
+      { "marathi": "aavadat naahi", "english": "don't like" }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Making simple plans",
+    "sentence": "चल, सिनेमाला जाऊया!",
+    "transliteration": "Chal, cinemaala jaauya!",
+    "translation": "Come on, let's go to a movie! (the '-ऊया' ending is the everyday 'let's...' form)",
+    "words": [
+      { "word": "चल", "transliteration": "chal", "meaning": "come on, let's go" },
+      { "word": "जाऊया", "transliteration": "jaauya", "meaning": "let's go" },
+      { "word": "भेटूया", "transliteration": "bhetuya", "meaning": "let's meet" },
+      { "word": "करूया", "transliteration": "karuya", "meaning": "let's do" },
+      { "word": "सिनेमा", "transliteration": "cinema", "meaning": "movie, cinema" }
+    ],
+    "practice": {
+      "question": "Which word means 'let's meet'?",
+      "options": ["जाऊया (jaauya)", "भेटूया (bhetuya)", "करूया (karuya)", "चल (chal)"],
+      "answer": "भेटूया (bhetuya)"
     },
-    {
-        "id": 21,
-        "title": "Water",
-        "sentence": "Mala paani pahije.",
-        "translation": "I want water.",
-        "words": [
-            {
-                "word": "paani",
-                "meaning": "water"
-            },
-            {
-                "word": "pahije",
-                "meaning": "want / need"
-            },
-            {
-                "word": "mala",
-                "meaning": "I / to me"
-            }
-        ],
-        "practice": {
-            "question": "Mala ___ pahije.",
-            "options": [
-                "paani",
-                "naav",
-                "ghar",
-                "kaam"
-            ],
-            "answer": "paani"
-        },
-        "note": "'Paani' means water."
+    "matching": [
+      { "marathi": "chal", "english": "come on / let's go" },
+      { "marathi": "jaauya", "english": "let's go" },
+      { "marathi": "bhetuya", "english": "let's meet" },
+      { "marathi": "karuya", "english": "let's do" }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "What are you doing right now?",
+    "sentence": "अगं, आत्ता काय करतेयस?",
+    "transliteration": "Aga, aatta kaay karteyas?",
+    "translation": "Hey, what are you doing right now? (to a female; to a male: 'आत्ता काय करतोयस?')",
+    "words": [
+      { "word": "आत्ता", "transliteration": "aatta", "meaning": "right now" },
+      { "word": "करतोयस", "transliteration": "kartoyas", "meaning": "are doing (male, right now)" },
+      { "word": "करतेयस", "transliteration": "karteyas", "meaning": "are doing (female, right now)" },
+      { "word": "अगं", "transliteration": "aga", "meaning": "hey (to a female)" },
+      { "word": "काही खास नाही", "transliteration": "kaahi khaas naahi", "meaning": "nothing special (a common reply)" }
+    ],
+    "practice": {
+      "question": "How do you ask a male friend what he's doing right now?",
+      "options": ["आत्ता काय करतोयस?", "आत्ता काय करतेयस?", "कुठे चाललायस?", "काय झालं?"],
+      "answer": "आत्ता काय करतोयस?"
     },
-    {
-        "id": 22,
-        "title": "Tea",
-        "sentence": "Mala chaha avadto.",
-        "translation": "I like tea.",
-        "words": [
-            {
-                "word": "chaha",
-                "meaning": "tea"
-            },
-            {
-                "word": "avadto",
-                "meaning": "like"
-            },
-            {
-                "word": "mala",
-                "meaning": "I / to me"
-            }
-        ],
-        "practice": {
-            "question": "Mala ___ avadto.",
-            "options": [
-                "chaha",
-                "paani",
-                "ghar",
-                "shala"
-            ],
-            "answer": "chaha"
-        },
-        "note": "'Mala ... avadto' means 'I like ...' in many common sentences."
+    "matching": [
+      { "marathi": "aatta", "english": "right now" },
+      { "marathi": "kartoyas", "english": "are doing (male)" },
+      { "marathi": "karteyas", "english": "are doing (female)" },
+      { "marathi": "kaahi khaas naahi", "english": "nothing special" }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Where are you going?",
+    "sentence": "अरे, कुठे चाललायस?",
+    "transliteration": "Are, kuthe chaallaayas?",
+    "translation": "Hey, where are you off to? (to a male; to a female: 'कुठे चाललीयस?' or 'कुठे जातेयस?')",
+    "words": [
+      { "word": "कुठे", "transliteration": "kuthe", "meaning": "where" },
+      { "word": "चाललायस", "transliteration": "chaallaayas", "meaning": "where are you headed (male, right now)" },
+      { "word": "चाललीयस", "transliteration": "chaalliiyas", "meaning": "where are you headed (female)" },
+      { "word": "जातेयस", "transliteration": "jaateyas", "meaning": "are going (female, another common form)" },
+      { "word": "अरे", "transliteration": "are", "meaning": "hey (to a male / general)" }
+    ],
+    "practice": {
+      "question": "How would you ask a female 'where are you going?'",
+      "options": ["कुठे चाललायस?", "कुठे चाललीयस?", "कुठे आहेस?", "काय करतोयस?"],
+      "answer": "कुठे चाललीयस?"
     },
-    {
-        "id": 23,
-        "title": "Eating",
-        "sentence": "Mi bhakri khato.",
-        "translation": "I eat bhakri.",
-        "words": [
-            {
-                "word": "bhakri",
-                "meaning": "flatbread"
-            },
-            {
-                "word": "khato",
-                "meaning": "eat"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            }
-        ],
-        "practice": {
-            "question": "Mi bhakri ___.",
-            "options": [
-                "khato",
-                "pito",
-                "jato",
-                "zopto"
-            ],
-            "answer": "khato"
-        },
-        "note": "'Bhakri' is a common flatbread. 'Khato' means eat."
+    "matching": [
+      { "marathi": "kuthe", "english": "where" },
+      { "marathi": "chaallaayas", "english": "headed where (male)" },
+      { "marathi": "chaalliiyas", "english": "headed where (female)" },
+      { "marathi": "are", "english": "hey" }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "I'm busy / I'm free",
+    "sentence": "जरा कामात आहे, नंतर बोलूया.",
+    "transliteration": "Jara kaamaat aahe, nantar boluya.",
+    "translation": "I'm a bit busy, let's talk later. ('कामात आहे' = literally 'in work' — the everyday way to say busy)",
+    "words": [
+      { "word": "कामात", "transliteration": "kaamaat", "meaning": "busy (lit. 'in work' — the spoken way)" },
+      { "word": "व्यस्त", "transliteration": "vyasta", "meaning": "busy (a little more formal)" },
+      { "word": "मोकळा", "transliteration": "mokla", "meaning": "free, not busy (male)" },
+      { "word": "मोकळी", "transliteration": "mokli", "meaning": "free, not busy (female)" },
+      { "word": "वेळ", "transliteration": "vel", "meaning": "time" }
+    ],
+    "practice": {
+      "question": "Which word means 'free / not busy' (for a male)?",
+      "options": ["मोकळा (mokla)", "व्यस्त (vyasta)", "वेळ (vel)", "कामात (kaamaat)"],
+      "answer": "मोकळा (mokla)"
     },
-    {
-        "id": 24,
-        "title": "Drinking",
-        "sentence": "Mi dudh pito.",
-        "translation": "I drink milk.",
-        "words": [
-            {
-                "word": "dudh",
-                "meaning": "milk"
-            },
-            {
-                "word": "pito",
-                "meaning": "drink"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            }
-        ],
-        "practice": {
-            "question": "Mi dudh ___.",
-            "options": [
-                "pito",
-                "khato",
-                "baghto",
-                "lihito"
-            ],
-            "answer": "pito"
-        },
-        "note": "'Pito' means drink."
+    "matching": [
+      { "marathi": "kaamat", "english": "busy" },
+      { "marathi": "mokla", "english": "free (male)" },
+      { "marathi": "mokli", "english": "free (female)" },
+      { "marathi": "vel", "english": "time" }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "What happened?",
+    "sentence": "अरे, काय झालं?",
+    "transliteration": "Are, kaay jhaala?",
+    "translation": "Hey, what happened? (the go-to question when someone looks off)",
+    "words": [
+      { "word": "काय", "transliteration": "kaay", "meaning": "what" },
+      { "word": "झालं", "transliteration": "jhaala", "meaning": "happened" },
+      { "word": "काही नाही", "transliteration": "kaahi naahi", "meaning": "nothing" },
+      { "word": "सगळं", "transliteration": "sagla", "meaning": "everything, all" },
+      { "word": "ठीक", "transliteration": "theek", "meaning": "fine, okay" }
+    ],
+    "practice": {
+      "question": "What does काय झालं? mean?",
+      "options": ["what happened?", "where are you?", "what are you doing?", "did you eat?"],
+      "answer": "what happened?"
     },
-    {
-        "id": 25,
-        "title": "Fruit",
-        "sentence": "Mala amba avadto.",
-        "translation": "I like mango.",
-        "words": [
-            {
-                "word": "amba",
-                "meaning": "mango"
-            },
-            {
-                "word": "avadto",
-                "meaning": "like"
-            },
-            {
-                "word": "mala",
-                "meaning": "I / to me"
-            }
-        ],
-        "practice": {
-            "question": "Mala ___ avadto.",
-            "options": [
-                "amba",
-                "pustak",
-                "paise",
-                "vel"
-            ],
-            "answer": "amba"
-        },
-        "note": "'Amba' means mango."
+    "matching": [
+      { "marathi": "kaay", "english": "what" },
+      { "marathi": "jhaala", "english": "happened" },
+      { "marathi": "sagla", "english": "everything" },
+      { "marathi": "theek", "english": "fine, okay" }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "No problem",
+    "sentence": "काही हरकत नाही!",
+    "transliteration": "Kaahi harkat naahi!",
+    "translation": "No problem! / That's totally fine!",
+    "words": [
+      { "word": "काही हरकत नाही", "transliteration": "kaahi harkat naahi", "meaning": "no problem / no objection" },
+      { "word": "हरकत", "transliteration": "harkat", "meaning": "objection, problem" },
+      { "word": "राहू दे", "transliteration": "raahu de", "meaning": "leave it / never mind" },
+      { "word": "जाऊ दे", "transliteration": "jaau de", "meaning": "let it go / forget about it" }
+    ],
+    "practice": {
+      "question": "Which phrase means 'never mind / let it go'?",
+      "options": ["जाऊ दे (jaau de)", "काय झालं? (kaay jhaala)", "कुठे आहेस? (kuthe aahes)", "भूक लागली (bhuk laagli)"],
+      "answer": "जाऊ दे (jaau de)"
     },
-    {
-        "id": 26,
-        "title": "Today",
-        "sentence": "Aaj mi ghari aahe.",
-        "translation": "Today I am at home.",
-        "words": [
-            {
-                "word": "aaj",
-                "meaning": "today"
-            },
-            {
-                "word": "ghari",
-                "meaning": "at home"
-            },
-            {
-                "word": "aahe",
-                "meaning": "am / is"
-            }
-        ],
-        "practice": {
-            "question": "___ mi ghari aahe.",
-            "options": [
-                "Aaj",
-                "Udya",
-                "Kon",
-                "Kuthe"
-            ],
-            "answer": "Aaj"
-        },
-        "note": "'Aaj' means today."
+    "matching": [
+      { "marathi": "kaahi harkat naahi", "english": "no problem" },
+      { "marathi": "harkat", "english": "objection / problem" },
+      { "marathi": "raahu de", "english": "leave it / never mind" },
+      { "marathi": "jaau de", "english": "let it go" }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "I understand / I don't understand",
+    "sentence": "अरे, मला नाही समजलं.",
+    "transliteration": "Are, mala naahi samajla.",
+    "translation": "Oh, I didn't get it. (just say 'समजलं' on its own to mean 'got it!')",
+    "words": [
+      { "word": "समजलं", "transliteration": "samajla", "meaning": "understood / got it" },
+      { "word": "समजलं नाही", "transliteration": "samajla naahi", "meaning": "didn't understand" },
+      { "word": "मला", "transliteration": "mala", "meaning": "to me / I" },
+      { "word": "परत", "transliteration": "parat", "meaning": "again" },
+      { "word": "सांग", "transliteration": "saang", "meaning": "tell / say (informal command)" }
+    ],
+    "practice": {
+      "question": "How do you say 'I didn't understand'?",
+      "options": ["मला समजलं.", "मला समजलं नाही.", "मला आवडतं.", "काय झालं?"],
+      "answer": "मला समजलं नाही."
     },
-    {
-        "id": 27,
-        "title": "Tomorrow",
-        "sentence": "Udya mi bazarat jaanar.",
-        "translation": "Tomorrow I will go to the market.",
-        "words": [
-            {
-                "word": "udya",
-                "meaning": "tomorrow"
-            },
-            {
-                "word": "bazarat",
-                "meaning": "to the market"
-            },
-            {
-                "word": "jaanar",
-                "meaning": "will go"
-            }
-        ],
-        "practice": {
-            "question": "___ mi bazarat jaanar.",
-            "options": [
-                "Udya",
-                "Aaj",
-                "Ata",
-                "Ithe"
-            ],
-            "answer": "Udya"
-        },
-        "note": "'Udya' means tomorrow. 'Jaanar' means will go."
+    "matching": [
+      { "marathi": "samajla", "english": "understood" },
+      { "marathi": "samajla naahi", "english": "didn't understand" },
+      { "marathi": "parat", "english": "again" },
+      { "marathi": "saang", "english": "tell / say" }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Wait a minute",
+    "sentence": "अगं, जरा थांब!",
+    "transliteration": "Aga, jara thaamb!",
+    "translation": "Hey, hold on a sec! ('जरा थांब' is softer and friendlier than just 'थांब')",
+    "words": [
+      { "word": "थांब", "transliteration": "thaamb", "meaning": "wait, hold on (informal command)" },
+      { "word": "जरा", "transliteration": "jara", "meaning": "just, a sec (softener)" },
+      { "word": "एक मिनिट", "transliteration": "ek minit", "meaning": "one minute / one sec" },
+      { "word": "आलोच", "transliteration": "aaloch", "meaning": "I'm just coming / right there (male)" },
+      { "word": "आलेच", "transliteration": "aalech", "meaning": "I'm just coming / right there (female)" }
+    ],
+    "practice": {
+      "question": "Which means 'I'm just coming!' said by a female?",
+      "options": ["आलोच (aaloch)", "आलेच (aalech)", "थांब (thaamb)", "जरा (jara)"],
+      "answer": "आलेच (aalech)"
     },
-    {
-        "id": 28,
-        "title": "Now",
-        "sentence": "Ata mi abhyas karto.",
-        "translation": "Now I study.",
-        "words": [
-            {
-                "word": "ata",
-                "meaning": "now"
-            },
-            {
-                "word": "abhyas",
-                "meaning": "study"
-            },
-            {
-                "word": "karto",
-                "meaning": "do"
-            }
-        ],
-        "practice": {
-            "question": "Ata mi abhyas ___.",
-            "options": [
-                "karto",
-                "khato",
-                "pito",
-                "zopto"
-            ],
-            "answer": "karto"
-        },
-        "note": "'Abhyas karto' means do study/study."
+    "matching": [
+      { "marathi": "thaamb", "english": "wait / hold on" },
+      { "marathi": "jara", "english": "just / a sec" },
+      { "marathi": "ek minit", "english": "one minute" },
+      { "marathi": "aaloch", "english": "just coming (male)" }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Really?",
+    "sentence": "अगं, खरंच?!",
+    "transliteration": "Aga, kharach?!",
+    "translation": "Wait, really?! (the reaction you give when you can't believe something)",
+    "words": [
+      { "word": "खरंच", "transliteration": "kharach", "meaning": "really, seriously" },
+      { "word": "खरं", "transliteration": "khara", "meaning": "true, real" },
+      { "word": "खोटं", "transliteration": "khota", "meaning": "false, a lie" },
+      { "word": "काय सांगतोस!", "transliteration": "kaay saangtos", "meaning": "no way! / you don't say! (said to a male)" },
+      { "word": "काय सांगतेस!", "transliteration": "kaay saangtes", "meaning": "no way! / you don't say! (said to a female)" }
+    ],
+    "practice": {
+      "question": "Which word means 'really? / seriously?'",
+      "options": ["खरंच (kharach)", "खोटं (khota)", "सगळं (sagla)", "नंतर (nantar)"],
+      "answer": "खरंच (kharach)"
     },
-    {
-        "id": 29,
-        "title": "Morning",
-        "sentence": "Sakali mi lavkar uthto.",
-        "translation": "In the morning I wake up early.",
-        "words": [
-            {
-                "word": "sakali",
-                "meaning": "in the morning"
-            },
-            {
-                "word": "lavkar",
-                "meaning": "early"
-            },
-            {
-                "word": "uthto",
-                "meaning": "wake up"
-            }
-        ],
-        "practice": {
-            "question": "Sakali mi lavkar ___.",
-            "options": [
-                "uthto",
-                "zopto",
-                "khato",
-                "baghto"
-            ],
-            "answer": "uthto"
-        },
-        "note": "'Sakali' means in the morning. 'Lavkar' means early."
+    "matching": [
+      { "marathi": "kharach", "english": "really, seriously" },
+      { "marathi": "khara", "english": "true, real" },
+      { "marathi": "khota", "english": "false, a lie" },
+      { "marathi": "kaay saangtos", "english": "no way! (to a male)" }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Sounds good",
+    "sentence": "छान आहे! चालेल.",
+    "transliteration": "Chhaan aahe! Chaalel.",
+    "translation": "That's great! Works for me.",
+    "words": [
+      { "word": "छान", "transliteration": "chhaan", "meaning": "nice, lovely, great" },
+      { "word": "मस्त", "transliteration": "masta", "meaning": "awesome, cool (very common casually)" },
+      { "word": "चालेल", "transliteration": "chaalel", "meaning": "that works / fine" },
+      { "word": "बरोबर", "transliteration": "barobar", "meaning": "right, correct" },
+      { "word": "एकदम", "transliteration": "ekdam", "meaning": "totally, completely" }
+    ],
+    "practice": {
+      "question": "Which word is a casual way to say 'awesome / cool'?",
+      "options": ["मस्त (masta)", "नंतर (nantar)", "हरकत (harkat)", "वेळ (vel)"],
+      "answer": "मस्त (masta)"
     },
-    {
-        "id": 30,
-        "title": "Night",
-        "sentence": "Ratree mi zopto.",
-        "translation": "At night I sleep.",
-        "words": [
-            {
-                "word": "ratree",
-                "meaning": "at night"
-            },
-            {
-                "word": "zopto",
-                "meaning": "sleep"
-            },
-            {
-                "word": "mi",
-                "meaning": "I"
-            }
-        ],
-        "practice": {
-            "question": "Ratree mi ___.",
-            "options": [
-                "zopto",
-                "uthto",
-                "pito",
-                "jato"
-            ],
-            "answer": "zopto"
-        },
-        "note": "'Ratree' means at night."
+    "matching": [
+      { "marathi": "chhaan", "english": "nice, lovely" },
+      { "marathi": "masta", "english": "awesome, cool" },
+      { "marathi": "chaalel", "english": "that works" },
+      { "marathi": "barobar", "english": "right, correct" }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Let's go",
+    "sentence": "चला, निघूया!",
+    "transliteration": "Chala, nighuya!",
+    "translation": "Come on, let's get going! (use 'चल' for one friend; 'चला' for a group or to be polite)",
+    "words": [
+      { "word": "चल", "transliteration": "chal", "meaning": "come on / let's go (to one person, informal)" },
+      { "word": "चला", "transliteration": "chala", "meaning": "come on / let's go (to a group or politely)" },
+      { "word": "जाऊया", "transliteration": "jaauya", "meaning": "let's go" },
+      { "word": "निघूया", "transliteration": "nighuya", "meaning": "let's head off / get going" },
+      { "word": "लवकर", "transliteration": "lavkar", "meaning": "quickly, soon, hurry" }
+    ],
+    "practice": {
+      "question": "You're telling a group (or being polite). Which 'let's go' do you use?",
+      "options": ["चल (chal)", "चला (chala)", "जरा (jara)", "थांब (thaamb)"],
+      "answer": "चला (chala)"
     },
-    {
-        "id": 31,
-        "title": "Where",
-        "sentence": "Tu kuthe rahatos?",
-        "translation": "Where do you live?",
-        "words": [
-            {
-                "word": "kuthe",
-                "meaning": "where"
-            },
-            {
-                "word": "rahatos",
-                "meaning": "live"
-            },
-            {
-                "word": "tu",
-                "meaning": "you"
-            }
-        ],
-        "practice": {
-            "question": "Tu ___ rahatos?",
-            "options": [
-                "kuthe",
-                "kasa",
-                "kay",
-                "kon"
-            ],
-            "answer": "kuthe"
-        },
-        "note": "'Kuthe' means where."
+    "matching": [
+      { "marathi": "chal", "english": "come on (to one person)" },
+      { "marathi": "chala", "english": "come on (group / polite)" },
+      { "marathi": "nighuya", "english": "let's head off" },
+      { "marathi": "lavkar", "english": "quickly, hurry" }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Things I like",
+    "sentence": "मला गाणी ऐकायला आवडतं.",
+    "transliteration": "Mala gaani aikaayla aavadta.",
+    "translation": "I like listening to songs. (the pattern 'मला [verb]-आयला आवडतं' = 'I like to ___' — plug in any action)",
+    "words": [
+      { "word": "आवडतं", "transliteration": "aavadta", "meaning": "like" },
+      { "word": "गाणी", "transliteration": "gaani", "meaning": "songs" },
+      { "word": "ऐकायला", "transliteration": "aikaayla", "meaning": "to listen" },
+      { "word": "वाचायला", "transliteration": "vaachaayla", "meaning": "to read" },
+      { "word": "खूप", "transliteration": "khup", "meaning": "very, a lot" }
+    ],
+    "practice": {
+      "question": "How do you say 'I like to read'?",
+      "options": ["मला वाचायला आवडतं.", "मला गाणी आवडतं.", "मला भूक लागली.", "मला आवडत नाही."],
+      "answer": "मला वाचायला आवडतं."
     },
-    {
-        "id": 32,
-        "title": "Who",
-        "sentence": "Ti kon aahe?",
-        "translation": "Who is she?",
-        "words": [
-            {
-                "word": "ti",
-                "meaning": "she"
-            },
-            {
-                "word": "kon",
-                "meaning": "who"
-            },
-            {
-                "word": "aahe",
-                "meaning": "is"
-            }
-        ],
-        "practice": {
-            "question": "Ti ___ aahe?",
-            "options": [
-                "kon",
-                "kuthe",
-                "kiti",
-                "kasa"
-            ],
-            "answer": "kon"
-        },
-        "note": "'Ti' means she. 'Kon' means who."
+    "matching": [
+      { "marathi": "aavadta", "english": "like" },
+      { "marathi": "gaani", "english": "songs" },
+      { "marathi": "aikaayla", "english": "to listen" },
+      { "marathi": "vaachaayla", "english": "to read" }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Things I don't like",
+    "sentence": "अरे, मला गर्दी अजिबात आवडत नाही.",
+    "transliteration": "Are, mala gardi ajibaat aavadat naahi.",
+    "translation": "Ugh, I don't like crowds at all. ('अजिबात' strengthens a 'no' — 'not at all')",
+    "words": [
+      { "word": "आवडत नाही", "transliteration": "aavadat naahi", "meaning": "don't like" },
+      { "word": "गर्दी", "transliteration": "gardi", "meaning": "crowd" },
+      { "word": "अजिबात", "transliteration": "ajibaat", "meaning": "at all (with a negative: 'not at all')" },
+      { "word": "नको", "transliteration": "nako", "meaning": "don't want it" },
+      { "word": "कंटाळा", "transliteration": "kantaala", "meaning": "boredom ('मला कंटाळा आला' = I'm bored)" }
+    ],
+    "practice": {
+      "question": "Which word means 'at all' (used to strengthen a 'no')?",
+      "options": ["अजिबात (ajibaat)", "गर्दी (gardi)", "कंटाळा (kantaala)", "खूप (khup)"],
+      "answer": "अजिबात (ajibaat)"
     },
-    {
-        "id": 33,
-        "title": "What",
-        "sentence": "He kay aahe?",
-        "translation": "What is this?",
-        "words": [
-            {
-                "word": "he",
-                "meaning": "this"
-            },
-            {
-                "word": "kay",
-                "meaning": "what"
-            },
-            {
-                "word": "aahe",
-                "meaning": "is"
-            }
-        ],
-        "practice": {
-            "question": "He ___ aahe?",
-            "options": [
-                "kay",
-                "kuthe",
-                "kon",
-                "kiti"
-            ],
-            "answer": "kay"
-        },
-        "note": "'Kay' means what."
+    "matching": [
+      { "marathi": "aavadat naahi", "english": "don't like" },
+      { "marathi": "gardi", "english": "crowd" },
+      { "marathi": "ajibaat", "english": "at all" },
+      { "marathi": "kantaala", "english": "boredom" }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Talking about hobbies",
+    "sentence": "मला सिनेमे बघायला खूप आवडतं.",
+    "transliteration": "Mala cineme baghaayla khup aavadta.",
+    "translation": "I really love watching movies.",
+    "words": [
+      { "word": "सिनेमे", "transliteration": "cineme", "meaning": "movies" },
+      { "word": "बघायला", "transliteration": "baghaayla", "meaning": "to watch" },
+      { "word": "गाणी", "transliteration": "gaani", "meaning": "songs, music" },
+      { "word": "खेळ", "transliteration": "khel", "meaning": "game, sport" },
+      { "word": "खेळायला", "transliteration": "khelaayla", "meaning": "to play" }
+    ],
+    "practice": {
+      "question": "Which word means 'to watch'?",
+      "options": ["बघायला (baghaayla)", "ऐकायला (aikaayla)", "खेळायला (khelaayla)", "वाचायला (vaachaayla)"],
+      "answer": "बघायला (baghaayla)"
     },
-    {
-        "id": 34,
-        "title": "How Many",
-        "sentence": "Tujhyakade kiti pustake aahet?",
-        "translation": "How many books do you have?",
-        "words": [
-            {
-                "word": "tujhyakade",
-                "meaning": "with you / you have"
-            },
-            {
-                "word": "kiti",
-                "meaning": "how many / how much"
-            },
-            {
-                "word": "pustake",
-                "meaning": "books"
-            }
-        ],
-        "practice": {
-            "question": "Tujhyakade ___ pustake aahet?",
-            "options": [
-                "kiti",
-                "kay",
-                "kon",
-                "kuthe"
-            ],
-            "answer": "kiti"
-        },
-        "note": "'Kiti' means how many/how much."
+    "matching": [
+      { "marathi": "cinema", "english": "movies" },
+      { "marathi": "baghaayla", "english": "to watch" },
+      { "marathi": "gaani", "english": "songs / music" },
+      { "marathi": "khel", "english": "game / sport" }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Happy / sad / tired",
+    "sentence": "खूप थकलो आहे आज.",
+    "transliteration": "Khup thaklo aahe aaj.",
+    "translation": "I'm so tired today. (said by a male; a woman says 'थकले आहे'. Note: आनंदी and उदास stay the same for both genders, but थकलो/थकले changes)",
+    "words": [
+      { "word": "आनंदी", "transliteration": "aanandi", "meaning": "happy (same for male & female)" },
+      { "word": "उदास", "transliteration": "udaas", "meaning": "sad, down (same for both)" },
+      { "word": "थकलो", "transliteration": "thaklo", "meaning": "tired (male)" },
+      { "word": "थकले", "transliteration": "thakle", "meaning": "tired (female)" },
+      { "word": "खूप", "transliteration": "khup", "meaning": "very, really" }
+    ],
+    "practice": {
+      "question": "A woman says she's tired. Which is correct?",
+      "options": ["थकलो आहे.", "थकले आहे.", "आनंदी आहे.", "उदास आहे."],
+      "answer": "थकले आहे."
     },
-    {
-        "id": 35,
-        "title": "Market",
-        "sentence": "Mi bazarat phal gheto.",
-        "translation": "I buy fruit in the market.",
-        "words": [
-            {
-                "word": "bazarat",
-                "meaning": "in the market"
-            },
-            {
-                "word": "phal",
-                "meaning": "fruit"
-            },
-            {
-                "word": "gheto",
-                "meaning": "take / buy"
-            }
-        ],
-        "practice": {
-            "question": "Mi bazarat phal ___.",
-            "options": [
-                "gheto",
-                "pito",
-                "zopto",
-                "aikto"
-            ],
-            "answer": "gheto"
-        },
-        "note": "'Gheto' means take/buy depending on context."
+    "matching": [
+      { "marathi": "aanandi", "english": "happy" },
+      { "marathi": "udaas", "english": "sad, down" },
+      { "marathi": "thaklo", "english": "tired (male)" },
+      { "marathi": "thakle", "english": "tired (female)" }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Excited / nervous",
+    "sentence": "अरे, मला खूप टेन्शन आलंय!",
+    "transliteration": "Are, mala khup tension aalay!",
+    "translation": "Ugh, I'm so nervous / stressed! ('टेन्शन आलंय' is how people really say it; the pattern 'X वाटतंय' = 'feeling X')",
+    "words": [
+      { "word": "टेन्शन", "transliteration": "tension", "meaning": "nervousness, stress (everyday borrowed word)" },
+      { "word": "उत्सुक", "transliteration": "utsuk", "meaning": "eager, excited" },
+      { "word": "भीती", "transliteration": "bhiti", "meaning": "fear" },
+      { "word": "वाटतंय", "transliteration": "vaattay", "meaning": "feeling / feels (right now)" },
+      { "word": "आलंय", "transliteration": "aalay", "meaning": "has come / has set in" }
+    ],
+    "practice": {
+      "question": "Which is a very common spoken word for feeling nervous / stressed?",
+      "options": ["टेन्शन (tension)", "उत्सुक (utsuk)", "भीती (bhiti)", "आनंदी (aanandi)"],
+      "answer": "टेन्शन (tension)"
     },
-    {
-        "id": 36,
-        "title": "Money",
-        "sentence": "Majhyakade paise aahet.",
-        "translation": "I have money.",
-        "words": [
-            {
-                "word": "majhyakade",
-                "meaning": "with me / I have"
-            },
-            {
-                "word": "paise",
-                "meaning": "money"
-            },
-            {
-                "word": "aahet",
-                "meaning": "are / have"
-            }
-        ],
-        "practice": {
-            "question": "Majhyakade ___ aahet.",
-            "options": [
-                "paise",
-                "paani",
-                "naav",
-                "ghar"
-            ],
-            "answer": "paise"
-        },
-        "note": "'Paise' means money."
+    "matching": [
+      { "marathi": "tension", "english": "nervousness / stress" },
+      { "marathi": "utsuk", "english": "eager / excited" },
+      { "marathi": "bhiti", "english": "fear" },
+      { "marathi": "vaattay", "english": "feeling / feels" }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Giving opinions",
+    "sentence": "मला वाटतं, हे बरोबर आहे.",
+    "transliteration": "Mala vaatta, he barobar aahe.",
+    "translation": "I think this is right. ('मला वाटतं' is the everyday way to open an opinion)",
+    "words": [
+      { "word": "मला वाटतं", "transliteration": "mala vaatta", "meaning": "I think / I feel" },
+      { "word": "माझ्या मते", "transliteration": "maajhya mate", "meaning": "in my opinion" },
+      { "word": "हे", "transliteration": "he", "meaning": "this" },
+      { "word": "ते", "transliteration": "te", "meaning": "that" },
+      { "word": "बरोबर", "transliteration": "barobar", "meaning": "right, correct" }
+    ],
+    "practice": {
+      "question": "How do you say 'I think...' to start an opinion?",
+      "options": ["मला वाटतं", "मला आवडतं", "काय झालं", "कुठे आहेस"],
+      "answer": "मला वाटतं"
     },
-    {
-        "id": 37,
-        "title": "Price",
-        "sentence": "Yachi kimat kiti aahe?",
-        "translation": "How much is its price?",
-        "words": [
-            {
-                "word": "yachi",
-                "meaning": "its / this one's"
-            },
-            {
-                "word": "kimat",
-                "meaning": "price"
-            },
-            {
-                "word": "kiti",
-                "meaning": "how much"
-            }
-        ],
-        "practice": {
-            "question": "Yachi ___ kiti aahe?",
-            "options": [
-                "kimat",
-                "naav",
-                "madat",
-                "shala"
-            ],
-            "answer": "kimat"
-        },
-        "note": "'Kimat' means price."
+    "matching": [
+      { "marathi": "mala vaatta", "english": "I think" },
+      { "marathi": "maajhya mate", "english": "in my opinion" },
+      { "marathi": "he", "english": "this" },
+      { "marathi": "te", "english": "that" }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Agreeing & disagreeing",
+    "sentence": "हो ना, अगदी बरोबर!",
+    "transliteration": "Ho na, agadi barobar!",
+    "translation": "Right, exactly! (to disagree gently you'd say 'नाही रे' to a male or 'नाही गं' to a female)",
+    "words": [
+      { "word": "हो ना", "transliteration": "ho na", "meaning": "right? / yeah, totally (agreement)" },
+      { "word": "अगदी", "transliteration": "agadi", "meaning": "exactly, absolutely" },
+      { "word": "नाही रे", "transliteration": "naahi re", "meaning": "nah / no way (to a male)" },
+      { "word": "नाही गं", "transliteration": "naahi ga", "meaning": "nah / no way (to a female)" },
+      { "word": "बरोबर", "transliteration": "barobar", "meaning": "right, correct" }
+    ],
+    "practice": {
+      "question": "Which means a casual 'nah / no way' said to a female?",
+      "options": ["नाही रे (naahi re)", "नाही गं (naahi ga)", "हो ना (ho na)", "अगदी (agadi)"],
+      "answer": "नाही गं (naahi ga)"
     },
-    {
-        "id": 38,
-        "title": "Travel by Bus",
-        "sentence": "Mi busne shalet jato.",
-        "translation": "I go to school by bus.",
-        "words": [
-            {
-                "word": "busne",
-                "meaning": "by bus"
-            },
-            {
-                "word": "shalet",
-                "meaning": "to school"
-            },
-            {
-                "word": "jato",
-                "meaning": "go"
-            }
-        ],
-        "practice": {
-            "question": "Mi ___ shalet jato.",
-            "options": [
-                "busne",
-                "ghari",
-                "bhat",
-                "vel"
-            ],
-            "answer": "busne"
-        },
-        "note": "'Busne' means by bus."
+    "matching": [
+      { "marathi": "ho na", "english": "right? / totally" },
+      { "marathi": "agadi", "english": "exactly" },
+      { "marathi": "naahi re", "english": "nah (to a male)" },
+      { "marathi": "naahi ga", "english": "nah (to a female)" }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Making plans",
+    "sentence": "उद्या संध्याकाळी भेटूया का?",
+    "transliteration": "Udya sandhyaakaali bhetuya kaa?",
+    "translation": "Shall we meet tomorrow evening? (adding 'का' turns 'let's meet' into 'shall we meet?')",
+    "words": [
+      { "word": "उद्या", "transliteration": "udya", "meaning": "tomorrow" },
+      { "word": "संध्याकाळी", "transliteration": "sandhyaakaali", "meaning": "in the evening" },
+      { "word": "सकाळी", "transliteration": "sakaali", "meaning": "in the morning" },
+      { "word": "भेटूया", "transliteration": "bhetuya", "meaning": "let's meet" },
+      { "word": "का", "transliteration": "kaa", "meaning": "question particle ('shall we?')" }
+    ],
+    "practice": {
+      "question": "Which word means 'in the evening'?",
+      "options": ["संध्याकाळी (sandhyaakaali)", "सकाळी (sakaali)", "उद्या (udya)", "आत्ता (aatta)"],
+      "answer": "संध्याकाळी (sandhyaakaali)"
     },
-    {
-        "id": 39,
-        "title": "Directions Left",
-        "sentence": "Dava kade vala.",
-        "translation": "Turn left.",
-        "words": [
-            {
-                "word": "dava",
-                "meaning": "left"
-            },
-            {
-                "word": "kade",
-                "meaning": "towards"
-            },
-            {
-                "word": "vala",
-                "meaning": "turn"
-            }
-        ],
-        "practice": {
-            "question": "___ kade vala.",
-            "options": [
-                "Dava",
-                "Ujva",
-                "Ata",
-                "Aaj"
-            ],
-            "answer": "Dava"
-        },
-        "note": "'Dava' means left."
+    "matching": [
+      { "marathi": "udya", "english": "tomorrow" },
+      { "marathi": "sandhyaakaali", "english": "in the evening" },
+      { "marathi": "sakaali", "english": "in the morning" },
+      { "marathi": "bhetuya", "english": "let's meet" }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Inviting someone",
+    "sentence": "अगं, तू पण येशील का?",
+    "transliteration": "Aga, tu pan yeshil kaa?",
+    "translation": "Hey, will you come too? ('येशील का?' works for both genders; 'येणार का?' is an equally common, slightly more casual version)",
+    "words": [
+      { "word": "येशील का", "transliteration": "yeshil kaa", "meaning": "will you come? (informal)" },
+      { "word": "येणार का", "transliteration": "yenaar kaa", "meaning": "are you coming? / will you come?" },
+      { "word": "पण", "transliteration": "pan", "meaning": "also, too" },
+      { "word": "नक्की ये", "transliteration": "nakki ye", "meaning": "definitely come" },
+      { "word": "सोबत", "transliteration": "sobat", "meaning": "along, with" }
+    ],
+    "practice": {
+      "question": "How do you invite a friend, 'will you come too?'",
+      "options": ["तू पण येशील का?", "तू कुठे आहेस?", "काय झालं?", "मला आवडतं."],
+      "answer": "तू पण येशील का?"
     },
-    {
-        "id": 40,
-        "title": "Directions Right",
-        "sentence": "Ujva kade ja.",
-        "translation": "Go to the right side.",
-        "words": [
-            {
-                "word": "ujva",
-                "meaning": "right"
-            },
-            {
-                "word": "kade",
-                "meaning": "towards"
-            },
-            {
-                "word": "ja",
-                "meaning": "go"
-            }
-        ],
-        "practice": {
-            "question": "___ kade ja.",
-            "options": [
-                "Ujva",
-                "Dava",
-                "Kal",
-                "Ithe"
-            ],
-            "answer": "Ujva"
-        },
-        "note": "'Ujva' means right."
+    "matching": [
+      { "marathi": "yeshil kaa", "english": "will you come?" },
+      { "marathi": "yenaar kaa", "english": "are you coming?" },
+      { "marathi": "pan", "english": "also, too" },
+      { "marathi": "nakki ye", "english": "definitely come" }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Talking about your day",
+    "sentence": "आज दिवस मस्त गेला!",
+    "transliteration": "Aaj divas masta gela!",
+    "translation": "Today went great! (literally 'today the day went great'. To say what you did, use 'केलं': 'मी खूप काम केलं' = 'I did a lot of work')",
+    "words": [
+      { "word": "आज", "transliteration": "aaj", "meaning": "today" },
+      { "word": "दिवस", "transliteration": "divas", "meaning": "day" },
+      { "word": "गेला", "transliteration": "gela", "meaning": "went, passed (the day 'went')" },
+      { "word": "मस्त", "transliteration": "masta", "meaning": "great, awesome" },
+      { "word": "केलं", "transliteration": "kela", "meaning": "did ('मी ... केलं' = 'I did ...')" }
+    ],
+    "practice": {
+      "question": "What does 'आज दिवस मस्त गेला' mean?",
+      "options": ["Today went great!", "I'm tired today.", "Where did you go?", "What did you do?"],
+      "answer": "Today went great!"
     },
-    {
-        "id": 41,
-        "title": "Weather Hot",
-        "sentence": "Aaj khup garam aahe.",
-        "translation": "Today it is very hot.",
-        "words": [
-            {
-                "word": "aaj",
-                "meaning": "today"
-            },
-            {
-                "word": "khup",
-                "meaning": "very"
-            },
-            {
-                "word": "garam",
-                "meaning": "hot"
-            }
-        ],
-        "practice": {
-            "question": "Aaj khup ___ aahe.",
-            "options": [
-                "garam",
-                "thanda",
-                "navin",
-                "ushira"
-            ],
-            "answer": "garam"
-        },
-        "note": "'Khup' means very. 'Garam' means hot."
+    "matching": [
+      { "marathi": "aaj", "english": "today" },
+      { "marathi": "divas", "english": "day" },
+      { "marathi": "gela", "english": "went / passed" },
+      { "marathi": "masta", "english": "great, awesome" }
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Common Marathi reactions",
+    "sentence": "अरे वा! मस्तच!",
+    "transliteration": "Are vaa! Mastach!",
+    "translation": "Oh wow! Awesome! (these one-word reactions are the heartbeat of Marathi chat — 'अरे वा' for good news, 'बापरे' for shock, 'अरेरे' for sympathy)",
+    "words": [
+      { "word": "अरे वा", "transliteration": "are vaa", "meaning": "wow! / nice! (delight, good news)" },
+      { "word": "बापरे", "transliteration": "baapre", "meaning": "oh my! / yikes! (shock, or a big amount)" },
+      { "word": "अरेरे", "transliteration": "arere", "meaning": "oh no! / aww (sympathy, disappointment)" },
+      { "word": "मस्तच", "transliteration": "mastach", "meaning": "just awesome (the '-च' adds punch)" }
+    ],
+    "practice": {
+      "question": "Which reaction shows sympathy, like 'oh no / aww'?",
+      "options": ["अरे वा (are vaa)", "बापरे (baapre)", "अरेरे (arere)", "मस्तच (mastach)"],
+      "answer": "अरेरे (arere)"
     },
-    {
-        "id": 42,
-        "title": "Weather Cold",
-        "sentence": "Aaj khup thanda aahe.",
-        "translation": "Today it is very cold.",
-        "words": [
-            {
-                "word": "aaj",
-                "meaning": "today"
-            },
-            {
-                "word": "khup",
-                "meaning": "very"
-            },
-            {
-                "word": "thanda",
-                "meaning": "cold"
-            }
-        ],
-        "practice": {
-            "question": "Aaj khup ___ aahe.",
-            "options": [
-                "thanda",
-                "garam",
-                "navin",
-                "lavkar"
-            ],
-            "answer": "thanda"
-        },
-        "note": "'Thanda' means cold."
+    "matching": [
+      { "marathi": "are vaa", "english": "wow! / nice!" },
+      { "marathi": "baapre", "english": "oh my! / yikes!" },
+      { "marathi": "arere", "english": "oh no! / aww" },
+      { "marathi": "mastach", "english": "just awesome" }
+    ]
+  },
+  {
+    "id": 42,
+    "title": "Surprise & disbelief",
+    "sentence": "अशक्य! खरंच का?",
+    "transliteration": "Ashakya! Kharach kaa?",
+    "translation": "No way! Really? (what you blurt out when something's hard to believe)",
+    "words": [
+      { "word": "अशक्य", "transliteration": "ashakya", "meaning": "impossible! / no way!" },
+      { "word": "खरंच का", "transliteration": "kharach kaa", "meaning": "really? seriously?" },
+      { "word": "काय सांगतोस", "transliteration": "kaay saangtos", "meaning": "you don't say! (to a male)" },
+      { "word": "काय सांगतेस", "transliteration": "kaay saangtes", "meaning": "you don't say! (to a female)" },
+      { "word": "विश्वासच बसत नाही", "transliteration": "vishwaasach basat naahi", "meaning": "I just can't believe it" }
+    ],
+    "practice": {
+      "question": "Which word means 'no way! / impossible!'?",
+      "options": ["अशक्य (ashakya)", "खरंच (kharach)", "बापरे (baapre)", "अरेरे (arere)"],
+      "answer": "अशक्य (ashakya)"
     },
-    {
-        "id": 43,
-        "title": "Rain",
-        "sentence": "Paus padat aahe.",
-        "translation": "It is raining.",
-        "words": [
-            {
-                "word": "paus",
-                "meaning": "rain"
-            },
-            {
-                "word": "padat",
-                "meaning": "falling"
-            },
-            {
-                "word": "aahe",
-                "meaning": "is"
-            }
-        ],
-        "practice": {
-            "question": "___ padat aahe.",
-            "options": [
-                "Paus",
-                "Bhat",
-                "Naav",
-                "Paise"
-            ],
-            "answer": "Paus"
-        },
-        "note": "'Paus padat aahe' means it is raining."
+    "matching": [
+      { "marathi": "ashakya", "english": "no way! / impossible!" },
+      { "marathi": "kharach kaa", "english": "really?" },
+      { "marathi": "kaay saangtos", "english": "you don't say! (male)" },
+      { "marathi": "vishwaasach basat naahi", "english": "I can't believe it" }
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Talking about the weather",
+    "sentence": "बापरे, आज खूप गरम आहे!",
+    "transliteration": "Baapre, aaj khup garam aahe!",
+    "translation": "Whoa, it's so hot today! (note: rain 'falls' in Marathi — 'पाऊस पडतोय' = it's raining)",
+    "words": [
+      { "word": "गरम", "transliteration": "garam", "meaning": "hot" },
+      { "word": "थंड", "transliteration": "thand", "meaning": "cold" },
+      { "word": "पाऊस", "transliteration": "paaus", "meaning": "rain" },
+      { "word": "पडतोय", "transliteration": "padtoy", "meaning": "is falling (used for rain)" },
+      { "word": "ऊन", "transliteration": "oon", "meaning": "sunshine, hot sun" }
+    ],
+    "practice": {
+      "question": "How do you say 'it's raining'?",
+      "options": ["पाऊस पडतोय.", "गरम आहे.", "थंड आहे.", "ऊन आहे."],
+      "answer": "पाऊस पडतोय."
     },
-    {
-        "id": 44,
-        "title": "Happy",
-        "sentence": "Mi anandi aahe.",
-        "translation": "I am happy.",
-        "words": [
-            {
-                "word": "mi",
-                "meaning": "I"
-            },
-            {
-                "word": "anandi",
-                "meaning": "happy"
-            },
-            {
-                "word": "aahe",
-                "meaning": "am"
-            }
-        ],
-        "practice": {
-            "question": "Mi ___ aahe.",
-            "options": [
-                "anandi",
-                "thaklo",
-                "bhook",
-                "tahan"
-            ],
-            "answer": "anandi"
-        },
-        "note": "'Anandi' means happy."
+    "matching": [
+      { "marathi": "garam", "english": "hot" },
+      { "marathi": "thand", "english": "cold" },
+      { "marathi": "paaus", "english": "rain" },
+      { "marathi": "oon", "english": "sunshine / sun" }
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Work & studies",
+    "sentence": "खूप काम आहे, अभ्यासही करायचाय.",
+    "transliteration": "Khup kaam aahe, abhyaasahi karaaychaay.",
+    "translation": "I've got a lot of work, and studying to do too. ('करायचाय' = 'have to do' — a very handy spoken form)",
+    "words": [
+      { "word": "काम", "transliteration": "kaam", "meaning": "work" },
+      { "word": "अभ्यास", "transliteration": "abhyaas", "meaning": "study, studies" },
+      { "word": "ऑफिस", "transliteration": "office", "meaning": "office (borrowed, used all the time)" },
+      { "word": "करायचाय", "transliteration": "karaaychaay", "meaning": "have to do / need to do" },
+      { "word": "सुट्टी", "transliteration": "sutti", "meaning": "holiday, day off, leave" }
+    ],
+    "practice": {
+      "question": "Which word means 'a day off / holiday'?",
+      "options": ["सुट्टी (sutti)", "काम (kaam)", "अभ्यास (abhyaas)", "ऑफिस (office)"],
+      "answer": "सुट्टी (sutti)"
     },
-    {
-        "id": 45,
-        "title": "Tired",
-        "sentence": "Mi thaklo aahe.",
-        "translation": "I am tired.",
-        "words": [
-            {
-                "word": "mi",
-                "meaning": "I"
-            },
-            {
-                "word": "thaklo",
-                "meaning": "tired"
-            },
-            {
-                "word": "aahe",
-                "meaning": "am"
-            }
-        ],
-        "practice": {
-            "question": "Mi ___ aahe.",
-            "options": [
-                "thaklo",
-                "anandi",
-                "garam",
-                "navin"
-            ],
-            "answer": "thaklo"
-        },
-        "note": "'Thaklo' means tired. A female speaker may say 'thakli'."
+    "matching": [
+      { "marathi": "kaam", "english": "work" },
+      { "marathi": "abhyaas", "english": "study / studies" },
+      { "marathi": "karaaychaay", "english": "have to do" },
+      { "marathi": "sutti", "english": "holiday / day off" }
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Future plans",
+    "sentence": "उद्या मी गावी जाणार आहे.",
+    "transliteration": "Udya mi gaavi jaanaar aahe.",
+    "translation": "Tomorrow I'm going to my hometown. ('गावी जाणं' — going to your native place — is a very Maharashtrian thing to say. '-णार आहे' = a planned 'going to'; '-ईन/-एन' = a simple 'I will')",
+    "words": [
+      { "word": "जाणार आहे", "transliteration": "jaanaar aahe", "meaning": "am going to go (planned)" },
+      { "word": "करणार", "transliteration": "karnaar", "meaning": "going to do" },
+      { "word": "जाईन", "transliteration": "jaain", "meaning": "I will go" },
+      { "word": "भेटेन", "transliteration": "bheten", "meaning": "I will meet" },
+      { "word": "गावी", "transliteration": "gaavi", "meaning": "to the hometown / native village" }
+    ],
+    "practice": {
+      "question": "Which means 'I will meet'?",
+      "options": ["भेटेन (bheten)", "जाईन (jaain)", "करणार (karnaar)", "गावी (gaavi)"],
+      "answer": "भेटेन (bheten)"
     },
-    {
-        "id": 46,
-        "title": "Hungry",
-        "sentence": "Mala bhook lagli aahe.",
-        "translation": "I am hungry.",
-        "words": [
-            {
-                "word": "mala",
-                "meaning": "to me / I"
-            },
-            {
-                "word": "bhook",
-                "meaning": "hunger"
-            },
-            {
-                "word": "lagli",
-                "meaning": "felt / happened"
-            }
-        ],
-        "practice": {
-            "question": "Mala ___ lagli aahe.",
-            "options": [
-                "bhook",
-                "tahan",
-                "paise",
-                "naav"
-            ],
-            "answer": "bhook"
-        },
-        "note": "'Mala bhook lagli aahe' means I am hungry."
+    "matching": [
+      { "marathi": "jaanaar aahe", "english": "am going to go" },
+      { "marathi": "karnaar", "english": "going to do" },
+      { "marathi": "jaain", "english": "I will go" },
+      { "marathi": "bheten", "english": "I will meet" }
+    ]
+  },
+  {
+    "id": 46,
+    "title": "Past experiences",
+    "sentence": "मी काल सिनेमा बघायला गेलो होतो.",
+    "transliteration": "Mi kaal cinema baghaayla gelo hoto.",
+    "translation": "I'd gone to watch a movie yesterday. (said by a male; a woman says 'गेले होते'. The '-लो/-ले होतो/होते' ending is how you narrate something you did)",
+    "words": [
+      { "word": "गेलो होतो", "transliteration": "gelo hoto", "meaning": "had gone (male)" },
+      { "word": "गेले होते", "transliteration": "gele hote", "meaning": "had gone (female)" },
+      { "word": "पाहिलं", "transliteration": "paahila", "meaning": "saw" },
+      { "word": "पाहिलं होतं", "transliteration": "paahila hota", "meaning": "had seen" },
+      { "word": "काल", "transliteration": "kaal", "meaning": "yesterday" }
+    ],
+    "practice": {
+      "question": "A woman says 'I had gone'. Which is correct?",
+      "options": ["गेलो होतो", "गेले होते", "जाणार आहे", "जाईन"],
+      "answer": "गेले होते"
     },
-    {
-        "id": 47,
-        "title": "Thirsty",
-        "sentence": "Mala tahan lagli aahe.",
-        "translation": "I am thirsty.",
-        "words": [
-            {
-                "word": "mala",
-                "meaning": "to me / I"
-            },
-            {
-                "word": "tahan",
-                "meaning": "thirst"
-            },
-            {
-                "word": "lagli",
-                "meaning": "felt / happened"
-            }
-        ],
-        "practice": {
-            "question": "Mala ___ lagli aahe.",
-            "options": [
-                "tahan",
-                "bhook",
-                "pustak",
-                "shala"
-            ],
-            "answer": "tahan"
-        },
-        "note": "'Tahan' means thirst."
+    "matching": [
+      { "marathi": "gelo hoto", "english": "had gone (male)" },
+      { "marathi": "gele hote", "english": "had gone (female)" },
+      { "marathi": "paahila", "english": "saw" },
+      { "marathi": "kaal", "english": "yesterday" }
+    ]
+  },
+  {
+    "id": 47,
+    "title": "Phone & texting",
+    "sentence": "अरे, नंतर फोन कर ना.",
+    "transliteration": "Are, nantar phone kar na.",
+    "translation": "Hey, call me later, will you? (that little 'ना' at the end turns an order into a friendly request — very Marathi)",
+    "words": [
+      { "word": "फोन कर", "transliteration": "phone kar", "meaning": "call (me)" },
+      { "word": "मेसेज कर", "transliteration": "message kar", "meaning": "text / message (me)" },
+      { "word": "ना", "transliteration": "na", "meaning": "softening particle (makes a request gentle, friendly)" },
+      { "word": "बोल", "transliteration": "bol", "meaning": "talk, speak (informal command)" },
+      { "word": "ऑनलाइन", "transliteration": "online", "meaning": "online" }
+    ],
+    "practice": {
+      "question": "Which little word makes 'call me' sound friendly rather than bossy?",
+      "options": ["ना (na)", "कर (kar)", "फोन (phone)", "नंतर (nantar)"],
+      "answer": "ना (na)"
     },
-    {
-        "id": 48,
-        "title": "Can I Come",
-        "sentence": "Mi yeu shakto ka?",
-        "translation": "Can I come?",
-        "words": [
-            {
-                "word": "mi",
-                "meaning": "I"
-            },
-            {
-                "word": "yeu",
-                "meaning": "come"
-            },
-            {
-                "word": "shakto",
-                "meaning": "can"
-            },
-            {
-                "word": "ka",
-                "meaning": "question marker"
-            }
-        ],
-        "practice": {
-            "question": "Mi yeu ___ ka?",
-            "options": [
-                "shakto",
-                "pahije",
-                "aahe",
-                "nahi"
-            ],
-            "answer": "shakto"
-        },
-        "note": "'Shakto' means can/able to. 'Ka' makes it a question."
+    "matching": [
+      { "marathi": "phone kar", "english": "call (me)" },
+      { "marathi": "message kar", "english": "text (me)" },
+      { "marathi": "na", "english": "softening particle" },
+      { "marathi": "bol", "english": "talk / speak" }
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Phrases people use all the time",
+    "sentence": "काय चाललंय आजकाल?",
+    "transliteration": "Kaay chaallay aajkaal?",
+    "translation": "What's up these days? (the everyday 'what's going on'. A classic non-answer reply is 'असंच!' — 'nothing much')",
+    "words": [
+      { "word": "काय चाललंय", "transliteration": "kaay chaallay", "meaning": "what's going on? / what's up?" },
+      { "word": "बघूया", "transliteration": "baghuya", "meaning": "we'll see / let's see" },
+      { "word": "ठीक आहे", "transliteration": "theek aahe", "meaning": "okay, alright" },
+      { "word": "आजकाल", "transliteration": "aajkaal", "meaning": "these days, lately" },
+      { "word": "असंच", "transliteration": "asanch", "meaning": "nothing much / just the usual (a classic non-answer)" }
+    ],
+    "practice": {
+      "question": "Someone asks 'काय चाललंय?' — which casual reply means 'nothing much / just the usual'?",
+      "options": ["असंच (asanch)", "बापरे (baapre)", "अशक्य (ashakya)", "गरम (garam)"],
+      "answer": "असंच (asanch)"
     },
-    {
-        "id": 49,
-        "title": "I Can Speak",
-        "sentence": "Mi thode bolu shakto.",
-        "translation": "I can speak a little.",
-        "words": [
-            {
-                "word": "thode",
-                "meaning": "a little"
-            },
-            {
-                "word": "bolu",
-                "meaning": "speak"
-            },
-            {
-                "word": "shakto",
-                "meaning": "can"
-            }
-        ],
-        "practice": {
-            "question": "Mi thode bolu ___.",
-            "options": [
-                "shakto",
-                "pahije",
-                "aahe",
-                "jaato"
-            ],
-            "answer": "shakto"
-        },
-        "note": "'Bolu shakto' means can speak."
+    "matching": [
+      { "marathi": "kaay chaallay", "english": "what's up?" },
+      { "marathi": "baghuya", "english": "we'll see" },
+      { "marathi": "theek aahe", "english": "okay, alright" },
+      { "marathi": "aajkaal", "english": "these days" }
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Real Marathi small talk",
+    "sentence": "अरे, बऱ्याच दिवसांनी! कसं काय?",
+    "transliteration": "Are, baryaach divsaanni! Kasa kaay?",
+    "translation": "Hey, long time no see! How's it going? (exactly what you say running into a friend or neighbour)",
+    "words": [
+      { "word": "बऱ्याच दिवसांनी", "transliteration": "baryaach divsaanni", "meaning": "after a long time / long time no see" },
+      { "word": "कसं काय", "transliteration": "kasa kaay", "meaning": "how's it going?" },
+      { "word": "काय विशेष", "transliteration": "kaay vishesh", "meaning": "anything special? / what's new?" },
+      { "word": "मजेत", "transliteration": "majet", "meaning": "doing great" },
+      { "word": "भेटू मग", "transliteration": "bhetu mag", "meaning": "see you then / catch you later" }
+    ],
+    "practice": {
+      "question": "What does 'बऱ्याच दिवसांनी!' mean?",
+      "options": ["Long time no see!", "What happened?", "Where are you going?", "I'm tired."],
+      "answer": "Long time no see!"
     },
-    {
-        "id": 50,
-        "title": "See You Again",
-        "sentence": "Punha bhetu.",
-        "translation": "See you again.",
-        "words": [
-            {
-                "word": "punha",
-                "meaning": "again"
-            },
-            {
-                "word": "bhetu",
-                "meaning": "meet / see"
-            },
-            {
-                "word": "punha bhetu",
-                "meaning": "see you again"
-            }
-        ],
-        "practice": {
-            "question": "___ bhetu.",
-            "options": [
-                "Punha",
-                "Paani",
-                "Naav",
-                "Ghar"
-            ],
-            "answer": "Punha"
-        },
-        "note": "'Punha bhetu' means see you again."
-    }
+    "matching": [
+      { "marathi": "baryaach divsaanni", "english": "long time no see" },
+      { "marathi": "kasa kaay", "english": "how's it going?" },
+      { "marathi": "kaay vishesh", "english": "what's new?" },
+      { "marathi": "bhetu mag", "english": "see you then" }
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Putting it all together",
+    "sentence": "अरे, बऱ्याच दिवसांनी! कसं काय? — मजेत रे! तू बोल, काय चाललंय? — असंच! चल, नंतर निवांत भेटूया. — बरं, भेटू मग!",
+    "transliteration": "Are, baryaach divsaanni! Kasa kaay? — Majet re! Tu bol, kaay chaallay? — Asanch! Chal, nantar nivaant bhetuya. — Bara, bhetu mag!",
+    "translation": "Hey, long time no see! How's it going? — Great! You tell me, what's up? — Nothing much! Come on, let's meet up properly sometime. — Okay, see you then! (a full natural exchange built from everything you've learned. Bonus word: 'निवांत' = relaxed, unhurried — a beautifully Marathi word)",
+    "words": [
+      { "word": "कसं काय", "transliteration": "kasa kaay", "meaning": "how's it going?" },
+      { "word": "मजेत", "transliteration": "majet", "meaning": "doing great" },
+      { "word": "काय चाललंय", "transliteration": "kaay chaallay", "meaning": "what's up?" },
+      { "word": "असंच", "transliteration": "asanch", "meaning": "nothing much / just the usual" },
+      { "word": "निवांत", "transliteration": "nivaant", "meaning": "relaxed, unhurried, at leisure" }
+    ],
+    "practice": {
+      "question": "In this exchange, what does the reply 'असंच!' mean?",
+      "options": ["Nothing much / just the usual", "I'm very busy", "It's raining", "No way!"],
+      "answer": "Nothing much / just the usual"
+    },
+    "matching": [
+      { "marathi": "kasa kaay", "english": "how's it going?" },
+      { "marathi": "majet", "english": "doing great" },
+      { "marathi": "kaay chaallay", "english": "what's up?" },
+      { "marathi": "nivaant", "english": "relaxed / unhurried" }
+    ]
+  }
 ]
