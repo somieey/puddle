@@ -271,94 +271,10 @@
       "note": "'भाऊ' is often used like 'bro' among Marathi-speaking friends."
     }
   ],
-  "anime": {
-    "title": "Anime Practice",
-    "sentence": "Mi anime baghto.",
-    "translation": "I watch anime.",
-    "words": [
-      { "word": "Mi", "meaning": "I" },
-      { "word": "anime", "meaning": "anime" },
-      { "word": "baghto", "meaning": "watch" }
-    ],
-    "practice": {
-      "question": "Mi ____ baghto.",
-      "options": ["anime", "game", "pustak"],
-      "answer": "anime"
-    }
-  },
-  "coding": {
-    "title": "Coding Practice",
-    "sentence": "Mi Python shikto.",
-    "translation": "I learn Python.",
-    "words": [
-      { "word": "Mi", "meaning": "I" },
-      { "word": "Python", "meaning": "Python" },
-      { "word": "shikto", "meaning": "learn" }
-    ],
-    "practice": {
-      "question": "Mi Python ____.",
-      "options": ["shikto", "khelto", "baghto"],
-      "answer": "shikto"
-    }
-  },
-  "music": {
-    "title": "Music Practice",
-    "sentence": "Mala sangeet avadte.",
-    "translation": "I like music.",
-    "words": [
-      { "word": "Mala", "meaning": "I / to me" },
-      { "word": "sangeet", "meaning": "music" },
-      { "word": "avadte", "meaning": "like" }
-    ],
-    "practice": {
-      "question": "Mala ____ avadte.",
-      "options": ["sangeet", "game", "pustak"],
-      "answer": "sangeet"
-    }
-  },
-  "movies": {
-    "title": "Movies Practice",
-    "sentence": "Mi movie baghto.",
-    "translation": "I watch movies.",
-    "words": [
-      { "word": "Mi", "meaning": "I" },
-      { "word": "movie", "meaning": "movie" },
-      { "word": "baghto", "meaning": "watch" }
-    ],
-    "practice": {
-      "question": "Mi ____ baghto.",
-      "options": ["movie", "sangeet", "game"],
-      "answer": "movie"
-    }
-  },
-  "cricket": {
-    "title": "Cricket Practice",
-    "sentence": "Mi cricket khelto.",
-    "translation": "I play cricket.",
-    "words": [
-      { "word": "Mi", "meaning": "I" },
-      { "word": "cricket", "meaning": "cricket" },
-      { "word": "khelto", "meaning": "play" }
-    ],
-    "practice": {
-      "question": "Mi ____ khelto.",
-      "options": ["cricket", "movie", "pustak"],
-      "answer": "cricket"
-    }
-  },
-  "books": {
-    "title": "Books Practice",
-    "sentence": "Mi pustak vachto.",
-    "translation": "I read a book.",
-    "words": [
-      { "word": "Mi", "meaning": "I" },
-      { "word": "pustak", "meaning": "book" },
-      { "word": "vachto", "meaning": "read" }
-    ],
-    "practice": {
-      "question": "Mi ____ vachto.",
-      "options": ["pustak", "game", "sangeet"],
-      "answer": "pustak"
-    }
-  }
+  "anime": [],
+  "coding":[],
+  "music": [],
+  "movies": [],
+  "cricket": [],
+  "books": []
 }
