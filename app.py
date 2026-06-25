@@ -602,36 +602,55 @@ def interest_lesson(interest_name):
         return redirect(url_for("login"))
 
     user = users_collection.find_one({"email": session["user_email"]})
+
     interest_lessons = load_interest_lessons_for_user(user)
 
-    lesson = interest_lessons.get(interest_name)
+    lessons = interest_lessons.get(interest_name, [])
 
-    if lesson is None:
-        return "Interest lesson not found"
+    if not lessons:
+        return "No lessons available yet."
+
+    completed = user.get("completed_interest_practices", [])
+
+    next_lesson = None
+
+    for lesson in lessons:
+        lesson_key = f"{interest_name}-{lesson['id']}"
+        if lesson_key not in completed:
+            next_lesson = lesson
+            break
+
+    if next_lesson is None:
+        next_lesson = lessons[0]
 
     return render_template(
         "interest_lesson.html",
-        lesson=lesson,
+        lesson=next_lesson,
         interest=interest_name
     )
 
-@app.route("/complete-interest/<interest_name>")
-def complete_interest(interest_name):
+@app.route("/complete-interest/<interest_name>/<int:lesson_id>")
+def complete_interest(interest_name, lesson_id):
+
     if "user_email" not in session:
         return redirect(url_for("login"))
 
     user = users_collection.find_one({"email": session["user_email"]})
 
-    completed_interest_practices = user.get("completed_interest_practices", [])
-    current_xp = user.get("xp", 0)
+    completed_interest_practices = user.get(
+        "completed_interest_practices",
+        []
+    )
 
     today = date.today().isoformat()
 
-    if interest_name not in completed_interest_practices:
+    lesson_key = f"{interest_name}-{lesson_id}"
+
+    if lesson_key not in completed_interest_practices:
 
         update_data = {
             "$addToSet": {
-                "completed_interest_practices": interest_name,
+                "completed_interest_practices": lesson_key,
                 "practice_dates": today
             },
             "$inc": {
@@ -643,9 +662,10 @@ def complete_interest(interest_name):
             {"email": session["user_email"]},
             update_data
         )
+
         update_user_achievements(session["user_email"])
 
-    return redirect(url_for("dashboard"))
+    return redirect(url_for("interest_lesson", interest_name=interest_name))
 
 @app.route("/leaderboard")
 def leaderboard():
