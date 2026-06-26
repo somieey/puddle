@@ -273,6 +273,51 @@
                 font-size:32px;
             }
         }
+
+        .matching-grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        .match-row {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .match-word {
+            background: #fffaf4;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 15px 18px;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .match-select {
+            width: 100%;
+            background: #fffaf4;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 15px 18px;
+            font-family: inherit;
+            font-weight: 900;
+            font-size: 16px;
+            color: var(--brown);
+        }
+
+        #matching-result {
+            margin-top: 16px;
+            font-weight: 900;
+            color: var(--sage);
+        }
+
+        @media(max-width:760px) {
+            .match-row {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -320,7 +365,16 @@
                         <li>
                             <span>
                                 <strong>{{ item.word }}</strong>
-                                — {{ item.meaning }}
+
+                                {% if item.transliteration %}
+                                    <span style="color:#7a6a55; font-size:16px; margin-left:6px;">
+                                        ({{ item.transliteration }})
+                                    </span>
+                                {% endif %}
+
+                                <br>
+                                <span>{{ item.meaning }}</span>
+
                             </span>
 
                             <button
@@ -334,6 +388,38 @@
                     {% endfor %}
                 </ul>
             </section>
+
+            {% if lesson.matching %}
+            <section class="practice-card">
+                <h3>Match the Words 🧩</h3>
+
+                <div class="matching-grid">
+                    {% for pair in lesson.matching %}
+                        <div class="match-row">
+                            <div class="match-word">
+                                {{ pair.marathi }}
+                            </div>
+
+                            <select class="match-select" data-answer="{{ pair.english }}">
+                                <option value="">Choose meaning</option>
+
+                                {% for option in lesson.matching %}
+                                    <option value="{{ option.english }}">
+                                        {{ option.english }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <button type="button" class="btn secondary" onclick="checkMatching()">
+                    Check Matching
+                </button>
+
+                <p id="matching-result"></p>
+            </section>
+            {% endif %}
 
             <section class="practice-card">
                 <h3>Quick Practice ✍️</h3>
@@ -372,6 +458,32 @@
     </div>
 
 </div>
+
+<script>
+function checkMatching() {
+    const selects = document.querySelectorAll(".match-select");
+    const result = document.getElementById("matching-result");
+
+    let correct = 0;
+
+    selects.forEach(select => {
+        if (select.value === select.dataset.answer) {
+            correct++;
+            select.style.borderColor = "#5f8a5b";
+            select.style.background = "#f3f8ef";
+        } else {
+            select.style.borderColor = "#d88f8f";
+            select.style.background = "#fff3f3";
+        }
+    });
+
+    if (correct === selects.length) {
+        result.textContent = "Perfect! All matches are correct 🎉";
+    } else {
+        result.textContent = `${correct}/${selects.length} correct. Try again!`;
+    }
+}
+</script>
 
 <script src="{{ url_for('static', filename='js/lesson.js') }}"></script>
 </body>
