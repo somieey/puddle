@@ -1,3 +1,43 @@
 {
-  "lessons": []
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Good Morning ❤️",
+      "sentence": "शुभ सकाळ, झोप छान झाली ना?",
+      "transliteration": "Shubh sakal, jhop chhan jhali na?",
+      "translation": "Good morning, did you sleep well?",
+      "words": [
+        {
+          "word": "शुभ सकाळ",
+          "transliteration": "Shubh sakal",
+          "meaning": "Good morning"
+        },
+        {
+          "word": "झोप",
+          "transliteration": "Jhop",
+          "meaning": "Sleep"
+        }
+      ],
+      "practice": {
+        "question": "How do you say 'Good morning'?",
+        "options": [
+          "शुभ सकाळ",
+          "शुभ रात्री",
+          "कसा आहेस?",
+          "धन्यवाद"
+        ],
+        "answer": "शुभ सकाळ"
+      },
+      "matching": [
+        {
+          "marathi": "शुभ सकाळ",
+          "english": "Good morning"
+        },
+        {
+          "marathi": "झोप",
+          "english": "Sleep"
+        }
+      ]
+    }
+  ]
 }
