@@ -34,13 +34,26 @@ def get_user_language(user):
 
 def load_lessons_for_user(user):
     language = get_user_language(user)
+    theme = user.get("theme", "classic")
+
+    if theme == "relationship":
+        file_path = f"data/languages/{language}/relationship_lessons.json"
+    else:
+        file_path = f"data/languages/{language}/lessons.json"
 
     with open(
-        f"data/languages/{language}/lessons.json",
+        file_path,
         "r",
         encoding="utf-8"
     ) as file:
-        return json.load(file)
+        data = json.load(file)
+
+    # Classic lessons.json is usually a list.
+    # relationship_lessons.json may be {"lessons": []}.
+    if isinstance(data, dict):
+        return data.get("lessons", [])
+
+    return data
 
 
 def load_interest_lessons_for_user(user):
@@ -86,6 +99,8 @@ def get_daily_challenge():
 
 def get_word_of_the_day(user):
     lessons = load_lessons_for_user(user)
+    if not lessons:
+        return None
 
     all_words = []
 
@@ -263,6 +278,7 @@ def dashboard():
         return redirect(url_for("login"))
 
     user = users_collection.find_one({"email": session["user_email"]})
+
     level = calculate_level(user.get("xp", 0))
     level_title = get_level_title(user.get("xp", 0))
 
@@ -277,11 +293,13 @@ def dashboard():
     personalized_lesson = None
 
     for interest in user_interests:
-        if interest in interest_lessons:
-            personalized_lesson = interest_lessons[interest]
+        lessons_for_interest = interest_lessons.get(interest, [])
+        if lessons_for_interest:
+            personalized_lesson = lessons_for_interest[0]
             break
 
     completed_lessons = user.get("completed_lessons", [])
+
     today = date.today().isoformat()
     last_completed_date = user.get("last_completed_date")
 
@@ -373,6 +391,7 @@ def dashboard():
         total_achievement_count=total_achievement_count,
     )
 
+
 @app.route("/logout")
 def logout():
     session.clear()
@@ -385,6 +404,8 @@ def lesson(lesson_id):
 
     user = users_collection.find_one({"email": session["user_email"]})
     lessons = load_lessons_for_user(user)
+    if not lessons:
+        return render_template("relationship_coming_soon.html")
 
     selected_lesson = None
 
@@ -454,8 +475,16 @@ def complete_lesson(lesson_id):
         return redirect(url_for("login"))
 
     user = users_collection.find_one({"email": session["user_email"]})
+
+    lessons = load_lessons_for_user(user)
+
+    if not lessons:
+        return render_template("relationship_coming_soon.html")
+
+    if not any(lesson["id"] == lesson_id for lesson in lessons):
+        return "Lesson not found"
+
     completed_lessons = user.get("completed_lessons", [])
-    current_xp = user.get("xp", 0)
 
     today = date.today().isoformat()
     yesterday = (date.today() - timedelta(days=1)).isoformat()
@@ -506,6 +535,7 @@ def complete_lesson(lesson_id):
         update_user_achievements(session["user_email"])
 
     return redirect(url_for("lesson_complete", lesson_id=lesson_id, bonus_xp=bonus_xp))
+
 
 @app.route("/lesson-complete/<int:lesson_id>")
 def lesson_complete(lesson_id):
@@ -571,11 +601,13 @@ def vocabulary():
             for word in lesson_item["words"]:
                 learned_words.append({
                     "lesson_id": lesson_item["id"],
-                    "word": word["word"],
-                    "meaning": word["meaning"]
+                    "word": word.get("word"),
+                    "transliteration": word.get("transliteration", ""),
+                    "meaning": word.get("meaning")
                 })
 
     return render_template("vocabulary.html", learned_words=learned_words)
+
 
 @app.route("/review")
 def review():
@@ -586,6 +618,8 @@ def review():
     completed_lessons = user.get("completed_lessons", [])
 
     lessons = load_lessons_for_user(user)
+    if not lessons:
+        return render_template("relationship_coming_soon.html")
 
     completed_lesson_data = []
 
@@ -698,6 +732,7 @@ def leaderboard():
         user["is_current_user"] = user.get("email") == current_email
 
     return render_template("leaderboard.html", users=users)
+
 @app.route("/flashcards")
 def flashcards():
     if "user_email" not in session:
@@ -713,11 +748,11 @@ def flashcards():
 
     flashcards = []
 
-    for lesson in lessons:
-        if lesson["id"] in completed_lessons:
-
-            for word in lesson["words"]:
-                flashcards.append(word)
+    if lessons:
+        for lesson in lessons:
+            if lesson["id"] in completed_lessons:
+                for word in lesson["words"]:
+                    flashcards.append(word)
 
     return render_template(
         "flashcards.html",
@@ -733,6 +768,8 @@ def revision():
     completed_lessons = user.get("completed_lessons", [])
 
     lessons = load_lessons_for_user(user)
+    if not lessons:
+        return render_template("relationship_coming_soon.html")
 
     revision_words = []
 
@@ -751,7 +788,6 @@ def stats():
     user = users_collection.find_one({"email": session["user_email"]})
 
     lessons = load_lessons_for_user(user)
-
     completed_lessons = user.get("completed_lessons", [])
 
     total_lessons = len(lessons)
@@ -775,6 +811,7 @@ def stats():
         words_learned=words_learned,
         progress_percentage=progress_percentage
     )
+
 
 @app.route("/delete-note/<note_id>")
 def delete_note(note_id):
@@ -863,6 +900,8 @@ def daily_quiz():
     completed_lessons = user.get("completed_lessons", [])
 
     lessons = load_lessons_for_user(user)
+    if not lessons:
+        return render_template("relationship_coming_soon.html")
 
     learned_words = []
 

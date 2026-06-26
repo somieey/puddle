@@ -976,8 +976,18 @@
                     Continue Learning →
                 </a>
                 <p class="next-text">Next up: <strong>{{ next_lesson.title }}</strong></p>
+
             {% else %}
-                <p class="next-text">All lessons completed 🎉</p>
+                {% if current_theme == "relationship" %}
+                    <a href="/theme-settings" class="main-btn">
+                        Relationship Lessons Coming Soon →
+                    </a>
+                    <p class="next-text">
+                        Switch back to <strong>Classic Mode</strong> to continue regular lessons.
+                    </p>
+                {% else %}
+                    <p class="next-text">All lessons completed 🎉</p>
+                {% endif %}
             {% endif %}
         </div>
 

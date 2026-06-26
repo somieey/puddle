@@ -196,6 +196,16 @@
             margin-bottom:8px;
         }
 
+        .transliteration {
+            color:#9b7d62;
+            font-weight:900;
+            font-size:15px;
+            margin-top:-4px;
+            margin-bottom:8px;
+            position:relative;
+            z-index:1;
+        }
+
         .meaning {
             color:var(--brown-soft);
             font-weight:800;
@@ -400,10 +410,22 @@ body.theme-relationship .audio-chip {
 
         <section class="vocab-grid">
             {% for item in learned_words %}
-                <div class="word-card" data-word="{{ item.word|lower }}" data-meaning="{{ item.meaning|lower }}">
+                <div
+                    class="word-card"
+                    data-word="{{ item.word|lower }}"
+                    data-transliteration="{{ item.transliteration|default('')|lower }}"
+                    data-meaning="{{ item.meaning|lower }}"
+                >
                     <div class="word-top">
                         <div>
                             <div class="word-main">{{ item.word }}</div>
+
+                            {% if item.transliteration %}
+                                <div class="transliteration">
+                                    {{ item.transliteration }}
+                                </div>
+                            {% endif %}
+
                             <div class="meaning">{{ item.meaning }}</div>
                         </div>
 
@@ -442,10 +464,13 @@ function searchVocabulary() {
 
     cards.forEach(card => {
         const word = card.dataset.word || "";
+        const transliteration = card.dataset.transliteration || "";
         const meaning = card.dataset.meaning || "";
 
         card.style.display =
-            word.includes(query) || meaning.includes(query)
+            word.includes(query) ||
+            transliteration.includes(query) ||
+            meaning.includes(query)
             ? ""
             : "none";
     });
