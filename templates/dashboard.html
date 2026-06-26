@@ -953,12 +953,22 @@
         </div>
 
         <div class="hero-content">
-            <span class="date-pill">🌿 Today’s Learning</span>
+            <span class="date-pill">
+                {% if current_theme == "relationship" %}
+                    🌸 Relationship Mode
+                {% else %}
+                    🌿 Today’s Learning
+                {% endif %}
+            </span>
 
             <h1>Welcome back, {{ username }}!</h1>
 
             <p>
-                Let’s make today a small, cozy step in your language journey.
+                {% if current_theme == "relationship" %}
+                    Let’s learn something sweet for someone special.
+                {% else %}
+                    Let’s make today a small, cozy step in your language journey.
+                {% endif %}
             </p>
 
             {% if next_lesson %}
