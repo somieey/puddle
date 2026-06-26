@@ -14,6 +14,20 @@ app.config["SESSION_COOKIE_HTTPONLY"] = True
 app.config["SESSION_COOKIE_SECURE"] = True
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 
+@app.context_processor
+def inject_theme():
+    if "user_email" not in session:
+        return {"current_theme": "classic"}
+
+    user = users_collection.find_one({"email": session["user_email"]})
+
+    if not user:
+        return {"current_theme": "classic"}
+
+    return {
+        "current_theme": user.get("theme", "classic")
+    }
+
 def get_user_language(user):
     return user.get("language", "marathi")
 
