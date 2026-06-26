@@ -7,25 +7,65 @@
       "transliteration": "Chal, aapan jara game khelu!",
       "translation": "Come on, let's play a game for a bit!",
       "words": [
-        { "word": "चल", "transliteration": "chal", "meaning": "come on / let's" },
-        { "word": "आपण", "transliteration": "aapan", "meaning": "we" },
-        { "word": "जरा", "transliteration": "jara", "meaning": "a little / just" },
-        { "word": "गेम", "transliteration": "game", "meaning": "game" },
-        { "word": "खेळू", "transliteration": "khelu", "meaning": "let's play" }
+        {
+          "word": "चल",
+          "transliteration": "chal",
+          "meaning": "Come on / Let's"
+        },
+        {
+          "word": "आपण",
+          "transliteration": "aapan",
+          "meaning": "We"
+        },
+        {
+          "word": "जरा",
+          "transliteration": "jara",
+          "meaning": "A little / just"
+        },
+        {
+          "word": "गेम",
+          "transliteration": "game",
+          "meaning": "Game"
+        },
+        {
+          "word": "खेळणे",
+          "transliteration": "khelane",
+          "meaning": "To play"
+        }
       ],
       "practice": {
-        "question": "What does 'jara' mean?",
-        "options": ["a lot", "a little / just", "never", "every day"],
-        "answer": "a little / just"
+        "question": "What does 'जरा (Jara)' mean?",
+        "options": [
+          "A lot",
+          "A little",
+          "Never",
+          "Every day"
+        ],
+        "answer": "A little"
       },
       "matching": [
-        { "marathi": "chal", "english": "come on / let's" },
-        { "marathi": "aapan", "english": "we" },
-        { "marathi": "jara", "english": "a little / just" },
-        { "marathi": "game", "english": "game" },
-        { "marathi": "khelu", "english": "let's play" }
+        {
+          "marathi": "Chal",
+          "english": "Come on / Let's"
+        },
+        {
+          "marathi": "Aapan",
+          "english": "We"
+        },
+        {
+          "marathi": "Jara",
+          "english": "A little"
+        },
+        {
+          "marathi": "Game",
+          "english": "Game"
+        },
+        {
+          "marathi": "Khelane",
+          "english": "To play"
+        }
       ],
-      "note": "'चल' is one of the most useful words in spoken Marathi. It is used at the start of many casual suggestions."
+      "note": "'चल' is one of the most useful words in spoken Marathi — it's dropped at the start of almost any casual suggestion, not just gaming ones."
     },
     {
       "id": 2,
@@ -34,25 +74,78 @@
       "transliteration": "Are, mi jinkalo! Punha khelaayacha ka?",
       "translation": "Hey, I won! Want to play again?",
       "words": [
-        { "word": "जिंकणे", "transliteration": "jinkane", "meaning": "to win" },
-        { "word": "हरणे", "transliteration": "harane", "meaning": "to lose" },
-        { "word": "सामना", "transliteration": "saamna", "meaning": "match" },
-        { "word": "पुन्हा", "transliteration": "punha", "meaning": "again" },
-        { "word": "अरे", "transliteration": "are", "meaning": "hey" }
+        {
+          "word": "जिंकणे",
+          "transliteration": "jinkane",
+          "meaning": "To win"
+        },
+        {
+          "word": "हरणे",
+          "transliteration": "harane",
+          "meaning": "To lose"
+        },
+        {
+          "word": "सामना",
+          "transliteration": "saamna",
+          "meaning": "Match"
+        },
+        {
+          "word": "पुन्हा",
+          "transliteration": "punha",
+          "meaning": "Again"
+        },
+        {
+          "word": "अरे",
+          "transliteration": "are",
+          "meaning": "Hey"
+        }
       ],
       "practice": {
-        "question": "If the speaker is female, how should she say 'I won'?",
-        "options": ["मी जिंकलो", "मी जिंकले", "मी जिंकतो", "मी जिंकेन"],
-        "answer": "मी जिंकले"
+        "question": "Which sentence correctly says \"I won\" for a female speaker?",
+        "options": [
+          "मी जिंकलो (Mi jinkalo)",
+          "मी जिंकले (Mi jinkale)",
+          "मी जिंकतो (Mi jinkato)",
+          "मी जिंकेन (Mi jinken)"
+        ],
+        "answer": "मी जिंकले (Mi jinkale)"
       },
       "matching": [
-        { "marathi": "jinkane", "english": "to win" },
-        { "marathi": "harane", "english": "to lose" },
-        { "marathi": "saamna", "english": "match" },
-        { "marathi": "punha", "english": "again" },
-        { "marathi": "are", "english": "hey" }
+        {
+          "marathi": "Jinkane",
+          "english": "To win"
+        },
+        {
+          "marathi": "Harane",
+          "english": "To lose"
+        },
+        {
+          "marathi": "Saamna",
+          "english": "Match"
+        },
+        {
+          "marathi": "Punha",
+          "english": "Again"
+        },
+        {
+          "marathi": "Are",
+          "english": "Hey"
+        }
       ],
-      "note": "Past-tense verbs in Marathi often change with the speaker's gender: जिंकलो for male speakers and जिंकले for female speakers."
+      "note": "Getting the gender ending right on past-tense verbs is one of the trickiest parts of spoken Marathi for learners — locals notice it immediately, so it's worth practicing with phrases you'll actually say.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "अरे, मी जिंकलो!",
+          "transliteration": "Are, mi jinkalo!"
+        },
+        {
+          "gender": "female",
+          "marathi": "अरे, मी जिंकले!",
+          "transliteration": "Are, mi jinkale!"
+        }
+      ],
+      "gender_note": "Past-tense verbs in Marathi change with the speaker's gender: '...लो' for male speakers, '...ले' for female speakers. The same pattern applies to most past-tense verbs, e.g. हरलो/हरले (lost), झालो/झाले (became)."
     },
     {
       "id": 3,
@@ -61,25 +154,69 @@
       "transliteration": "Sadhya tu konta game kheltos?",
       "translation": "Which game are you playing these days?",
       "words": [
-        { "word": "सध्या", "transliteration": "sadhya", "meaning": "these days / currently" },
-        { "word": "कोणता", "transliteration": "konta", "meaning": "which" },
-        { "word": "खेळणे", "transliteration": "khelane", "meaning": "to play" },
-        { "word": "आवडता / आवडती", "transliteration": "aavadta / aavadti", "meaning": "favourite" },
-        { "word": "प्रकार", "transliteration": "prakaar", "meaning": "type / genre" }
+        {
+          "word": "सध्या",
+          "transliteration": "sadhya",
+          "meaning": "These days / currently"
+        },
+        {
+          "word": "कोणता",
+          "transliteration": "konta",
+          "meaning": "Which"
+        },
+        {
+          "word": "आवडता / आवडती",
+          "transliteration": "aavadta / aavadti",
+          "meaning": "Favourite (m/f)"
+        },
+        {
+          "word": "प्रकार",
+          "transliteration": "prakaar",
+          "meaning": "Type / genre"
+        }
       ],
       "practice": {
-        "question": "Which sentence is correct when asking a female friend what game she is playing?",
-        "options": ["तू कोणता गेम खेळतोस?", "तू कोणता गेम खेळतेस?", "तू कोणता गेम खेळतो?", "तू कोणता गेम खेळते?"],
-        "answer": "तू कोणता गेम खेळतेस?"
+        "question": "Which sentence correctly asks a female friend \"Which game are you playing?\"",
+        "options": [
+          "तू कोणता गेम खेळतोस? (Tu konta game kheltos?)",
+          "तू कोणता गेम खेळतेस? (Tu konta game kheltes?)",
+          "तू कोणता गेम खेळतो? (Tu konta game khelto?)",
+          "तू कोणता गेम खेळते? (Tu konta game khelte?)"
+        ],
+        "answer": "तू कोणता गेम खेळतेस? (Tu konta game kheltes?)"
       },
       "matching": [
-        { "marathi": "sadhya", "english": "these days" },
-        { "marathi": "konta", "english": "which" },
-        { "marathi": "khelane", "english": "to play" },
-        { "marathi": "aavadta / aavadti", "english": "favourite" },
-        { "marathi": "prakaar", "english": "type / genre" }
+        {
+          "marathi": "Sadhya",
+          "english": "These days"
+        },
+        {
+          "marathi": "Konta",
+          "english": "Which"
+        },
+        {
+          "marathi": "Aavadta / Aavadti",
+          "english": "Favourite (m/f)"
+        },
+        {
+          "marathi": "Prakaar",
+          "english": "Type / genre"
+        }
       ],
-      "note": "Among friends, 'तू' is natural. 'तुम्ही' would sound too formal in a casual gaming chat."
+      "note": "Among friends, 'तू' (informal you) is used naturally — switching to 'तुम्ही' would sound oddly formal for a casual gaming chat.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "सध्या तू कोणता गेम खेळतोस?",
+          "transliteration": "Sadhya tu konta game kheltos?"
+        },
+        {
+          "gender": "female",
+          "marathi": "सध्या तू कोणता गेम खेळतेस?",
+          "transliteration": "Sadhya tu konta game kheltes?"
+        }
+      ],
+      "gender_note": "Second-person verbs agree with the listener's gender: '...तोस' when speaking to a male friend, '...तेस' when speaking to a female friend."
     },
     {
       "id": 4,
@@ -88,25 +225,56 @@
       "transliteration": "Ye, majhya team madhe join ho, sobat khelu!",
       "translation": "Come on, join my team, let's play together!",
       "words": [
-        { "word": "टीम", "transliteration": "team", "meaning": "team" },
-        { "word": "जॉईन होणे", "transliteration": "join hone", "meaning": "to join" },
-        { "word": "सोबत", "transliteration": "sobat", "meaning": "together / with" },
-        { "word": "मॅच / सामना", "transliteration": "match / saamna", "meaning": "match" },
-        { "word": "मित्र / मैत्रीण", "transliteration": "mitra / maitriin", "meaning": "friend" }
+        {
+          "word": "टीम",
+          "transliteration": "team",
+          "meaning": "Team"
+        },
+        {
+          "word": "जॉईन होणे",
+          "transliteration": "join hone",
+          "meaning": "To join"
+        },
+        {
+          "word": "सोबत",
+          "transliteration": "sobat",
+          "meaning": "Together"
+        },
+        {
+          "word": "मित्र / मैत्रीण",
+          "transliteration": "mitra / maitrin",
+          "meaning": "Friend (m/f)"
+        }
       ],
       "practice": {
-        "question": "What do you call a female friend in Marathi?",
-        "options": ["मित्र", "मैत्रीण", "दोन्ही चालतं", "कोणतंच नाही"],
-        "answer": "मैत्रीण"
+        "question": "Which Marathi word means \"Friend\" when referring to a girl?",
+        "options": [
+          "मित्र (Mitra)",
+          "मैत्रीण (Maitrin)",
+          "टीम (Team)",
+          "सोबत (Sobat)"
+        ],
+        "answer": "मैत्रीण (Maitrin)"
       },
       "matching": [
-        { "marathi": "team", "english": "team" },
-        { "marathi": "join hone", "english": "to join" },
-        { "marathi": "sobat", "english": "together / with" },
-        { "marathi": "match / saamna", "english": "match" },
-        { "marathi": "mitra / maitriin", "english": "friend" }
+        {
+          "marathi": "Team",
+          "english": "Team"
+        },
+        {
+          "marathi": "Join hone",
+          "english": "To join"
+        },
+        {
+          "marathi": "Sobat",
+          "english": "Together"
+        },
+        {
+          "marathi": "Mitra / Maitrin",
+          "english": "Friend (m/f)"
+        }
       ],
-      "note": "Marathi has gendered words for friend: मित्र for a male friend and मैत्रीण for a female friend."
+      "note": "Unlike English 'friend', Marathi has separate words depending on the friend's gender: मित्र for a male friend, मैत्रीण for a female friend. Mixing English words like 'टीम' and 'जॉईन' straight into Marathi sentences is completely normal in everyday speech."
     },
     {
       "id": 5,
@@ -115,25 +283,65 @@
       "transliteration": "Ha majha saglyaat aavadta game aahe.",
       "translation": "This is my favourite game of all.",
       "words": [
-        { "word": "आवडता", "transliteration": "aavadta", "meaning": "favourite" },
-        { "word": "सगळ्यात", "transliteration": "saglyaat", "meaning": "most / of all" },
-        { "word": "नवीन", "transliteration": "navin", "meaning": "new" },
-        { "word": "जुना", "transliteration": "juna", "meaning": "old" },
-        { "word": "प्रकार", "transliteration": "prakaar", "meaning": "type / genre" }
+        {
+          "word": "आवडता",
+          "transliteration": "aavadta",
+          "meaning": "Favourite"
+        },
+        {
+          "word": "सगळ्यात",
+          "transliteration": "saglyaat",
+          "meaning": "Most / of all"
+        },
+        {
+          "word": "नवीन",
+          "transliteration": "navin",
+          "meaning": "New"
+        },
+        {
+          "word": "जुना",
+          "transliteration": "juna",
+          "meaning": "Old"
+        },
+        {
+          "word": "प्रकार",
+          "transliteration": "prakaar",
+          "meaning": "Type / genre"
+        }
       ],
       "practice": {
-        "question": "What does 'aavadta' mean?",
-        "options": ["new", "favourite", "old", "boring"],
-        "answer": "favourite"
+        "question": "What does 'आवडता (Aavadta)' mean?",
+        "options": [
+          "New",
+          "Favourite",
+          "Old",
+          "Boring"
+        ],
+        "answer": "Favourite"
       },
       "matching": [
-        { "marathi": "aavadta", "english": "favourite" },
-        { "marathi": "saglyaat", "english": "most / of all" },
-        { "marathi": "navin", "english": "new" },
-        { "marathi": "juna", "english": "old" },
-        { "marathi": "prakaar", "english": "type / genre" }
+        {
+          "marathi": "Aavadta",
+          "english": "Favourite"
+        },
+        {
+          "marathi": "Saglyaat",
+          "english": "Most / of all"
+        },
+        {
+          "marathi": "Navin",
+          "english": "New"
+        },
+        {
+          "marathi": "Juna",
+          "english": "Old"
+        },
+        {
+          "marathi": "Prakaar",
+          "english": "Type / genre"
+        }
       ],
-      "note": "'आवडता' changes depending on the noun: आवडता गेम, आवडती गोष्ट, आवडतं गाणं."
+      "note": "'आवडता' changes form depending on what it describes — आवडता गेम (favourite game), आवडती गोष्ट (favourite story), आवडतं गाणं (favourite song). The noun's gender decides the ending, not the speaker's."
     },
     {
       "id": 6,
@@ -142,25 +350,78 @@
       "transliteration": "Bagh, mi level up zaalo, majha score pan vaadhla!",
       "translation": "Look, I leveled up, my score also increased!",
       "words": [
-        { "word": "लेव्हल", "transliteration": "level", "meaning": "level" },
-        { "word": "स्कोअर", "transliteration": "score", "meaning": "score" },
-        { "word": "वाढणे", "transliteration": "vaadhane", "meaning": "to increase" },
-        { "word": "गुण", "transliteration": "gun", "meaning": "points" },
-        { "word": "बघ", "transliteration": "bagh", "meaning": "look" }
+        {
+          "word": "लेव्हल",
+          "transliteration": "level",
+          "meaning": "Level"
+        },
+        {
+          "word": "स्कोअर",
+          "transliteration": "score",
+          "meaning": "Score"
+        },
+        {
+          "word": "वाढणे",
+          "transliteration": "vaadhane",
+          "meaning": "To increase"
+        },
+        {
+          "word": "गुण",
+          "transliteration": "gun",
+          "meaning": "Points"
+        },
+        {
+          "word": "बघ",
+          "transliteration": "bagh",
+          "meaning": "Look (informal)"
+        }
       ],
       "practice": {
-        "question": "If a boy says 'I leveled up', which word should he use?",
-        "options": ["झालो", "झाले", "झालीस", "झाला"],
-        "answer": "झालो"
+        "question": "Which word correctly completes \"मी लेव्हल अप ___\" for a male speaker?",
+        "options": [
+          "झालो (Zaalo)",
+          "झाले (Zaale)",
+          "झालीस (Zaalis)",
+          "झाला (Zaala)"
+        ],
+        "answer": "झालो (Zaalo)"
       },
       "matching": [
-        { "marathi": "level", "english": "level" },
-        { "marathi": "score", "english": "score" },
-        { "marathi": "vaadhane", "english": "to increase" },
-        { "marathi": "gun", "english": "points" },
-        { "marathi": "bagh", "english": "look" }
+        {
+          "marathi": "Level",
+          "english": "Level"
+        },
+        {
+          "marathi": "Score",
+          "english": "Score"
+        },
+        {
+          "marathi": "Vaadhane",
+          "english": "To increase"
+        },
+        {
+          "marathi": "Gun",
+          "english": "Points"
+        },
+        {
+          "marathi": "Bagh",
+          "english": "Look"
+        }
       ],
-      "note": "Words like लेव्हल and स्कोअर are usually not translated. Marathi gamers use the English terms directly."
+      "note": "Words like 'लेव्हल' and 'स्कोअर' are almost never translated — Marathi gamers use the English terms directly inside Marathi sentences.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "मी लेव्हल अप झालो!",
+          "transliteration": "Mi level up zaalo!"
+        },
+        {
+          "gender": "female",
+          "marathi": "मी लेव्हल अप झाले!",
+          "transliteration": "Mi level up zaale!"
+        }
+      ],
+      "gender_note": "झालो/झाले (became) follows the same male/female past-tense pattern you saw with जिंकलो/जिंकले."
     },
     {
       "id": 7,
@@ -169,25 +430,78 @@
       "transliteration": "Tu majha live stream baghtoyas ka?",
       "translation": "Are you watching my live stream?",
       "words": [
-        { "word": "स्ट्रीम करणे", "transliteration": "stream karane", "meaning": "to stream" },
-        { "word": "लाइव्ह", "transliteration": "live", "meaning": "live" },
-        { "word": "बघणे", "transliteration": "baghane", "meaning": "to watch" },
-        { "word": "गेमर", "transliteration": "gamer", "meaning": "gamer" },
-        { "word": "चॅनेल", "transliteration": "channel", "meaning": "channel" }
+        {
+          "word": "स्ट्रीम करणे",
+          "transliteration": "stream karane",
+          "meaning": "To stream"
+        },
+        {
+          "word": "लाइव्ह",
+          "transliteration": "live",
+          "meaning": "Live"
+        },
+        {
+          "word": "बघणे",
+          "transliteration": "baghane",
+          "meaning": "To watch"
+        },
+        {
+          "word": "गेमर",
+          "transliteration": "gamer",
+          "meaning": "Gamer"
+        },
+        {
+          "word": "चॅनेल",
+          "transliteration": "channel",
+          "meaning": "Channel"
+        }
       ],
       "practice": {
-        "question": "Which form is used when asking a boy 'are you watching?'",
-        "options": ["बघतोयस", "बघतेयस", "बघतोस", "बघते"],
-        "answer": "बघतोयस"
+        "question": "Which sentence correctly asks a male friend \"Are you watching my live stream?\"",
+        "options": [
+          "तू माझा लाइव्ह स्ट्रीम बघतोयस का? (Tu majha live stream baghtoyas ka?)",
+          "तू माझा लाइव्ह स्ट्रीम बघतेयस का? (Tu majha live stream baghteyas ka?)",
+          "तू माझा लाइव्ह स्ट्रीम बघतोस का? (Tu majha live stream baghtos ka?)",
+          "तू माझा लाइव्ह स्ट्रीम बघते का? (Tu majha live stream baghte ka?)"
+        ],
+        "answer": "तू माझा लाइव्ह स्ट्रीम बघतोयस का? (Tu majha live stream baghtoyas ka?)"
       },
       "matching": [
-        { "marathi": "stream karane", "english": "to stream" },
-        { "marathi": "live", "english": "live" },
-        { "marathi": "baghane", "english": "to watch" },
-        { "marathi": "gamer", "english": "gamer" },
-        { "marathi": "channel", "english": "channel" }
+        {
+          "marathi": "Stream karane",
+          "english": "To stream"
+        },
+        {
+          "marathi": "Live",
+          "english": "Live"
+        },
+        {
+          "marathi": "Baghane",
+          "english": "To watch"
+        },
+        {
+          "marathi": "Gamer",
+          "english": "Gamer"
+        },
+        {
+          "marathi": "Channel",
+          "english": "Channel"
+        }
       ],
-      "note": "'बघतोयस / बघतेयस' is the casual spoken form of 'you are watching'."
+      "note": "Spoken Marathi loves contractions — 'बघत आहेस' shrinking to 'बघतोयस' is exactly the kind of shortcut native speakers use constantly but textbooks rarely teach.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "तू माझा लाइव्ह स्ट्रीम बघतोयस का?",
+          "transliteration": "Tu majha live stream baghtoyas ka?"
+        },
+        {
+          "gender": "female",
+          "marathi": "तू माझा लाइव्ह स्ट्रीम बघतेयस का?",
+          "transliteration": "Tu majha live stream baghteyas ka?"
+        }
+      ],
+      "gender_note": "'बघतोयस/बघतेयस' is the casual spoken contraction of 'बघत आहेस' (you are watching) — you'll hear the short form far more often than the full one."
     },
     {
       "id": 8,
@@ -196,25 +510,56 @@
       "transliteration": "Ha game mhanje ek number timepass aahe, vel kasa jaato kalatach nahi!",
       "translation": "This game is excellent time-pass, you don't even realize how time flies!",
       "words": [
-        { "word": "टाइमपास", "transliteration": "timepass", "meaning": "casual fun / way to pass time" },
-        { "word": "वेळ", "transliteration": "vel", "meaning": "time" },
-        { "word": "एक नंबर", "transliteration": "ek number", "meaning": "awesome / the best" },
-        { "word": "अॅडिक्टिव्ह", "transliteration": "addictive", "meaning": "addictive" },
-        { "word": "मजा", "transliteration": "maja", "meaning": "fun" }
+        {
+          "word": "टाइमपास",
+          "transliteration": "timepass",
+          "meaning": "Casual fun / way to pass time"
+        },
+        {
+          "word": "वेळ",
+          "transliteration": "vel",
+          "meaning": "Time"
+        },
+        {
+          "word": "एक नंबर",
+          "transliteration": "ek number",
+          "meaning": "The best / awesome (slang)"
+        },
+        {
+          "word": "मजा",
+          "transliteration": "maja",
+          "meaning": "Fun"
+        }
       ],
       "practice": {
-        "question": "What does 'ek number' mean in casual Marathi?",
-        "options": ["number one literally", "awesome / the best", "alone", "nothing"],
-        "answer": "awesome / the best"
+        "question": "What does the Marathi slang phrase \"एक नंबर (Ek number)\" mean?",
+        "options": [
+          "The literal number one",
+          "Awesome / the best",
+          "Lonely",
+          "Nothing at all"
+        ],
+        "answer": "Awesome / the best"
       },
       "matching": [
-        { "marathi": "timepass", "english": "time-pass / casual fun" },
-        { "marathi": "vel", "english": "time" },
-        { "marathi": "ek number", "english": "awesome / the best" },
-        { "marathi": "addictive", "english": "addictive" },
-        { "marathi": "maja", "english": "fun" }
+        {
+          "marathi": "Timepass",
+          "english": "Time-pass / casual fun"
+        },
+        {
+          "marathi": "Vel",
+          "english": "Time"
+        },
+        {
+          "marathi": "Ek number",
+          "english": "Awesome / the best"
+        },
+        {
+          "marathi": "Maja",
+          "english": "Fun"
+        }
       ],
-      "note": "'एक नंबर' literally means number one, but casually it means awesome."
+      "note": "'एक नंबर' literally means 'number one' but is used as everyday slang for 'awesome.' 'टाइमपास' is a beloved Marathi-English hybrid word with no single English equivalent, but everyone instantly understands the vibe."
     },
     {
       "id": 9,
@@ -223,25 +568,56 @@
       "transliteration": "Are yaar, net slow aahe ani phone-hi hang hotoy!",
       "translation": "Ugh dude, the net is slow and my phone is hanging too!",
       "words": [
-        { "word": "यार", "transliteration": "yaar", "meaning": "dude / buddy" },
-        { "word": "नेट", "transliteration": "net", "meaning": "internet" },
-        { "word": "स्लो", "transliteration": "slow", "meaning": "slow" },
-        { "word": "फोन", "transliteration": "phone", "meaning": "phone" },
-        { "word": "हँग होणे", "transliteration": "hang hone", "meaning": "to hang / lag" }
+        {
+          "word": "यार",
+          "transliteration": "yaar",
+          "meaning": "Dude / buddy"
+        },
+        {
+          "word": "नेट",
+          "transliteration": "net",
+          "meaning": "Internet"
+        },
+        {
+          "word": "स्लो",
+          "transliteration": "slow",
+          "meaning": "Slow"
+        },
+        {
+          "word": "हँग होणे",
+          "transliteration": "hang hone",
+          "meaning": "To hang / lag"
+        }
       ],
       "practice": {
-        "question": "What does 'yaar' mean in casual speech?",
-        "options": ["year", "dude / buddy", "enemy", "home"],
-        "answer": "dude / buddy"
+        "question": "Where does the word \"यार (Yaar)\" come from, and what does it mean?",
+        "options": [
+          "English, meaning 'year'",
+          "Hindi/Urdu, meaning 'friend/buddy'",
+          "Sanskrit, meaning 'enemy'",
+          "Marathi, meaning 'house'"
+        ],
+        "answer": "Hindi/Urdu, meaning 'friend/buddy'"
       },
       "matching": [
-        { "marathi": "yaar", "english": "dude / buddy" },
-        { "marathi": "net", "english": "internet" },
-        { "marathi": "slow", "english": "slow" },
-        { "marathi": "phone", "english": "phone" },
-        { "marathi": "hang hone", "english": "to hang / lag" }
+        {
+          "marathi": "Yaar",
+          "english": "Dude / buddy"
+        },
+        {
+          "marathi": "Net",
+          "english": "Internet"
+        },
+        {
+          "marathi": "Slow",
+          "english": "Slow"
+        },
+        {
+          "marathi": "Hang hone",
+          "english": "To hang / lag"
+        }
       ],
-      "note": "'यार' comes from Hindi/Urdu but is used constantly in casual Marathi, especially by younger speakers."
+      "note": "'यार' comes from Hindi/Urdu but gets used constantly in casual spoken Marathi, especially among younger speakers in cities like Pune and Mumbai."
     },
     {
       "id": 10,
@@ -250,29 +626,707 @@
       "transliteration": "Good game bhau! Udya rematch paahije.",
       "translation": "Good game, bro! I want a rematch tomorrow.",
       "words": [
-        { "word": "गुड गेम / जीजी", "transliteration": "good game / GG", "meaning": "good game" },
-        { "word": "भाऊ", "transliteration": "bhau", "meaning": "bro" },
-        { "word": "उद्या", "transliteration": "udya", "meaning": "tomorrow" },
-        { "word": "रिमॅच", "transliteration": "rematch", "meaning": "rematch" },
-        { "word": "पाहिजे", "transliteration": "paahije", "meaning": "want / need" }
+        {
+          "word": "गुड गेम / जीजी",
+          "transliteration": "good game / gg",
+          "meaning": "Good game"
+        },
+        {
+          "word": "भाऊ",
+          "transliteration": "bhau",
+          "meaning": "Bro (used casually for friends)"
+        },
+        {
+          "word": "उद्या",
+          "transliteration": "udya",
+          "meaning": "Tomorrow"
+        },
+        {
+          "word": "रिमॅच",
+          "transliteration": "rematch",
+          "meaning": "Rematch"
+        },
+        {
+          "word": "पाहिजे",
+          "transliteration": "paahije",
+          "meaning": "Want / need"
+        }
       ],
       "practice": {
-        "question": "How is 'bhau' commonly used among friends?",
-        "options": ["only for an actual brother", "like 'bro' in English", "only for elders", "never used casually"],
-        "answer": "like 'bro' in English"
+        "question": "How is the word \"भाऊ (Bhau)\" commonly used among friends?",
+        "options": [
+          "Only for an actual brother",
+          "Casually like 'bro' in English, with no real sibling implied",
+          "Only for elders",
+          "It's never used"
+        ],
+        "answer": "Casually like 'bro' in English, with no real sibling implied"
       },
       "matching": [
-        { "marathi": "good game / GG", "english": "good game" },
-        { "marathi": "bhau", "english": "bro" },
-        { "marathi": "udya", "english": "tomorrow" },
-        { "marathi": "rematch", "english": "rematch" },
-        { "marathi": "paahije", "english": "want / need" }
+        {
+          "marathi": "Good game / GG",
+          "english": "Good game"
+        },
+        {
+          "marathi": "Bhau",
+          "english": "Bro"
+        },
+        {
+          "marathi": "Udya",
+          "english": "Tomorrow"
+        },
+        {
+          "marathi": "Rematch",
+          "english": "Rematch"
+        },
+        {
+          "marathi": "Paahije",
+          "english": "Want / need"
+        }
       ],
-      "note": "'भाऊ' is often used like 'bro' among Marathi-speaking friends."
+      "note": "Among Marathi-speaking friends — especially young men — 'भाऊ' is used like 'bro' in English, with no actual sibling relationship implied. 'जीजी' (GG) is borrowed straight from international gaming culture and used exactly as in English."
     }
   ],
-  "anime": [],
-  "coding":[],
+  "anime": [
+    {
+      "id": 1,
+      "title": "Have You Watched This Anime?",
+      "sentence": "तू हा अॅनिमे बघितला आहेस का?",
+      "transliteration": "Tu ha anime baghitla aahes ka?",
+      "translation": "Have you watched this anime?",
+      "words": [
+        {
+          "word": "अॅनिमे",
+          "transliteration": "anime",
+          "meaning": "Anime"
+        },
+        {
+          "word": "बघणे",
+          "transliteration": "baghane",
+          "meaning": "To watch"
+        },
+        {
+          "word": "अजून",
+          "transliteration": "ajun",
+          "meaning": "Yet / still"
+        },
+        {
+          "word": "भाग",
+          "transliteration": "bhaag",
+          "meaning": "Episode"
+        }
+      ],
+      "practice": {
+        "question": "Which Marathi word means \"Episode\"?",
+        "options": [
+          "अॅनिमे (Anime)",
+          "भाग (Bhaag)",
+          "अजून (Ajun)",
+          "बघणे (Baghane)"
+        ],
+        "answer": "भाग (Bhaag)"
+      },
+      "matching": [
+        {
+          "marathi": "Anime",
+          "english": "Anime"
+        },
+        {
+          "marathi": "Baghane",
+          "english": "To watch"
+        },
+        {
+          "marathi": "Ajun",
+          "english": "Yet / still"
+        },
+        {
+          "marathi": "Bhaag",
+          "english": "Episode"
+        }
+      ],
+      "note": "Notice 'बघितला' here agrees with the object 'अॅनिमे' (masculine), not the speaker's gender — Marathi past-tense transitive verbs follow the object, unlike intransitive verbs like जिंकलो/जिंकले."
+    },
+    {
+      "id": 2,
+      "title": "Which Character Do You Like?",
+      "sentence": "तुला सगळ्यात जास्त कोणतं कॅरेक्टर आवडतं?",
+      "transliteration": "Tula saglyaat jaast kontay character aavadta?",
+      "translation": "Which character do you like the most?",
+      "words": [
+        {
+          "word": "कॅरेक्टर",
+          "transliteration": "character",
+          "meaning": "Character"
+        },
+        {
+          "word": "आवडणे",
+          "transliteration": "aavadne",
+          "meaning": "To like"
+        },
+        {
+          "word": "नायक",
+          "transliteration": "naayak",
+          "meaning": "Hero / protagonist"
+        },
+        {
+          "word": "खलनायक",
+          "transliteration": "khalnaayak",
+          "meaning": "Villain"
+        }
+      ],
+      "practice": {
+        "question": "What does \"खलनायक (Khalnaayak)\" mean?",
+        "options": [
+          "The main hero",
+          "The villain",
+          "The author",
+          "The director"
+        ],
+        "answer": "The villain"
+      },
+      "matching": [
+        {
+          "marathi": "Character",
+          "english": "Character"
+        },
+        {
+          "marathi": "Aavadne",
+          "english": "To like"
+        },
+        {
+          "marathi": "Naayak",
+          "english": "Hero"
+        },
+        {
+          "marathi": "Khalnaayak",
+          "english": "Villain"
+        }
+      ],
+      "note": "Most young fans say 'कॅरेक्टर' instead of the more formal native word 'पात्र' — borrowing the English term feels far more natural in casual fan talk."
+    },
+    {
+      "id": 3,
+      "title": "This Episode Was Amazing!",
+      "sentence": "हा भाग एकदम जबरी होता!",
+      "transliteration": "Ha bhaag ekdam jabri hota!",
+      "translation": "This episode was totally awesome!",
+      "words": [
+        {
+          "word": "जबरी",
+          "transliteration": "jabri",
+          "meaning": "Awesome / great (slang)"
+        },
+        {
+          "word": "एकदम",
+          "transliteration": "ekdam",
+          "meaning": "Totally / completely"
+        },
+        {
+          "word": "ट्विस्ट",
+          "transliteration": "twist",
+          "meaning": "Plot twist"
+        },
+        {
+          "word": "शेवट",
+          "transliteration": "shevat",
+          "meaning": "Ending"
+        }
+      ],
+      "practice": {
+        "question": "Choose the correct meaning of \"जबरी (Jabri)\".",
+        "options": [
+          "Very bad",
+          "Awesome / great",
+          "Average",
+          "Boring"
+        ],
+        "answer": "Awesome / great"
+      },
+      "matching": [
+        {
+          "marathi": "Jabri",
+          "english": "Awesome / great"
+        },
+        {
+          "marathi": "Ekdam",
+          "english": "Totally / completely"
+        },
+        {
+          "marathi": "Twist",
+          "english": "Plot twist"
+        },
+        {
+          "marathi": "Shevat",
+          "english": "Ending"
+        }
+      ],
+      "note": "'जबरी' is everyday Marathi slang for 'awesome' or 'epic' — heard constantly in Pune and Mumbai casual speech, roughly equivalent to saying something is 'fire' in English slang."
+    },
+    {
+      "id": 4,
+      "title": "Waiting for the Next Season",
+      "sentence": "मी पुढच्या सिझनची वाट बघतोय!",
+      "transliteration": "Mi pudhachya season chi vaat baghtoy!",
+      "translation": "I'm waiting for the next season!",
+      "words": [
+        {
+          "word": "वाट बघणे",
+          "transliteration": "vaat baghane",
+          "meaning": "To wait"
+        },
+        {
+          "word": "सिझन",
+          "transliteration": "season",
+          "meaning": "Season"
+        },
+        {
+          "word": "पुढचा / पुढची",
+          "transliteration": "pudhcha / pudhachi",
+          "meaning": "Next"
+        },
+        {
+          "word": "उत्सुकता",
+          "transliteration": "utsukata",
+          "meaning": "Excitement / eagerness"
+        }
+      ],
+      "practice": {
+        "question": "The word \"बघतोय (Baghtoy)\" is a short spoken form of which full phrase?",
+        "options": [
+          "बघत आहे (Baghat aahe) – am watching",
+          "बघितला आहे (Baghitla aahe) – have watched",
+          "बघणार आहे (Baghnaar aahe) – will watch",
+          "बघितलं होतं (Baghitla hota) – had watched"
+        ],
+        "answer": "बघत आहे (Baghat aahe) – am watching"
+      },
+      "matching": [
+        {
+          "marathi": "Vaat baghane",
+          "english": "To wait"
+        },
+        {
+          "marathi": "Season",
+          "english": "Season"
+        },
+        {
+          "marathi": "Pudhcha / Pudhachi",
+          "english": "Next"
+        },
+        {
+          "marathi": "Utsukata",
+          "english": "Excitement"
+        }
+      ],
+      "note": "Spoken Marathi loves shortcuts — 'बघत आहे' almost always becomes 'बघतोय/बघतेय' in real conversation, just like the ...तोयस/...तेयस forms you've seen before.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "मी पुढच्या सिझनची वाट बघतोय!",
+          "transliteration": "Mi pudhachya season chi vaat baghtoy!"
+        },
+        {
+          "gender": "female",
+          "marathi": "मी पुढच्या सिझनची वाट बघतेय!",
+          "transliteration": "Mi pudhachya season chi vaat baghtey!"
+        }
+      ],
+      "gender_note": "बघतोय/बघतेय is the casual contraction of 'बघत आहे' (am watching/waiting) — male speakers use ...तोय, female speakers use ...तेय."
+    },
+    {
+      "id": 5,
+      "title": "Subbed or Dubbed?",
+      "sentence": "तू सबटायटल्ससोबत बघतोस की डब केलेला?",
+      "transliteration": "Tu subtitles sobat baghtos ki dub kelela?",
+      "translation": "Do you watch it with subtitles or the dubbed version?",
+      "words": [
+        {
+          "word": "सबटायटल्स",
+          "transliteration": "subtitles",
+          "meaning": "Subtitles"
+        },
+        {
+          "word": "डब करणे",
+          "transliteration": "dub karane",
+          "meaning": "To dub"
+        },
+        {
+          "word": "मूळ",
+          "transliteration": "mul",
+          "meaning": "Original"
+        },
+        {
+          "word": "आवाज",
+          "transliteration": "aavaaz",
+          "meaning": "Voice"
+        }
+      ],
+      "practice": {
+        "question": "What does \"डब केलेला (Dub kelela)\" mean?",
+        "options": [
+          "In the original language",
+          "Voice-dubbed into another language",
+          "With subtitles",
+          "A new episode"
+        ],
+        "answer": "Voice-dubbed into another language"
+      },
+      "matching": [
+        {
+          "marathi": "Subtitles",
+          "english": "Subtitles"
+        },
+        {
+          "marathi": "Dub karane",
+          "english": "To dub"
+        },
+        {
+          "marathi": "Mul",
+          "english": "Original"
+        },
+        {
+          "marathi": "Aavaaz",
+          "english": "Voice"
+        }
+      ],
+      "note": "Marathi/Hindi-dubbed anime is fairly rare, so most Indian fans default to subtitles — the 'sub vs dub' debate usually happens in this same English-Marathi mixed style.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "तू सबटायटल्ससोबत बघतोस की डब केलेला?",
+          "transliteration": "Tu subtitles sobat baghtos ki dub kelela?"
+        },
+        {
+          "gender": "female",
+          "marathi": "तू सबटायटल्ससोबत बघतेस की डब केलेला?",
+          "transliteration": "Tu subtitles sobat baghtes ki dub kelela?"
+        }
+      ],
+      "gender_note": "Second-person present tense agrees with the listener's gender: ...तोस for a male friend, ...तेस for a female friend."
+    },
+    {
+      "id": 6,
+      "title": "This Episode Made Me Cry",
+      "sentence": "हा भाग बघून मी अगदी रडलो!",
+      "transliteration": "Ha bhaag baghun mi agadi radlo!",
+      "translation": "I literally cried watching this episode!",
+      "words": [
+        {
+          "word": "रडणे",
+          "transliteration": "radane",
+          "meaning": "To cry"
+        },
+        {
+          "word": "भावूक",
+          "transliteration": "bhaavuk",
+          "meaning": "Emotional"
+        },
+        {
+          "word": "हृदयस्पर्शी",
+          "transliteration": "hrudayasparshi",
+          "meaning": "Heart-touching"
+        },
+        {
+          "word": "अगदी",
+          "transliteration": "agadi",
+          "meaning": "Totally / literally"
+        }
+      ],
+      "practice": {
+        "question": "Which sentence correctly says \"I cried\" for a female speaker?",
+        "options": [
+          "मी रडलो (Mi radlo)",
+          "मी रडले (Mi radle)",
+          "मी रडतोस (Mi radtos)",
+          "मी रडेल (Mi radel)"
+        ],
+        "answer": "मी रडले (Mi radle)"
+      },
+      "matching": [
+        {
+          "marathi": "रडणे",
+          "english": "To cry"
+        },
+        {
+          "marathi": "भावूक",
+          "english": "Emotional"
+        },
+        {
+          "marathi": "हृदयस्पर्शी",
+          "english": "Heart-touching"
+        },
+        {
+          "marathi": "अगदी",
+          "english": "Totally / literally"
+        }
+      ],
+      "note": "Crying over a sad anime ending is a shared, often half-joked-about experience among fans — saying 'मी अगदी रडलो/रडले' is a common, slightly dramatic way to express it.",
+      "gender_variants": [
+        {
+          "gender": "male",
+          "marathi": "हा भाग बघून मी अगदी रडलो!",
+          "transliteration": "Ha bhaag baghun mi agadi radlo!"
+        },
+        {
+          "gender": "female",
+          "marathi": "हा भाग बघून मी अगदी रडले!",
+          "transliteration": "Ha bhaag baghun mi agadi radle!"
+        }
+      ],
+      "gender_note": "रडलो/रडले follows the same intransitive past-tense pattern as जिंकलो/जिंकले — male speakers use ...लो, female speakers use ...ले."
+    },
+    {
+      "id": 7,
+      "title": "Binge-Watching All Night",
+      "sentence": "काल मी रात्रभर बिंज वॉच केलं, झोपच आली नाही!",
+      "transliteration": "Kaal mi raatrabhar binge watch kelay, zopach aali nahi!",
+      "translation": "Yesterday I binge-watched all night, I didn't even feel sleepy!",
+      "words": [
+        {
+          "word": "रात्रभर",
+          "transliteration": "raatrabhar",
+          "meaning": "All night"
+        },
+        {
+          "word": "सलग",
+          "transliteration": "salag",
+          "meaning": "Continuously / back-to-back"
+        },
+        {
+          "word": "झोप",
+          "transliteration": "zop",
+          "meaning": "Sleep"
+        },
+        {
+          "word": "थकवा",
+          "transliteration": "thakva",
+          "meaning": "Tiredness"
+        }
+      ],
+      "practice": {
+        "question": "What does \"रात्रभर (Raatrabhar)\" mean?",
+        "options": [
+          "In the morning",
+          "The whole night",
+          "A little while",
+          "Every week"
+        ],
+        "answer": "The whole night"
+      },
+      "matching": [
+        {
+          "marathi": "रात्रभर",
+          "english": "All night"
+        },
+        {
+          "marathi": "सलग",
+          "english": "Continuously"
+        },
+        {
+          "marathi": "झोप",
+          "english": "Sleep"
+        },
+        {
+          "marathi": "थकवा",
+          "english": "Tiredness"
+        }
+      ],
+      "note": "'बिंज वॉच करणे' is now used as a single borrowed verb phrase in casual Marathi, exactly like in English — often paired with native time words like रात्रभर or सलग."
+    },
+    {
+      "id": 8,
+      "title": "My Favourite Genre",
+      "sentence": "माझा आवडता प्रकार रोमान्स आणि अॅक्शन आहे.",
+      "transliteration": "Majha aavadta prakaar romance ani action aahe.",
+      "translation": "My favourite genre is romance and action.",
+      "words": [
+        {
+          "word": "प्रकार",
+          "transliteration": "prakaar",
+          "meaning": "Genre / type"
+        },
+        {
+          "word": "रोमान्स",
+          "transliteration": "romance",
+          "meaning": "Romance"
+        },
+        {
+          "word": "अॅक्शन",
+          "transliteration": "action",
+          "meaning": "Action"
+        },
+        {
+          "word": "विनोदी",
+          "transliteration": "vinodi",
+          "meaning": "Comedy / funny"
+        },
+        {
+          "word": "काल्पनिक",
+          "transliteration": "kalpanik",
+          "meaning": "Fantasy / fictional"
+        }
+      ],
+      "practice": {
+        "question": "What does \"विनोदी (Vinodi)\" mean?",
+        "options": [
+          "Horror",
+          "Comedy / funny",
+          "Sad",
+          "Romantic"
+        ],
+        "answer": "Comedy / funny"
+      },
+      "matching": [
+        {
+          "marathi": "प्रकार",
+          "english": "Genre / type"
+        },
+        {
+          "marathi": "रोमान्स",
+          "english": "Romance"
+        },
+        {
+          "marathi": "अॅक्शन",
+          "english": "Action"
+        },
+        {
+          "marathi": "विनोदी",
+          "english": "Comedy"
+        },
+        {
+          "marathi": "काल्पनिक",
+          "english": "Fantasy"
+        }
+      ],
+      "note": "'प्रकार' is the natural Marathi word for 'genre/type' and works across anime, movies, and books alike — but the genre names themselves (रोमान्स, अॅक्शन) usually stay in English."
+    },
+    {
+      "id": 9,
+      "title": "Have You Read the Manga Too?",
+      "sentence": "तू मांगा पण वाचली आहेस का?",
+      "transliteration": "Tu manga pan vachli aahes ka?",
+      "translation": "Have you read the manga too?",
+      "words": [
+        {
+          "word": "मांगा",
+          "transliteration": "manga",
+          "meaning": "Manga"
+        },
+        {
+          "word": "वाचणे",
+          "transliteration": "vachane",
+          "meaning": "To read"
+        },
+        {
+          "word": "चित्र",
+          "transliteration": "chitra",
+          "meaning": "Picture / illustration"
+        },
+        {
+          "word": "लेखक",
+          "transliteration": "lekhak",
+          "meaning": "Author / writer"
+        }
+      ],
+      "practice": {
+        "question": "In the sentence \"तू मांगा वाचली आहेस का?\", the verb \"वाचली\" agrees with...",
+        "options": [
+          "The speaker's gender",
+          "The listener's gender",
+          "The object 'मांगा' (manga)",
+          "Nothing in particular"
+        ],
+        "answer": "The object 'मांगा' (manga)"
+      },
+      "matching": [
+        {
+          "marathi": "मांगा",
+          "english": "Manga"
+        },
+        {
+          "marathi": "वाचणे",
+          "english": "To read"
+        },
+        {
+          "marathi": "चित्र",
+          "english": "Picture / illustration"
+        },
+        {
+          "marathi": "लेखक",
+          "english": "Author"
+        }
+      ],
+      "note": "Just like with अॅनिमे बघितला earlier, the verb here (वाचली) agrees with the object मांगा, not the speaker — a good reminder of how Marathi past-tense transitive verbs work."
+    },
+    {
+      "id": 10,
+      "title": "Let's Go to a Cosplay Event",
+      "sentence": "चल, एकदा कॉसप्ले इव्हेंटला जाऊ, मज्जा येईल!",
+      "transliteration": "Chal, ekda cosplay event la jau, majja yeil!",
+      "translation": "Come on, let's go to a cosplay event sometime, it'll be fun!",
+      "words": [
+        {
+          "word": "कॉसप्ले",
+          "transliteration": "cosplay",
+          "meaning": "Cosplay"
+        },
+        {
+          "word": "इव्हेंट",
+          "transliteration": "event",
+          "meaning": "Event"
+        },
+        {
+          "word": "पोशाख",
+          "transliteration": "poshakh",
+          "meaning": "Costume"
+        },
+        {
+          "word": "गर्दी",
+          "transliteration": "gardi",
+          "meaning": "Crowd"
+        },
+        {
+          "word": "फॅन",
+          "transliteration": "fan",
+          "meaning": "Fan"
+        }
+      ],
+      "practice": {
+        "question": "What does \"पोशाख (Poshakh)\" mean?",
+        "options": [
+          "Food item",
+          "Costume / outfit",
+          "Ticket",
+          "Song"
+        ],
+        "answer": "Costume / outfit"
+      },
+      "matching": [
+        {
+          "marathi": "कॉसप्ले",
+          "english": "Cosplay"
+        },
+        {
+          "marathi": "इव्हेंट",
+          "english": "Event"
+        },
+        {
+          "marathi": "पोशाख",
+          "english": "Costume"
+        },
+        {
+          "marathi": "गर्दी",
+          "english": "Crowd"
+        },
+        {
+          "marathi": "फॅन",
+          "english": "Fan"
+        }
+      ],
+      "note": "Anime conventions and cosplay meetups are growing in cities like Pune, Mumbai, and Bengaluru, where fans naturally mix English fandom terms into everyday Marathi conversation, just like in this lesson."
+    }
+  ],
+  "coding": [],
   "music": [],
   "movies": [],
   "cricket": [],
