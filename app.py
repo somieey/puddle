@@ -213,7 +213,8 @@ def signup():
             "completed_lessons": [],
             "current_lesson": 1,
             "achievements": [],
-            "longest_streak": 0
+            "longest_streak": 0,
+            "theme": "classic"
         }
 
         users_collection.insert_one(user)
@@ -1049,6 +1050,37 @@ def feedback():
         return render_template("feedback_success.html")
 
     return render_template("feedback.html", user=user)
+
+@app.route("/theme-settings")
+def theme_settings():
+    if "user_email" not in session:
+        return redirect(url_for("login"))
+
+    user = users_collection.find_one({"email": session["user_email"]})
+    current_theme = user.get("theme", "classic")
+
+    return render_template(
+        "theme_settings.html",
+        current_theme=current_theme
+    )
+
+
+@app.route("/change-theme", methods=["POST"])
+def change_theme():
+    if "user_email" not in session:
+        return redirect(url_for("login"))
+
+    selected_theme = request.form.get("theme")
+
+    if selected_theme not in ["classic", "relationship"]:
+        return "Invalid theme selected"
+
+    users_collection.update_one(
+        {"email": session["user_email"]},
+        {"$set": {"theme": selected_theme}}
+    )
+
+    return redirect(url_for("theme_settings"))
 
 if __name__ == "__main__":
     app.run(debug=True)

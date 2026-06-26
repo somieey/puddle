@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Settings | Puddle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin:0;
+            font-family:"Nunito", sans-serif;
+            background:#f4ede1;
+            color:#36281b;
+        }
+
+        .page {
+            max-width:900px;
+            margin:0 auto;
+            padding:35px 22px;
+        }
+
+        .top {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:30px;
+        }
+
+        .logo {
+            font-family:"Baloo 2";
+            font-size:34px;
+            font-weight:800;
+        }
+
+        .back {
+            text-decoration:none;
+            color:#36281b;
+            background:#fffdf9;
+            padding:11px 18px;
+            border-radius:999px;
+            font-weight:900;
+        }
+
+        .hero {
+            background:#fffdf9;
+            border:1px solid #e2d3ba;
+            border-radius:30px;
+            padding:35px;
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        h1 {
+            font-family:"Baloo 2";
+            font-size:46px;
+            margin:0 0 10px;
+        }
+
+        .theme-grid {
+            display:grid;
+            grid-template-columns:repeat(2, 1fr);
+            gap:22px;
+        }
+
+        .theme-card {
+            background:#fffdf9;
+            border:2px solid #e2d3ba;
+            border-radius:28px;
+            padding:28px;
+        }
+
+        .theme-card.active {
+            border-color:#5f8a5b;
+            background:#f6fbf2;
+        }
+
+        .theme-card.relationship.active {
+            border-color:#d88fa3;
+            background:#fff4f8;
+        }
+
+        .icon {
+            font-size:42px;
+            margin-bottom:12px;
+        }
+
+        h2 {
+            font-family:"Baloo 2";
+            font-size:30px;
+            margin:0 0 8px;
+        }
+
+        p {
+            color:#7a6a55;
+            font-weight:800;
+            line-height:1.6;
+        }
+
+        button {
+            border:none;
+            background:#d28a5d;
+            color:white;
+            padding:13px 22px;
+            border-radius:999px;
+            font-weight:900;
+            cursor:pointer;
+            margin-top:12px;
+        }
+
+        .relationship button {
+            background:#d88fa3;
+        }
+
+        button:disabled {
+            opacity:.55;
+            cursor:not-allowed;
+        }
+
+        .current {
+            display:inline-block;
+            background:#d6e2c8;
+            color:#5f8a5b;
+            padding:7px 13px;
+            border-radius:999px;
+            font-weight:900;
+            margin-bottom:12px;
+        }
+
+        @media(max-width:760px) {
+            .theme-grid {
+                grid-template-columns:1fr;
+            }
+
+            .top {
+                flex-direction:column;
+                gap:14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top">
+        <div class="logo">🦫 Puddle</div>
+        <a href="/settings" class="back">← Back to Settings</a>
+    </div>
+
+    <section class="hero">
+        <h1>Choose your mode.</h1>
+        <p>Classic is for everyday learning. Relationship Mode will later unlock partner-focused lessons.</p>
+    </section>
+
+    <div class="theme-grid">
+
+        <div class="theme-card {% if current_theme == 'classic' %}active{% endif %}">
+            <div class="icon">🦫</div>
+
+            {% if current_theme == 'classic' %}
+                <span class="current">Current Theme</span>
+            {% endif %}
+
+            <h2>Classic Mode</h2>
+            <p>Everyday Marathi for conversations, friends, travel, food, plans, and real life.</p>
+
+            <form method="POST" action="/change-theme">
+                <input type="hidden" name="theme" value="classic">
+                <button type="submit" {% if current_theme == 'classic' %}disabled{% endif %}>
+                    {% if current_theme == 'classic' %}Selected{% else %}Switch to Classic{% endif %}
+                </button>
+            </form>
+        </div>
+
+        <div class="theme-card relationship {% if current_theme == 'relationship' %}active{% endif %}">
+            <div class="icon">🌸</div>
+
+            {% if current_theme == 'relationship' %}
+                <span class="current">Current Theme</span>
+            {% endif %}
+
+            <h2>Relationship Mode</h2>
+            <p>For cute phrases, caring texts, nicknames, and conversations with someone special.</p>
+
+            <form method="POST" action="/change-theme">
+                <input type="hidden" name="theme" value="relationship">
+                <button type="submit" {% if current_theme == 'relationship' %}disabled{% endif %}>
+                    {% if current_theme == 'relationship' %}Selected{% else %}Switch to Relationship{% endif %}
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
