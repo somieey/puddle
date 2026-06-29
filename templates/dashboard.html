@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
     <style>
         :root {
             --cream: #f4ede1;
@@ -40,15 +41,14 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html { background-color: var(--cream); scroll-behavior: smooth; }
+        html { background-color: var(--page-bg); scroll-behavior: smooth; }
 
         body {
             font-family: 'Nunito', system-ui, sans-serif;
-            background-color: var(--cream);
-            background-image:
-                radial-gradient(circle at 6% 4%, rgba(95, 138, 91, 0.16), transparent 34%),
-                radial-gradient(circle at 96% 2%, rgba(210, 138, 93, 0.14), transparent 32%),
-                radial-gradient(circle at 50% 100%, rgba(207, 142, 155, 0.12), transparent 42%);
+            background:
+                radial-gradient(circle at top left, var(--accent-soft) 0%, transparent 30%),
+                radial-gradient(circle at top right, rgba(255,255,255,.12) 0%, transparent 35%),
+                var(--page-bg);
             background-attachment: fixed;
             color: var(--brown);
             line-height: 1.55;
@@ -111,10 +111,10 @@
             gap: 12px;
             margin: 0 -22px 30px;
             padding: 14px 28px;
-            background: rgba(251, 245, 234, 0.85);
+            background: var(--nav-bg);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--beige-line);
+            border-bottom: 1px solid var(--line);
         }
 
         .brand {
@@ -132,7 +132,7 @@
             width: 40px;
             height: 40px;
             border-radius: 14px;
-            background: linear-gradient(150deg, var(--sage-soft), var(--peach-soft));
+            background: var(--brand-mark-bg);
             font-size: 1.25rem;
             box-shadow: inset 0 0 0 1px rgba(111, 140, 84, 0.25);
             animation: tilt 5s ease-in-out infinite;
@@ -170,10 +170,10 @@
         .nav-links a.active:hover { background: var(--brown); color: var(--cream); }
 
         .nav-links .logout-link {
-            background: var(--pink-soft);
-            color: var(--pink-deep);
+            background: var(--accent-soft);
+            color: var(--accent);
         }
-        .nav-links .logout-link:hover { background: var(--pink-deep); color: #fff; transform: translateY(-1px); }
+        .nav-links .logout-link:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 
         /* ---------- Hero ---------- */
         .dashboard-hero {
@@ -182,7 +182,7 @@
             grid-template-columns: 1.4fr 1fr;
             gap: 28px;
             align-items: center;
-            background: linear-gradient(140deg, #fffdf8 0%, #fbf0dd 55%, #f4ecd6 100%);
+            background: var(--hero-bg);
             border: 1px solid var(--beige-line);
             border-radius: 34px;
             padding: 46px 48px 0;
@@ -234,8 +234,8 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: var(--sage-soft);
-            color: var(--sage-deep);
+            background: var(--accent-soft);
+            color: var(--accent);
             font-weight: 800;
             font-size: 0.78rem;
             letter-spacing: 0.04em;
@@ -252,7 +252,7 @@
         }
 
         .hero-content > p {
-            color: var(--brown-mid-solid);
+            color: var(--text-soft);
             font-size: 1.05rem;
             max-width: 430px;
             margin-bottom: 24px;
@@ -262,7 +262,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--peach-deep);
+            background: var(--button);
             color: #fff;
             font-weight: 800;
             font-size: 1rem;
@@ -272,7 +272,7 @@
             transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
         }
         .main-btn:hover {
-            background: #db8047;
+            background: var(--button-hover);
             transform: translateY(-2px);
             box-shadow: 0 18px 32px -12px rgba(229, 143, 91, 0.95);
         }
@@ -280,7 +280,7 @@
 
         .next-text {
             margin-top: 16px;
-            color: var(--brown-mid-solid);
+            color: var(--text-soft);
             font-weight: 700;
             font-size: 0.95rem;
         }
@@ -299,7 +299,7 @@
 
         .speech-bubble {
             position: relative;
-            background: #fff;
+            background: var(--speech-bg);
             color: var(--brown);
             font-weight: 800;
             font-size: 0.95rem;
@@ -307,7 +307,7 @@
             border-radius: 18px;
             margin-bottom: 18px;
             box-shadow: var(--shadow-sm);
-            border: 1px solid var(--beige-line);
+            border: 1px solid var(--speech-border);
             text-align: center;
             animation: bobBubble 4s ease-in-out infinite;
         }
@@ -319,7 +319,7 @@
             transform: translateX(-50%);
             border-width: 10px 9px 0;
             border-style: solid;
-            border-color: #fff transparent transparent;
+            border-color: var(--speech-bg) transparent transparent;
         }
         @keyframes bobBubble {
             0%, 100% { transform: translateY(0); }
@@ -833,8 +833,8 @@
 
         .hero-language-pill a {
             text-decoration: none;
-            background: #d6e2c8;
-            color: #5f8a5b;
+            background: var(--accent-soft);
+            color: var(--accent);
             padding: 6px 10px;
             border-radius: 999px;
             font-size: 13px;
@@ -883,28 +883,6 @@
         .goal-check,
         .goal-icon {
             flex-shrink: 0;
-        }
-
-        body.theme-relationship {
-            background:
-                radial-gradient(circle at top left, #f7dce5 0%, transparent 30%),
-                radial-gradient(circle at top right, #eadcf8 0%, transparent 35%),
-                #fff1f6;
-        }
-
-        body.theme-relationship .badge,
-        body.theme-relationship .date-pill {
-            background:#f7dce5;
-            color:#b85f78;
-        }
-
-        body.theme-relationship .main-btn,
-        body.theme-relationship button {
-            background:#d88fa3;
-        }
-
-        body.theme-relationship .setting-icon {
-            background:#f7dce5;
         }
 
     </style>

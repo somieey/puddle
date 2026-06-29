@@ -1,0 +1,77 @@
+:root {
+    --page-bg: #f4ede1;
+    --card-bg: #fffdf9;
+    --text-main: #36281b;
+    --text-soft: #7a6a55;
+    --line: #e2d3ba;
+
+    --accent: #5f8a5b;
+    --accent-soft: #d6e2c8;
+    --button: #d28a5d;
+    --button-hover: #b06334;
+
+    --hero-bg: linear-gradient(135deg, #fffdf9, #f0ddc8);
+
+    --nav-bg: rgba(251, 245, 234, 0.85);
+    --brand-mark-bg: linear-gradient(150deg, #d6e2c8, #f0ddc8);
+
+    --speech-bg: #ffffff;
+    --speech-border: #e2d3ba;
+}
+
+body.theme-relationship {
+    --page-bg: #fff1f6;
+    --card-bg: #fffdf9;
+    --text-main: #36281b;
+    --text-soft: #7a6a55;
+    --line: #ead0d9;
+
+    --accent: #b85f78;
+    --accent-soft: #f7dce5;
+    --button: #d88fa3;
+    --button-hover: #b85f78;
+
+    --hero-bg: linear-gradient(135deg, #fffdf9, #f7dce5);
+
+    --nav-bg: rgba(255, 241, 246, 0.86);
+    --brand-mark-bg: linear-gradient(150deg, #f7dce5, #eadcf8);
+
+    --speech-bg: #fff7fb;
+    --speech-border: #ead0d9;
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, var(--accent-soft) 0%, transparent 30%),
+        radial-gradient(circle at top right, #f6e2d2 0%, transparent 35%),
+        var(--page-bg);
+    color: var(--text-main);
+}
+
+.badge,
+.date-pill {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+button,
+.btn,
+.main-btn,
+.primary-btn,
+.setting-btn {
+    background: var(--button);
+}
+
+.hero,
+.dashboard-hero {
+    background: var(--hero-bg);
+}
+
+.card,
+.setting-card,
+.word-card,
+.hub-card,
+.summary-card {
+    background: var(--card-bg);
+    border-color: var(--line);
+}
